@@ -1,29 +1,40 @@
-<!-- header menu -->
-<header id="fh5co-header-section" class="sticky-banner">
-  <div class="container">
-    <div class="nav-header">
-      <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-      <h1 id="fh5co-logo"><a href="index.html">Find Menu</a></h1>
-      <!-- START #fh5co-menu-wrap -->
-      <nav id="fh5co-menu-wrap" role="navigation">
-        <ul class="sf-menu" id="fh5co-primary-menu">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li>
-            <a href="#" class="fh5co-sub-ddown">Dropdown</a>
-            <ul class="fh5co-sub-menu">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">CSS3 &amp; HTML5</a></li>
-              <li><a href="#">Angular JS</a></li>
-              <li><a href="#">Node JS</a></li>
-              <li><a href="#">Django &amp; Python</a></li>
-            </ul>
-          </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
-</section>
+    <!--banner-->
+    <section id="banner">
+      <div class="bg-color">
+        <header id="header">
+            <div class="container">
+                <div id="mySidenav" class="sidenav">
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </li>
+                    <li class= <?php if($_SESSION['module'] == "home"){ echo "active";}else{ echo "";} ?> >
+                      <a href="<?php friendly('?module=home&function=init'); ?>">Inicio</a>
+                    </li>
+                    <li>
+                    <a href="<?php friendly('?module=users&function=create_users'); ?>">Registrarse</a>
+                    </li>
+                    <li>
+                      <a href="<?php friendly('?module=menus&function=list_menus'); ?>">Menus</a>
+                    </li>
+                    <li>
+                      <a href="<?php friendly('?module=contact&function=view_contact'); ?>">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+            </div>
+        </header>
+        <div class="container">
+        <div class="row">
+          <div class="inner text-center">
+            <h1 class="logo-name">findMenu</h1>
+            <h2>Eslogan findMenu</h2>
+            <p>Encuentra los mejores menús cerca de ti</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- / banner -->

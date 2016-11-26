@@ -22,6 +22,8 @@
   //Includes de 2º nivel
   //CSS
   define('CSS_PATH', '/view/css/');
+  //JS
+  define('JS_PATH', '/view/js/');
   //log
   define('LOG_DIR', SITE_ROOT.'classes/log.class.singleton.php');
   define('USER_LOG_DIR', SITE_ROOT.'log/user/Site_User_errors.log');
@@ -31,5 +33,7 @@
   define('VIEW_PATH_INC_ERROR', SITE_ROOT.'view/inc/templates_error/');
 
   //Includes de 3º nivel
-  //model home
+  //module home
   define('HOME_VIEW', 'modules/home/view/');
+  //Template home images
+  define('TEMPLATE_IMAGE_PATH', '/view//img/template/');

@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <img src="img/res01.jpg" alt="" class="img-responsive">
+                        <img src="<?php echo TEMPLATE_IMAGE_PATH?>res01.jpg" alt="image about" class="img-responsive">
                     </div>
                 </div>
                 <div class="col-md-1"></div>
@@ -38,24 +38,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-center" style="padding:60px;">
-                      <h1 class="header-h">Up Coming events</h1>
-                      <p class="header-p">Decorations 100% complete here</p>
+                      <h1 class="header-h">Menus destacados</h1>
+                      <p class="header-p">Los menus mejor valorados</p>
                     </div>
                     <div class="col-md-12" style="padding-bottom:60px;">
                         <div class="item active left">
                           <div class="col-md-6 col-sm-6 left-images">
-                           <img src="img/res02.jpg" class="img-responsive">
+                           <img src="<?php echo TEMPLATE_IMAGE_PATH?>res02.jpg" alt="image event" class="img-responsive">
                          </div>
                          <div class="col-md-6 col-sm-6 details-text">
                           <div class="content-holder">
-                            <h2>Joyful party</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
+                            <h2>Menu de arroz</h2>
+                            <p>Arroz extraño con gambas, guindilla y chorizo servido en marmita al romero.</p>
                             <address>
-                              <strong>Place: </strong>
-                              1612 Collins Str, Victoria 8007
+                              <strong>Bar: </strong>
+                              El racó de Vicent
                               <br>
-                              <strong>Time: </strong>
-                              07:30pm
+                              <strong>Dirección: </strong>
+                              Calle falsa dirección 123
+                              <br>
+                              <strong>Horario: </strong>
+                              comidas y cenas
                             </address>
                             <a class="btn btn-imfo btn-read-more" href="events-details.html">Read more</a>
                           </div>

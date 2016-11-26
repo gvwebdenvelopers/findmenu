@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -35,7 +35,7 @@ body {
     font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -53,7 +53,7 @@ table {
 	border-spacing: 0;
 }
 #banner{
-    background: url(img/banner-bg.jpg) no-repeat;
+    background: url(/view/img/template/banner-bg.jpg) no-repeat;
     background-size: cover;
     min-height: 630px;
 }
@@ -78,19 +78,24 @@ table {
     font-family: 'Satisfy', sans-serif;
     font-size: 65px;
     margin-top: 140px;
-    color: #FFB03B;
+    color: #37a000;
 }
 .sidenav {
     height: 100%;
     width: 0;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+		background-color: #fff;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
+	  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	  -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	  -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -101,7 +106,13 @@ table {
     transition: 0.3s
 }
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #37a000;
+}
+li.active{
+		background-color: #eee;
+}
+li.active a{
+		color: #37a000 !important;
 }
 .closebtn {
     position: absolute;
@@ -123,7 +134,7 @@ table {
 }
 
 .header-h {
-    color: #FFB03B;
+    color: #37a000;
     font-size: 46px;
     font-family: 'Satisfy', sans-serif;
     font-weight: 300;
@@ -241,7 +252,7 @@ table {
 }
 .heading{
     font-family: 'Satisfy', sans-serif;
-    color: #FFB03B;
+    color: #37a000;
     font-size: 24px;
 }
 .marb-35{
@@ -252,7 +263,7 @@ table {
 }
 .details-list ul li i {
     margin-right: 10px;
-    color: #ffb03b;
+    color: #37a000;
 }
 #about img
 {
@@ -260,7 +271,7 @@ table {
     border-radius: 2px;
 }
 #event{
-    background: url('img/res02.jpg') no-repeat;
+    background: url('/view/img/template/res02.jpg') no-repeat;
     background-size: cover;
 }
 .left-images img {
@@ -280,7 +291,7 @@ table {
     overflow: auto;
 }
 .content-holder h2 {
-    color: #FFB03B;
+    color: #37a000;
     font-size: 32px;
     padding-bottom: 15px;
     font-family: 'Satisfy', sans-serif;
@@ -326,7 +337,7 @@ table {
     font-family: Montserrat,arial;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #FFB03B;
+    color: #37a000;
 }
 .menu-restaurant .menu-line {
     position: absolute;
@@ -353,9 +364,9 @@ table {
     display: block;
 }
 .gallery-trigger ul li a.active, .gallery-trigger ul li a:hover {
-    background: #FFB03B;
+    background: #37a000;
     color: #fff;
-    border: 1px solid #FFB03B;
+    border: 1px solid #37a000;
 }
 .gallery-trigger ul li {
     display: inline-block;
@@ -393,7 +404,7 @@ table {
     padding-bottom: 20px;
     font-family: 'Satisfy', sans-serif;
     font-size: 44px;
-    color: #FFB03B;
+    color: #37a000;
 }
 .footer .widget, .footer address {
     color: #999;

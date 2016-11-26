@@ -5,7 +5,7 @@
                 <div class="col-md-offset-3 col-md-6 text-center">
                     <div class="widget">
                         <h4 class="widget-title">findMenu</h4>
-                        <address>I.E.S l'Estació<br>Ontinyent</address>
+                        <address>GV Web Devenlopers<br>Ontinyent</address>
                         <ul class="social-list list-horizontal">
                             <li><a href="#">Twitter</a> |</li>
                             <li><a href="#">Facebook</a></li>
@@ -21,8 +21,10 @@
     <!-- / footer -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
 

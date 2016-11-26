@@ -42,18 +42,3 @@
     <![endif]-->
   </head>
   <body>
-    <!--banner-->
-    <section id="banner">
-      <div class="bg-color">
-        <div class="container">
-        <div class="row">
-          <div class="inner text-center">
-            <h1 class="logo-name">findMenu</h1>
-            <h2>Eslogan findMenu</h2>
-            <p>Encuentra los mejores menús cerca de ti</p>
-          </div>
-        </div>
-        </div>
-      </div>
-
-    <!-- / banner -->
