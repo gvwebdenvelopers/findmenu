@@ -27,13 +27,13 @@
   	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo CSS_PATH ?>bootstrap.min.css" rel="stylesheet">
     <!--fontawesome-->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo CSS_PATH ?>font-awesome.min.css" rel="stylesheet">
     <!-- Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans' rel='stylesheet' type='text/css'>
+    <link type="text/css" href='https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans' rel='stylesheet'>
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link type="text/css" href="<?php echo CSS_PATH ?>style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,5 +55,5 @@
         </div>
         </div>
       </div>
-      
+
     <!-- / banner -->
