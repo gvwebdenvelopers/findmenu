@@ -4,12 +4,12 @@
         <name>home</name>
         <uri>home</uri>
     </module>
-    <module>
+    <!-- <module>
         <name>users</name>
         <uri>users</uri>
     </module>
     <module>
         <name>menus</name>
         <uri>menus</uri>
-    </module>
+    </module>-->
 </modules>
