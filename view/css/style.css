@@ -478,6 +478,12 @@ li.menu_logo:hover {
 }
 #contact, #form_users{
     background-color: rgba(221, 221, 221, 0.33);
+		text-align: center;
+}
+.container div{
+		text-align: center;
+		margin-left: 20%;
+		margin-right: auto;
 }
 
 .footer .social-list a {
