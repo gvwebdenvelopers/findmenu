@@ -4,11 +4,11 @@
         <name>home</name>
         <uri>home</uri>
     </module>
-    <!-- <module>
-        <name>users</name>
-        <uri>users</uri>
+     <module>
+        <name>products</name>
+        <uri>products</uri>
     </module>
-    <module>
+    <!--<module>
         <name>menus</name>
         <uri>menus</uri>
     </module>-->

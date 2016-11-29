@@ -18,15 +18,14 @@
             </div>
         </div>
     </footer>
-    <!-- / footer -->
+    <!-- / footer --> 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed
     <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.min.js"></script>-->
     <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
 
 </body>
 </html>
