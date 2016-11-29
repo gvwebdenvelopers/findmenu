@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+    <function>
+        <name>page_products</name>
+        <uri>page_products</uri>
+    </function>
+    <function>
+        <name>autocomplete_products</name>
+        <uri>autocomplete_products</uri>
+    </function>
+    <function>
+        <name>trademark</name>
+        <uri>trademark</uri>
+    </function>
+    <function>
+        <name>count_product</name>
+        <uri>count_product</uri>
+    </function>
+    <function>
+        <name>num_pages</name>
+        <uri>num_pages</uri>
+    </function>
+    <function>
+        <name>view_error_true</name>
+        <uri>view_error_true</uri>
+    </function>
+    <function>
+        <name>view_error_false</name>
+        <uri>view_error_false</uri>
+    </function>
+    <function>
+        <name>id_product</name>
+        <uri>id_product</uri>
+    </function>
+    <function>
+        <name>obtain_products</name>
+        <uri>obtain_products</uri>
+    </function>
+</functions>
