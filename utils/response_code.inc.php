@@ -75,11 +75,11 @@ function showErrorPage($code = 0, $message = "", $http = "", $num_http = 0) {
             exit;
             break;
         case 4:
-            require_once(VIEW_PATH_INC . "header.html");
+            require_once(VIEW_PATH_INC . "header.php");
             require_once(VIEW_PATH_INC . "menu.php");
             //showErrorPage(1, "", 'HTTP/1.0 400 Bad Request', 400);
             loadView("400");
-            require_once(VIEW_PATH_INC . "footer.html");
+            require_once(VIEW_PATH_INC . "footer.php");
             die();
             break;
         default:

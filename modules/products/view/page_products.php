@@ -1,6 +1,6 @@
-
-<!--<script type="text/javascript" src="<?php echo PRODUCTS_JS_LIB_PATH ?>jquery.bootpag.min.js" ></script>-->
 <script type="text/javascript" src="<?php echo PRODUCTS_JS_PATH ?>page_products.js" ></script>
+<script type="text/javascript" src="<?php echo PRODUCTS_JS_LIB_PATH ?>jquery.bootpag.min.js" ></script>
+
 <link rel="stylesheet" type="text/css" href="<?php echo PRODUCTS_CSS_PATH ?>main.css">
 <br><br><br><br><br><br>
 <!--input de autocomplete añadida-->
