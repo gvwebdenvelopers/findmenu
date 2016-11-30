@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+    <function>
+        <name>signup</name>
+        <uri>signup</uri>
+    </function>
+    <function>
+        <name>signup_user</name>
+        <uri>signup_user</uri>
+    </function>
+    <function>
+        <name></name>
+        <uri></uri>
+    </function>
+</functions>
