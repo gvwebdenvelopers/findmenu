@@ -43,4 +43,4 @@
   define('MODEL_USER', SITE_ROOT . '/modules/user/model/model/');
   define('FUNCTIONS_USERS', SITE_ROOT . 'modules/users/utils/');
   define('USERS_CSS_PATH', '/modules/users/view/css/');
-  define('USERS_JS_PATH', '/modules/users/view/js/');
+  define('USERS_JS_PATH', SITE_ROOT . '/modules/users/view/js/');
