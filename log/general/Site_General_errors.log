@@ -1,26 +1,44 @@
-30/11/16 12:24:45 AM | error loadView general
+30/11/16 07:44:18 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:24:45 AM | error loadView general
+30/11/16 07:44:18 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:24:54 AM | error loadView general
+30/11/16 07:46:17 PM | error loadView general
+-> Controller:users | Function:response 200
+30/11/16 07:46:17 PM | error loadView general
+-> Controller:users | Function:response 200
+30/11/16 07:46:41 PM | error loadView general
+-> Controller:contact | Function:response 200
+30/11/16 07:46:41 PM | error loadView general
+-> Controller:contact | Function:response 200
+30/11/16 07:48:16 PM | error loadView general
+-> Controller:contact | Function:response 200
+30/11/16 07:48:16 PM | error loadView general
+-> Controller:contact | Function:response 200
+30/11/16 07:48:23 PM | error loadView general
+-> Controller:users | Function:response 200
+30/11/16 07:48:23 PM | error loadView general
+-> Controller:users | Function:response 200
+30/11/16 07:48:32 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:24:54 AM | error loadView general
+30/11/16 07:48:32 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:25:51 AM | error loadView general
+30/11/16 07:48:34 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:25:51 AM | error loadView general
+30/11/16 07:48:34 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:26:00 AM | error loadView general
+30/11/16 07:50:40 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:26:01 AM | error loadView general
--> Controller:media | Function:response 200
-30/11/16 12:29:46 AM | error loadView general
+30/11/16 07:50:40 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:30:19 AM | error loadView general
+30/11/16 07:50:41 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:30:19 AM | error loadView general
--> Controller:media | Function:response 200
-30/11/16 12:31:42 AM | error loadView general
+30/11/16 07:50:41 PM | error loadView general
 -> Controller:view | Function:response 200
-30/11/16 12:31:42 AM | error loadView general
--> Controller:media | Function:response 200
+30/11/16 07:50:46 PM | error loadView general
+-> Controller:view | Function:response 200
+30/11/16 07:50:47 PM | error loadView general
+-> Controller:view | Function:response 200
+30/11/16 07:57:14 PM | error loadView general
+-> Controller: | Function:response 200
+30/11/16 07:57:15 PM | error loadView general
+-> Controller: | Function:response 200

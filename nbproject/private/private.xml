@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/jorge/Proyectos/findmenu/utils/utils.inc.php</file>
-            <file>file:/home/jorge/Proyectos/findmenu/view/inc/menu.php</file>
-            <file>file:/home/jorge/Proyectos/findmenu/resources/modules.xml</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/products/resources/functions.xml</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/products/controller/controller_products.class.php</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/products/view/js/page_products.js</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/products/view/page_products.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -35,7 +35,7 @@ define('VIEW_PATH_INC_ERROR', SITE_ROOT . 'view/inc/templates_error/');
 
 //Includes de 3º nivel
 //module home
-define('HOME_VIEW', 'modules/home/view/');
+define('HOME_VIEW', '/modules/home/view/');
 //Template home images
 define('TEMPLATE_IMAGE_PATH', '/view//img/template/');
 
