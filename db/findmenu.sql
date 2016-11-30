@@ -59,20 +59,22 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `id` varchar(100) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `birth_date` varchar(10) NOT NULL,
-  `sing_in_date` varchar(10) DEFAULT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `birthdate` varchar(10) NOT NULL,
+  `singindate` varchar(10) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
-  `address` varchar(100) DEFAULT NULL,
   `user` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `usertype` varchar(10) DEFAULT NULL,
   `avatar` varchar(200) DEFAULT NULL,
   `country` varchar(45) DEFAULT NULL,
   `province` varchar(45) DEFAULT NULL,
   `city` varchar(45) DEFAULT NULL,
   'favorites' varchar(200) DEFAULT NULL,/*id de los menus favoritos del usuario */
+  'active' boolean DEFAULT NULL,
+  `token` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

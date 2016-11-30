@@ -23,6 +23,18 @@ class users_bll {
     public function create_user_BLL($arrArgument) {
         return $this->dao->create_user_DAO($this->db, $arrArgument);
     }
+    
+    public function update_BLL($arrArgument) {
+        return $this->dao->update_DAO($this->db, $arrArgument);
+    }
+
+    public function count_BLL($arrArgument) {
+        return $this->dao->count_DAO($this->db, $arrArgument);
+    }
+
+    public function select_BLL($arrArgument) {
+        return $this->dao->select_DAO($this->db, $arrArgument);
+    }
 
     public function obtain_countries_BLL($url) {
         return $this->dao->obtain_countries_DAO($url);

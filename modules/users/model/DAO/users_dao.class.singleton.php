@@ -14,44 +14,29 @@ class users_dao {
     }
 
     public function create_user_DAO($db, $arrArgument) {
-        $name = $arrArgument['name'];
-        $last_name = $arrArgument['last_name'];
-        $birth_date = $arrArgument['birth_date'];
-        $title_date = $arrArgument['title_date'];
-        $address = $arrArgument['address'];
-        $user = $arrArgument['user'];
-        $pass = $arrArgument['pass'];
+        $nombre = $arrArgument['nombre'];
+        $apellidos = $arrArgument['apellidos'];
+        $date_birthday = $arrArgument['date_birthday'];
+        $sing_in_date = "";
         $email = $arrArgument['email'];
-        $en_lvl = $arrArgument['en_lvl'];
-        $interests = $arrArgument['interests'];
+        $usuario = $arrArgument['usuario'];
+        $password = $arrArgument['password'];
+        $tipo = $arrArgument['tipo'];
         $avatar = $arrArgument['avatar'];
-        $country = $arrArgument['country'];
-        $province = $arrArgument['province'];
-        $town = $arrArgument['town'];
+        $pais = " ";
+        $provincia = " ";
+        $poblacion = " ";
+        $favorites = " ";
+        $token = $arrArgument['token'];
+        if ($arrArgument['activado'])
+            $activado = $arrArgument['activado'];
+        else
+            $activado = 0;
 
-        //echo $country+" - "+$province+" + "+$town;
-        //die();
-
-        $history = 0;
-        $music = 0;
-        $computing = 0;
-        $magic = 0;
-
-        foreach ($interests as $indice) {
-            if ($indice === 'History')
-                $history = 1;
-            if ($indice === 'Music')
-                $music = 1;
-            if ($indice === 'Computing')
-                $computing = 1;
-            if ($indice === 'Magic')
-                $magic = 1;
-        }
-
-        $sql = "INSERT INTO users (name, last_name, birth_date, title_date,"
-                . " address, user, pass, email, en_lvl,Computing,History,Magic,Music, avatar, country, province, town"
-                . " ) VALUES ('$name', '$last_name', '$birth_date',"
-                . " '$title_date', '$address', '$user', '$pass', '$email', '$en_lvl', '$computing', '$history', '$magic', '$music', '$avatar', '$country', '$province', '$town')";
+        $sql = "INSERT INTO usuarios ( name, lastname, birthdate, singindate, email, user,"
+                . " password, usertype, avatar, country, province, city, favorites, active, token"
+                . " ) VALUES ('$nombre', '$apellidos','$date_birthday', '$sing_in_date', '$email', '$usuario',"
+                . " '$password', '$tipo', '$avatar', '$pais','$provincia','$poblacion', '$favorites','$token', '$activado',)";
 
         return $db->ejecutar($sql);
     }

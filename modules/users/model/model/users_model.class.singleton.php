@@ -15,9 +15,21 @@ class users_model {
             self::$_instance = new self();
         return self::$_instance;
     }
-    
+
     public function create_user($arrArgument) {
         return $this->bll->create_user_BLL($arrArgument);
+    }
+
+    public function update($arrArgument) {
+        return $this->bll->update_BLL($arrArgument);
+    }
+
+    public function count($arrArgument) {
+        return $this->bll->count_BLL($arrArgument);
+    }
+
+     public function select($arrArgument) {
+        return $this->bll->select_BLL($arrArgument);
     }
 
     public function obtain_countries($url) {
