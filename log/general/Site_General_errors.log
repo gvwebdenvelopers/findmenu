@@ -1,44 +1,17 @@
-30/11/16 07:44:18 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:44:18 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:46:17 PM | error loadView general
--> Controller:users | Function:response 200
-30/11/16 07:46:17 PM | error loadView general
--> Controller:users | Function:response 200
-30/11/16 07:46:41 PM | error loadView general
--> Controller:contact | Function:response 200
-30/11/16 07:46:41 PM | error loadView general
--> Controller:contact | Function:response 200
-30/11/16 07:48:16 PM | error loadView general
--> Controller:contact | Function:response 200
-30/11/16 07:48:16 PM | error loadView general
--> Controller:contact | Function:response 200
-30/11/16 07:48:23 PM | error loadView general
--> Controller:users | Function:response 200
-30/11/16 07:48:23 PM | error loadView general
--> Controller:users | Function:response 200
-30/11/16 07:48:32 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:48:32 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:48:34 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:48:34 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:50:40 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:50:40 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:50:41 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:50:41 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:50:46 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:50:47 PM | error loadView general
--> Controller:view | Function:response 200
-30/11/16 07:57:14 PM | error loadView general
+
+30/11/16 08:32:40 PM | error loadView general
 -> Controller: | Function:response 200
-30/11/16 07:57:15 PM | error loadView general
+30/11/16 08:32:49 PM | error loadView general
 -> Controller: | Function:response 200
+30/11/16 08:36:16 PM | error loadView general
+-> Controller: | Function:response 200
+30/11/16 08:36:57 PM | error loadView general
+-> Controller: | Function:response 200
+30/11/16 08:36:58 PM | error loadView general
+-> Controller: | Function:response 200
+30/11/16 08:37:08 PM | error loadView general
+-> Controller: | Function:response 200
+30/11/16 08:38:08 PM | error loadView general
+-> Controller:view | Function:response 200
+30/11/16 08:38:08 PM | error loadView general
+-> Controller:view | Function:response 200
