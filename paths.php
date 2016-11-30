@@ -26,7 +26,7 @@ define('CSS_PATH', '/view/css/');
 //JS
 define('JS_PATH', '/view/js/');
 //log
-define('LOG_DIR', SITE_ROOT . 'classes/log.class.singleton.php');
+define('LOG_DIR', SITE_ROOT . 'classes/log/log.class.singleton.php');
 define('USER_LOG_DIR', SITE_ROOT . 'log/user/Site_User_errors.log');
 define('GENERAL_LOG_DIR', SITE_ROOT . 'log/general/Site_General_errors.log');
 //view
@@ -49,3 +49,10 @@ define('MODEL_PATH_PRODUCTS', SITE_ROOT . 'modules/products/model/');
 define('DAO_PRODUCTS', SITE_ROOT . 'modules/products/model/DAO/');
 define('BLL_PRODUCTS', SITE_ROOT . 'modules/products/model/BLL/');
 define('MODEL_PRODUCTS', SITE_ROOT . 'modules/products/model/model/');
+
+//model contact
+define('CONTACT_JS_PATH', '/modules/contact/view/js/');
+define('CONTACT_CSS_PATH', '/modules/contact/view/css/');
+define('CONTACT_LIB_PATH', '/modules/contact/view/lib/');
+define('CONTACT_IMG_PATH', '/modules/contact/view/img/');
+define('CONTACT_VIEW_PATH', 'modules/contact/view/');

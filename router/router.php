@@ -6,6 +6,7 @@
 	include(UTILS . "filters.inc.php");
 	include(UTILS . "utils.inc.php");
 	include(UTILS . "common.inc.php");
+        include(UTILS . "mail.inc.php");
 	include LOG_DIR;
 
 	if(PRODUCTION){ //estamos en producción

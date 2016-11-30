@@ -33,7 +33,7 @@
       			if (isset($arrPassValue))
       				$arrData = $arrPassValue;
       			include_once($view_path);
-                        echo $view_path;
+                        
     		} else {
             $result = filter_num_int($rutaVista);
             if ($result['resultado']) {
