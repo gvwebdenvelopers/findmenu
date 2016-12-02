@@ -9,11 +9,12 @@
                 <li class="menu_logo">
                   <span>findMenu</span>
                 </li>
-                <li class= <?php if($_SESSION['module'] == "home"){ echo "active";}else{ echo "";} ?> >
-                  <a href="<?php friendly('?module=home&function=init'); ?>">Inicio</a>
+                <li id="LogProf">
+                    <a href= "<?php friendly('?module=users'); ?>"; 
+                    class="button special" data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
                 </li>
-                <li class= <?php if($_SESSION['module'] == "users"){ echo "active";}else{ echo "";} ?>>
-                <a href="<?php friendly('?module=users&function=form_users'); ?>">Registrarse</a>
+                <li class= <?php if($_SESSION['module'] == "home"){ echo "active";}else{ echo "";} ?> >
+                  <a href="<?php friendly('?module=home'); ?>">Inicio</a>
                 </li>
                 <li class= <?php if($_SESSION['module'] == "menus"){ echo "active";}else{ echo "";} ?>>
                   <a href="<?php friendly('?module=menus&function=list_menus'); ?>">Menus</a>

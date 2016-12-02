@@ -8,6 +8,14 @@ class controller_user {
         $_SESSION['module'] = "user";
     }
 
+    function init(){
+        require_once(VIEW_PATH_INC."header.php");
+        require_once(VIEW_PATH_INC."menu.php");
+        loadView('modules/users/view/', 'modal.html');
+        loadView(HOME_VIEW, "menu.php");
+        require_once(VIEW_PATH_INC."footer.php");
+    }
+
     ////////////////////////////////////////////////////begin signup///////////////////////////////////////////
     function signup() { //refactorizar loadView para hacer los requires alli
         require_once(VIEW_PATH_INC."header.php");
@@ -20,7 +28,7 @@ class controller_user {
         $jsondata = array();
         $userJSON = json_decode($_POST['signup_user_json'], true);
 
-        $result = validate_userPHP($userJSON);
+        $result = validate_user($userJSON);
         if ($result['resultado']) {
             $avatar = get_gravatar($result['email'], $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
             $arrArgument = array(

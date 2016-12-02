@@ -59,21 +59,21 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` varchar(100) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL,
-  `birthdate` varchar(10) NOT NULL,
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `lastname` varchar(100) DEFAULT NULL,
+  `birthdate` varchar(10) DEFAULT NULL,
   `singindate` varchar(10) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
-  `user` varchar(50) NOT NULL,
+  `user` varchar(50) DEFAULT NULL,
   `password` varchar(100) NOT NULL,
   `usertype` varchar(10) DEFAULT NULL,
   `avatar` varchar(200) DEFAULT NULL,
   `country` varchar(45) DEFAULT NULL,
   `province` varchar(45) DEFAULT NULL,
   `city` varchar(45) DEFAULT NULL,
-  'favorites' varchar(200) DEFAULT NULL,/*id de los menus favoritos del usuario */
-  'active' boolean DEFAULT NULL,
+  `favorites` varchar(200) DEFAULT NULL,/*id de los menus favoritos del usuario */
+  `active` boolean DEFAULT NULL,
   `token` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -85,7 +85,9 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('Jordi','Martinez Frias','20/12/1982','25/12/2016','jordimart@gmail.com','Av.comte torrefiel','jordimart','pass_jordi123','default-avatar.png','ES','46','Ontinyent', '101:103:104:105'),('Oscar','Otero Millán','5/5/1986','25/12/2016','oscarompro@gmail.com','Partida lombria','osotemi','pass_oscar123','default-avatar.png','ES','46','Ontinyent', '101:102:105');
+INSERT INTO `users` (`name`, `lastname`, `birthdate`, `singindate`, `email`, `user`, `password`, `usertype`,`avatar`,`country`,`province`,`city`, `favorites`, `active`, `token` )
+VALUES ('Jordi','Martinez Frias','20/12/1982','01/12/2016','jordimart@gmail.com','jordimart','pass_jordi123','admin','default-avatar.png','ES','46','Ontinyent', '101:103:104:105', '1', 'wefPFve09eEvveffEEFEe9E'),
+('Oscar','Otero Millán','5/5/1986','25/12/2016','oscarompro@gmail.com','Partida lombria','osotemi','pass_oscar123','default-avatar.png','ES','46','Ontinyent', '101:102:105', '1', 'wsc23eE2y5U655hefPFve09eEvveffEEFEe9E');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

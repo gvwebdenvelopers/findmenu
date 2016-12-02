@@ -12,7 +12,7 @@ function validate_user($value) {
             'filter' => FILTER_VALIDATE_REGEXP,
             'options' => array('regexp' => '/^[A-Za-z]{2,30}$/')
         ),
-        'birth_date' => array(
+        'date_birthday' => array(
             'filter' => FILTER_VALIDATE_REGEXP,
             'options' => array('regexp' => '/^(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d$/')
         ),
@@ -20,14 +20,15 @@ function validate_user($value) {
             'filter' => FILTER_VALIDATE_REGEXP,
             'options' => array('regexp' => '/^[0-9a-zA-Z]{2,20}$/')
         ),
-        'pass' => array(
+        'password' => array(
             'filter' => FILTER_VALIDATE_REGEXP,
             'options' => array('regexp' => '/^[0-9a-zA-Z]{6,32}$/')
         ),
-        'email' => array(
+        'user_email' => array(
             'filter' => FILTER_CALLBACK,
             'options' => 'valida_email'
         ),
+        /*
         'country' => array(
             'filter' => FILTER_VALIDATE_REGEXP,
             'options' => array('regexp' => '/^[a-zA-Z_]*$/')
@@ -42,26 +43,24 @@ function validate_user($value) {
             'filter' => FILTER_CALLBACK,
             'options' => 'validate_town'
         )
+        */
     );
 
 
     $resultado = filter_var_array($value, $filtro);
-    //no filter
-    $resultado['en_lvl'] = $value['en_lvl'];
-    $resultado['interests'] = $value['interests'];
 
     if ($resultado['birth_date']) {
         //validate to user's over 16
-        $dates = validateAge($resultado['birth_date']);
+        $dates = validateAge($resultado['date_birthday']);
 
         if (!$dates) {
-            $error['birth_date'] = 'User must have more than 16 years';
+            $error['date_birthday'] = 'User must have more than 16 years';
             $valido = false;
         }
     }
 
-
-    if ($resultado['birth_date'] && $resultado['title_date']) {
+    /*
+    if ($resultado['date_birthday'] && $resultado['title_date']) {
         //compare date of birth with title_date
         $dates = valida_dates($resultado['birth_date'], $resultado['title_date']);
 
@@ -70,25 +69,9 @@ function validate_user($value) {
             $valido = false;
         }
     }
-
-
-    if ($resultado['en_lvl'] === 'Select level') {
-        $error['en_lvl'] = "You haven't select lvl.";
-        $valido = false;
-    }
-
-    if ($value['conf_pass'] != $resultado['pass']) {
-        $error['conf_pass'] = "Pass doesn't match";
-        $valido = false;
-    }
-
-    if ($value['conf_email'] != $resultado['email']) {
-        $error['conf_email'] = "emails doesn't match";
-        $valido = false;
-    }
-
-    if (count($resultado['interests']) <= 1) {
-        $error['interests'] = "Select 2 or more.";
+    */
+    if ($value['password2'] != $resultado['password']) {
+        $error['password2'] = "Pass doesn't match";
         $valido = false;
     }
 
@@ -100,52 +83,37 @@ function validate_user($value) {
             $valido = false;
         }
 
-        if (!$resultado['user']) {
-            $error['user'] = 'User must be 2 to 20 characters';
-            $valido = false;
-        }
-
-        if (!$resultado['email']) {
-            $error['email'] = 'error format email (example@example.com)';
-            $valido = false;
-        }
-
-
-        if (!$resultado['pass']) {
-            $error['pass'] = 'Pass must be 6 to 32 characters';
-            $valido = false;
-        }
-
-        if (!$resultado['address']) {
-            $error['address'] = "Address don't have  symbols.";
-            $valido = false;
-        }
-
         if (!$resultado['last_name']) {
             $error['last_name'] = 'Last name must be 2 to 30 letters';
             $valido = false;
         }
 
-        if (!$resultado['birth_date']) {
-            if ($resultado['birth_date'] == "") {
-                $error['birth_date'] = "this camp can't empty";
+        if (!$resultado['user']) {
+            $error['user'] = 'User must be 2 to 20 characters';
+            $valido = false;
+        }
+
+        if (!$resultado['user_email']) {
+            $error['user_email'] = 'error format email (example@example.com)';
+            $valido = false;
+        }
+
+
+        if (!$resultado['password']) {
+            $error['password'] = 'Pass must be 6 to 32 characters';
+            $valido = false;
+        }
+
+        if (!$resultado['date_birthday']) {
+            if ($resultado['date_birthday'] == "") {
+                $error['date_birthday'] = "this camp can't empty";
                 $valido = false;
             } else {
-                $error['birth_date'] = 'error format date (mm/dd/yyyy)';
+                $error['date_birthday'] = 'error format date (mm/dd/yyyy)';
                 $valido = false;
             }
         }
-
-        if (!$resultado['title_date']) {
-            if ($resultado['title_date'] == "") {
-                $error['title_date'] = "this camp can't empty";
-                $valido = false;
-            } else {
-                $error['title_date'] = 'error format date (mm/dd/yyyy)';
-                $valido = false;
-            }
-        }
-
+/*
         if (!$resultado['country']) {
             $error['country'] = 'Select correct country';
             $resultado['country'] = $value['country'];
@@ -161,7 +129,7 @@ function validate_user($value) {
             $resultado['town'] = $value['town'];
             $valido = false;
         }
-
+*/
     } else {
         $valido = false;
     };
@@ -216,4 +184,37 @@ function valida_email($email) {
 function validate_town($town) {
     $town = filter_var($town, FILTER_SANITIZE_STRING);
     return $town;
+}
+
+function get_gravatar($email, $s = 80, $d = 'wavatar', $r = 'g', $img = false, $atts = array()) {
+    $email = trim($email);
+    $email = strtolower($email);
+    $email_hash = md5($email);
+
+    $url = "https://www.gravatar.com/avatar/" . $email_hash;
+    $url .= md5(strtolower(trim($email)));
+    $url .= "?s=$s&d=$d&r=$r";
+    if ($img) {
+        $url = '<img src="' . $url . '"';
+        foreach ($atts as $key => $val)
+            $url .= ' ' . $key . '="' . $val . '"';
+        $url .= ' />';
+    }
+    return $url;
+}
+
+function sendtoken($arrArgument, $type) {
+    $mail = array(
+        'type' => $type,
+        'token' => $arrArgument['token'],
+        'inputEmail' => $arrArgument['email']
+    );
+    set_error_handler('ErrorHandler');
+    try {
+        //enviar_email($mail);
+        return true;
+    } catch (Exception $e) {
+        return false;
+    }
+    restore_error_handler();
 }

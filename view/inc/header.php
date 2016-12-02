@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>findMenu| <?php if(isset($_SESSION['module'])){ echo $_GET['module'];}else{ echo "home";} ?></title>
+    <title>findMenu| <?php if(isset($_SESSION['module'])){ echo $_SESSION['module'];}else{ echo "home";} ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   	<meta name="description" content="Aplicación findMenu, encuentra menús espectaculares de bares y restaurantes cerca de tí" />
   	<meta name="keywords" content="findMenu, bares, restaurantes, comidas,desayunos, almuerzos, cenas, donde comer, comer barato, buscar platos de menu" />
@@ -42,9 +42,17 @@
     <![endif]-->
     <!--form_user-->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+    <link rel="stylesheet" href="<?php echo USERS_CSS_PATH ?>main.css" type="text/css"/>
     <!-- Datepicker -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!--JS-->
+    <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH ?>skel.min.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH ?>skel-layers.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="<?php echo USERS_JS_PATH ?>init.js"></script>
   </head>
   <body>

@@ -8,11 +8,12 @@
                 <li>
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 </li>
+                <li id="LogProf">
+                    <a href="/modules/users/view/modal.html"
+                    class="button special" data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
+                </li>
                 <li class= <?php if($_SESSION['module'] == "home"){ echo "active";}else{ echo "";} ?> >
                   <a href="<?php friendly('?module=home&function=init'); ?>">Inicio</a>
-                </li>
-                <li class= <?php if($_SESSION['module'] == "users"){ echo "active";}else{ echo "";} ?>>
-                <a href="<?php friendly('?module=users&function=form_users'); ?>">Registrarse</a>
                 </li>
                 <li class= <?php if($_SESSION['module'] == "menus"){ echo "active";}else{ echo "";} ?>>
                   <a href="<?php friendly('?module=menus&function=list_menus'); ?>">Menus</a>
