@@ -18,6 +18,9 @@
                       <a href="<?php friendly('?module=products&function=page_products'); ?>">Restaurantes</a>
                     </li>
                     <li>
+                      <a href="<?php friendly('?module=menus&function=menus_maps'); ?>">Menus</a>
+                    </li>
+                    <li>
                       <a href="<?php friendly('?module=contact&function=view_contact'); ?>">Contact</a>
                     </li>
                   </ul>

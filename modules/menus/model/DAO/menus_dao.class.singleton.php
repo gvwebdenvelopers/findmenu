@@ -1,5 +1,5 @@
 <?php
-class ofertas_dao {
+class menus_dao {
     static $_instance;
 
     private function __construct() {
@@ -12,7 +12,7 @@ class ofertas_dao {
         return self::$_instance;
     }
 
-    public function create_ofertas_DAO($db, $arrArgument) {
+    public function create_menus_DAO($db, $arrArgument) {
         /* $usuario = $arrArgument['usuario'];
           $dni = $arrArgument['dni'];
           $nombre = $arrArgument['nombre'];
@@ -48,7 +48,7 @@ class ofertas_dao {
          * custom sql to select with the needed arguments
          */
         $i = count($arrArgument['column']);
-        $sql = "SELECT COUNT(*) as total FROM ofertas WHERE ";
+        $sql = "SELECT COUNT(*) as total FROM restaurantes WHERE ";
         for ($j = 0; $j < $i; $j++) {
             if ($i > 1 && $j != 0)
                 $sql.=" AND ";
@@ -63,7 +63,7 @@ class ofertas_dao {
         $i = count($arrArgument['column']);
         $k = count($arrArgument['field']);
         $sql1 = "SELECT ";
-        $sql2 = " FROM ofertas WHERE ";
+        $sql2 = " FROM restaurantes WHERE ";
       
         if ($arrArgument['column'][0] != 'false')
             for ($j = 0; $j < $i; $j++) {
@@ -81,7 +81,7 @@ class ofertas_dao {
         if ($arrArgument['column'][0] != 'false')
             $sql = $sql1 . $fields . $sql2 . $sql;
         else
-            $sql = $sql1 . $fields . ' FROM ofertas';
+            $sql = $sql1 . $fields . ' FROM restaurantes';
 
         $stmt = $db->ejecutar($sql);
         return $db->listar($stmt);
@@ -98,7 +98,7 @@ class ofertas_dao {
         $i = count($arrArgument['field']);
         $k = count($arrArgument['column']);
 
-        $sql1 = "UPDATE ofertas SET ";
+        $sql1 = "UPDATE restaurantes SET ";
         $sql2 = "  WHERE ";
 
         for ($j = 0; $j < $i; $j++) {

@@ -58,6 +58,6 @@ define('CONTACT_IMG_PATH', '/modules/contact/view/img/');
 define('CONTACT_VIEW_PATH', 'modules/contact/view/');
 
 //model ofertas
-define('OFERTAS_CSS_PATH', '/modules/menus/view/css/');
-define('OFERTAS_JS_PATH', '/modules/menus/view/js/');
-define('MODEL_OFERTAS', SITE_ROOT . '/modules/menus/model/model/');
+define('MENUS_CSS_PATH', '/modules/menus/view/css/');
+define('MENUS_JS_PATH', '/modules/menus/view/js/');
+define('MODEL_MENUS', SITE_ROOT . '/modules/menus/model/model/');

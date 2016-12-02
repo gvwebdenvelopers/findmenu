@@ -1,10 +1,10 @@
 <?php
-class ofertas_model {
+class menus_model {
     private $bll;
     static $_instance;
 
     private function __construct() {
-        $this->bll = ofertas_bll::getInstance();
+        $this->bll = menus_bll::getInstance();
     }
 
     public static function getInstance() {
@@ -13,8 +13,8 @@ class ofertas_model {
         return self::$_instance;
     }
 
-    public function create_ofertas($arrArgument) {
-        return $this->bll->create_ofertas_BLL($arrArgument);
+    public function create_menus($arrArgument) {
+        return $this->bll->create_menus_BLL($arrArgument);
     }
     
     public function update($arrArgument) {

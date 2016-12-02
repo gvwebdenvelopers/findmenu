@@ -1,11 +1,11 @@
 <?php
-class ofertas_bll {
+class menus_bll {
     private $dao;
     private $db;
     static $_instance;
 
     private function __construct() {
-        $this->dao = ofertas_dao::getInstance();
+        $this->dao = menus_dao::getInstance();
         $this->db = db::getInstance();
     }
 
@@ -15,7 +15,7 @@ class ofertas_bll {
         return self::$_instance;
     }
 
-    public function create_ofertas_BLL($arrArgument) {
+    public function create_menus_BLL($arrArgument) {
         return $this->dao->create_ofertas_DAO($this->db, $arrArgument);
     }
 

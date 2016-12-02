@@ -42,3 +42,103 @@
 -> Controller: view | Funciton:response 200
 30.11.2016 09:28:11  |  User:   | error loadView general
 -> Controller: view | Funciton:response 200
+01.12.2016 07:07:04  |  User:   | error loadView general
+-> Controller: menus | Funciton:response 200
+02.12.2016 12:45:07  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 12:45:07  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 12:57:44  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 12:57:44  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 12:58:04  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 12:58:04  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:05:00  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:07:06  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:10:46  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:11:05  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:11:05  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:11:08  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:14:56  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:19:42  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:22:52  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:22:52  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:22:55  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:24:10  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:24:30  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:24:30  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:24:35  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:27:39  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:28:19  |  User:   | error loadView general
+-> Controller: menus/menus_maps | Funciton:response 200
+02.12.2016 01:28:20  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:29:21  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:31:27  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:32:10  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:32:10  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:32:13  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:33:11  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:33:12  |  User:   | error loadView general
+-> Controller: view | Funciton:response 200
+02.12.2016 01:33:25  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+02.12.2016 01:38:08  |  User:   | ERROR: [8] Undefined variable: fields
+Notice on line 78 in file /var/www/findmenu/modules/menus/model/DAO/menus_dao.class.singleton.php
+
+-> Controller:  | Funciton:response 200

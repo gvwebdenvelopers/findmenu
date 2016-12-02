@@ -1,22 +1,25 @@
 <?php
-class controller_ofertas {
+class controller_menus {
     function __construct() {}
 
-    function begin() {
-        loadView('modules/ofertas/view/', 'main.php');
+    function menus_maps() {
+        require_once(VIEW_PATH_INC . "header.php");
+        require_once(VIEW_PATH_INC . "menu.php");
+        loadView('modules/menus/view/', 'main.php');
+        require_once(VIEW_PATH_INC . "footer.php");
     }
 
     function maploader() {
         set_error_handler('ErrorHandler');
         try {
-            $arrValue = loadModel(MODEL_OFERTAS, "ofertas_model", "select", array('column' => array('false'), 'field' => array('*')));
+            $arrValue = loadModel(MODEL_MENUS, "menus_model", "select", array('column' => array('false'), 'field' => array('*')));
         } catch (Exception $e) {
             $arrValue = false;
         }
         restore_error_handler();
 
         if ($arrValue) {
-            $arrArguments['ofertas'] = $arrValue;
+            $arrArguments['menus'] = $arrValue;
             $arrArguments['success'] = true;
             echo json_encode($arrArguments);
         } else {
