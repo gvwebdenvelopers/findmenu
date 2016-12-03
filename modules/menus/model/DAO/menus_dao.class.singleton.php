@@ -64,7 +64,7 @@ class menus_dao {
         $k = count($arrArgument['field']);
         $sql1 = "SELECT ";
         $sql2 = " FROM restaurantes WHERE ";
-      
+      $fields="";
         if ($arrArgument['column'][0] != 'false')
             for ($j = 0; $j < $i; $j++) {
                 if ($i > 1 && $j != 0)

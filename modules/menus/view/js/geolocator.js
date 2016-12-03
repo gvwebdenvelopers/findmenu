@@ -54,7 +54,7 @@ function refrescarUbicacion() {
 
 function cargarofertas(of) {
     for (var i = 0; i < of.length; i++) {
-        var content = '<div class="of" id="' + of[i].nombre + '"><div class="desc">' + of[i].valoracion + '</div><div class="fecha"> Fecha: ' + of[i].valoracion + ' - ' + of[i].valoracion + '</div><div class="hora"> Hora: ' + of[i].valoracion + ' - ' + of[i].valoracion + '</div><div class="precio"> Precio: ' + of[i].valoracion + ' €</div></div>';
+        var content = '<div class="of" id="' + of[i].nombre + '"><div class="desc">' + of[i].nombre + '</div><div class="fecha"> Menú: ' + of[i].precio_menu + ' €</div><div class="hora"> Dirección: ' + of[i].direccion +  '</div><div class="precio"> Valoración: ' + of[i].valoracion + ' estrellas</div></div>';
         $('.ofertas').append(content);
     }
 }
@@ -64,7 +64,7 @@ function marcar(map, menu) {
     var marker = new google.maps.Marker({position: latlon, map: map, title: menu.nombre, animation: google.maps.Animation.DROP});
 
     var infowindow = new google.maps.InfoWindow({
-        content: '<h1 class="oferta_title">Oferta en ' + menu.precio_menu + '</h1><p class="oferta_content">' + menu.precio_menu_almuerzo + '</p><p class="oferta_content">Día: ' + menu.precio_menu_noche + '</p><p class="oferta_content">Horario: ' + menu.valoracion + ' - ' + menu.valoracion + '</p>'
+        content: '<h1 class="oferta_title"> ' + menu.nombre + '</h1><p class="oferta_content">Menú: ' + menu.precio_menu + ' €</p><p class="oferta_content">' + menu.direccion + '</p><p class="oferta_content">Valoración: ' + menu.valoracion +  ' estrellas</p>'
     });
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
