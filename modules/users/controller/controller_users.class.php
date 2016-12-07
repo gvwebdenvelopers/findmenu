@@ -1,7 +1,7 @@
 <?php
-class controller_user {
+class controller_users {
     function __construct() {
-        require_once(UTILS_USER . "functions.inc.php");
+        require_once(UTILS_USERS . "functions_user.inc.php");
         include (LIBS . 'password_compat-master/lib/password.php');
         include (UTILS . 'upload.inc.php');
         //require_once(LIBS . 'twitteroauth/twitteroauth.php');
@@ -17,14 +17,14 @@ class controller_user {
     }
 
     ////////////////////////////////////////////////////begin signup///////////////////////////////////////////
-    function signup() { //refactorizar loadView para hacer los requires alli
+    function singup() { //refactorizar loadView para hacer los requires allí
         require_once(VIEW_PATH_INC."header.php");
         require_once(VIEW_PATH_INC."menu.php");
-        loadView('modules/users/view/', 'signup.php');
+        loadView('modules/users/view/', 'singup.php');
         require_once(VIEW_PATH_INC."footer.php");
     }
 
-    public function signup_user() {
+    public function singup_user() {
         $jsondata = array();
         $userJSON = json_decode($_POST['signup_user_json'], true);
 
@@ -32,13 +32,9 @@ class controller_user {
         if ($result['resultado']) {
             $avatar = get_gravatar($result['email'], $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
             $arrArgument = array(
-                'nombre' => $result['data']['name'],
-                'apellidos' => $result['data']['last_name'],
-                'date_birthday' => strtoupper($result['data']['date_birthday']),
                 'email' => $result['data']['user_email'],
-                'usuario' => $result['data']['user'],
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
-                'tipo' => $result['data']['type'],
+                'tipo' => "client",
                 'avatar' => $avatar,
                 'token' => ""
             );

@@ -26,6 +26,8 @@
 
   	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
 
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
     <!-- Bootstrap -->
     <link href="<?php echo CSS_PATH ?>bootstrap.min.css" rel="stylesheet">
     <!--fontawesome-->
@@ -42,7 +44,8 @@
     <![endif]-->
     <!--form_user-->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
-    <link rel="stylesheet" href="<?php echo USERS_CSS_PATH ?>main.css" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo USERS_CSS_PATH ?>users.css" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo USERS_CSS_PATH ?>singup.css" type="text/css"/>
     <!-- Datepicker -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -54,5 +57,6 @@
     <script type="text/javascript" src="<?php echo JS_PATH ?>skel-layers.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php echo USERS_JS_PATH ?>init.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH . '/' ?>cookies.js"></script>
   </head>
   <body>

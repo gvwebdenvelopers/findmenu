@@ -5,8 +5,8 @@
       <uri>init</uri>
   </function>
     <function>
-        <name>signup</name>
-        <uri>signup</uri>
+        <name>singup</name>
+        <uri>singup</uri>
     </function>
     <function>
         <name>signup_user</name>

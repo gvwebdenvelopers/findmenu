@@ -10,6 +10,8 @@
   define('URL_FRIENDLY', TRUE);
 
   //Includes de 1er nivel
+  //libs
+  define('LIBS', SITE_ROOT . '/libs/');
   //model
   define('MODEL_PATH', SITE_ROOT . 'model/');
   //media
@@ -17,7 +19,7 @@
   //modules
   define('MODULES_PATH', SITE_ROOT . 'modules/');
   //utils
-  define('UTILS', SITE_ROOT . 'utils/');
+  define('UTILS', SITE_ROOT . '/utils/');
 
   //Includes de 2º nivel
   //CSS
@@ -41,6 +43,6 @@
   //module users
   define('USERS_VIEW', '/modules/users/view/');
   define('MODEL_USER', SITE_ROOT . '/modules/user/model/model/');
-  define('FUNCTIONS_USERS', SITE_ROOT . 'modules/users/utils/');
+  define('UTILS_USERS', SITE_ROOT . 'modules/users/utils/');
   define('USERS_CSS_PATH', '/modules/users/view/css/');
   define('USERS_JS_PATH', '/modules/users/view/js/');

@@ -1,10 +1,8 @@
 $(document).ready(function () {
-    console.log("estamos en login");
     /////**modal login*///
-    /*var modalbase = '<div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
+    var modalbase = '<div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
             '<div class="modal-dialog" role="document">' +
             '<div class="modal-content">' +
-            '</div>' +
             '</div>' +
             '<div class="modal-footer">' +
             '<div class="8u 12u$(medium)">' +
@@ -15,9 +13,8 @@ $(document).ready(function () {
             '</div>' +
             '</div>';
     $("#LoginModal").append(modalbase);
-    console.log("en login ha imprimido modal??");
     ////**user menu*///
-    /*var user = Tools.readCookie("user");
+    var user = Tools.readCookie("user");
     if (user) {
         //console.log(user); //yomogan|https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly//media/flowers.png|client|yomogan
         user = user.split("|");
@@ -46,5 +43,5 @@ $(document).ready(function () {
     } else if (url[6] === "profile"){
         if (url[7] === "done")
             $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Usuario correctamente actualizado</div>");
-    }*/
+    }
 });

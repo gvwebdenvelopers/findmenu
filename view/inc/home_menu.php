@@ -38,4 +38,5 @@
     </div>
   </div>
 </section>
+<div id="LoginModal"></div>
 <!-- / banner -->

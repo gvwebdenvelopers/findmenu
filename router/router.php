@@ -44,19 +44,19 @@
 	            $exist = true;
 
 	            $path = MODULES_PATH . $URI_module."/controller/controller_".$URI_module.".class.php";
-							
-				if (file_exists($path)) {
 
-					require_once($path);
+							if (file_exists($path)) {
+								require_once($path);
 
-					$controllerClass = "controller_" . $URI_module;
-					$obj = new $controllerClass;
+								$controllerClass = "controller_" . $URI_module;
+								$obj = new $controllerClass;
 
-				} else {
-					//die($URI_module . ' - Controlador no encontrado');
-					showErrorPage(1, "", 'HTTP/1.0 400 Bad Request'.$path, 400);
-				}
-	            handlerfunction(((String)$module->name), $obj, $URI_function);
+							} else {
+								//die($URI_module . ' - Controlador no encontrado');
+								showErrorPage(1, "", 'HTTP/1.0 400 Bad Request'.$path, 400);
+							}
+
+				      handlerfunction(((String)$module->name), $obj, $URI_function);
 	            break;
 	        }
 	    }
@@ -67,9 +67,9 @@
 	}
 
 	function handlerFunction($module, $obj, $URI_function) {
+
 	    $functions = simplexml_load_file(MODULES_PATH . $module. "/resources/functions.xml");
 	    $exist = false;
-
 	    foreach ($functions->function as $function) {
 	        if (($URI_function === (String)$function->uri)) {
 	            $exist = true;

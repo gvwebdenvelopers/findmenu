@@ -10,7 +10,7 @@
                   <span>findMenu</span>
                 </li>
                 <li id="LogProf">
-                    <a href= "<?php friendly('?module=users'); ?>"; 
+                    <a href= "<?php friendly('?module=users'); ?>";
                     class="button special" data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
                 </li>
                 <li class= <?php if($_SESSION['module'] == "home"){ echo "active";}else{ echo "";} ?> >
@@ -26,4 +26,5 @@
             </div>
         </div>
     </header>
+    <div id="LoginModal"></div>
     <!-- / banner -->

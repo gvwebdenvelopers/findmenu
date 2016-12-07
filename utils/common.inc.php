@@ -29,10 +29,14 @@
     		$arrData = '';
 
     		if (file_exists($view_path)) {
+            echo "entra al if ";
+            echo $view_path;
       			if (isset($arrPassValue))
       				$arrData = $arrPassValue;
       			include_once($view_path);
     		} else {
+            echo "entra al else ";
+            echo $rutaVista . $templateName;
             $result = filter_num_int($rutaVista);
             if ($result['resultado']) {
                 $rutaVista = $result['datos'];
