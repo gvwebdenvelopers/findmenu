@@ -79,7 +79,8 @@
 	    }
 	    if (!$exist) {
 	        //die($URI_function . ' - Funci&oacute;n no encontrada');
-	        showErrorPage(4, "", 'HTTP/1.0 400 Bad Request (!$exist funciton )' . $URI_function, 400);
+	        //showErrorPage(4, "", 'HTTP/1.0 400 Bad Request (!$exist funciton )' . $URI_function, 400);
+					handlerModule('main', 'begin');
 	    } else {
 	    	//$obj->$event();
 			call_user_func(array($obj,$event));

@@ -1,9 +1,11 @@
 <?php
+  //PROYECTO
+  define('PROJECT', '/findmenu_localhost/');
   //SITE ROOT
   $path = $_SERVER['DOCUMENT_ROOT'] ;
   define('SITE_ROOT', $path);
   //SITE path
-  define('SITE_PATH','https://'.$_SERVER['HTTP_HOST'] .'/');
+  define('SITE_PATH','http://'.$_SERVER['HTTP_HOST'] );
   //production
   define('PRODUCTION',true);
   //amigables
@@ -25,7 +27,7 @@
   //CSS
   define('CSS_PATH', '/view/css/');
   //JS
-  define('JS_PATH', '/view/js/');
+  define('JS_PATH', SITE_PATH . '/view/js/');
   //log
   define('LOG_DIR', SITE_ROOT . 'classes/log.class.singleton.php');
   define('USER_LOG_DIR', SITE_ROOT . 'log/user/Site_User_errors.log');

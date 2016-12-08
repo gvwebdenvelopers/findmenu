@@ -1,10 +1,25 @@
 <?php
 
-function validate_user($value) {
+function validate_profile($value) {
     $error = array();
     $valido = true;
     $filtro = array(
-
+        'name' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[A-Za-z]{2,30}$/')
+        ),
+        'last_name' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[A-Za-z]{2,30}$/')
+        ),
+        'date_birthday' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d$/')
+        ),
+        'user' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[0-9a-zA-Z]{2,20}$/')
+        ),
         'password' => array(
             'filter' => FILTER_VALIDATE_REGEXP,
             'options' => array('regexp' => '/^[0-9a-zA-Z]{6,32}$/')
@@ -33,7 +48,7 @@ function validate_user($value) {
 
 
     $resultado = filter_var_array($value, $filtro);
-    /*
+
     if ($resultado['birth_date']) {
         //validate to user's over 16
         $dates = validateAge($resultado['date_birthday']);
@@ -44,7 +59,7 @@ function validate_user($value) {
         }
     }
 
-
+    /*
     if ($resultado['date_birthday'] && $resultado['title_date']) {
         //compare date of birth with title_date
         $dates = valida_dates($resultado['birth_date'], $resultado['title_date']);
@@ -63,6 +78,20 @@ function validate_user($value) {
     if ($resultado != null && $resultado) {
 
 
+        if (!$resultado['name']) {
+            $error['name'] = 'Name must be 2 to 30 letters';
+            $valido = false;
+        }
+
+        if (!$resultado['last_name']) {
+            $error['last_name'] = 'Last name must be 2 to 30 letters';
+            $valido = false;
+        }
+
+        if (!$resultado['user']) {
+            $error['user'] = 'User must be 2 to 20 characters';
+            $valido = false;
+        }
 
         if (!$resultado['user_email']) {
             $error['user_email'] = 'error format email (example@example.com)';
@@ -74,7 +103,7 @@ function validate_user($value) {
             $error['password'] = 'Pass must be 6 to 32 characters';
             $valido = false;
         }
-/*
+
         if (!$resultado['date_birthday']) {
             if ($resultado['date_birthday'] == "") {
                 $error['date_birthday'] = "this camp can't empty";
@@ -84,7 +113,7 @@ function validate_user($value) {
                 $valido = false;
             }
         }
-
+/*
         if (!$resultado['country']) {
             $error['country'] = 'Select correct country';
             $resultado['country'] = $value['country'];
@@ -105,7 +134,7 @@ function validate_user($value) {
         $valido = false;
     };
 
-    return $return = array('resultado' => $valido, 'error' => $error, 'data' => $resultado);
+    return $return = array('resultado' => $valido, 'error' => $error, 'datos' => $resultado);
 }
 
 function valida_dates($start_days, $dayslight) {

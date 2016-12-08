@@ -17,20 +17,20 @@ class controller_users {
     }
 
     ////////////////////////////////////////////////////begin signup///////////////////////////////////////////
-    function singup() { //refactorizar loadView para hacer los requires allí
+    function signup() { //refactorizar loadView para hacer los requires allí
         require_once(VIEW_PATH_INC."header.php");
         require_once(VIEW_PATH_INC."menu.php");
-        loadView('modules/users/view/', 'singup.php');
+        loadView('modules/users/view/', 'signup.php');
         require_once(VIEW_PATH_INC."footer.php");
     }
 
-    public function singup_user() {
+    public function signup_user() {
         $jsondata = array();
         $userJSON = json_decode($_POST['signup_user_json'], true);
 
         $result = validate_user($userJSON);
         if ($result['resultado']) {
-            $avatar = get_gravatar($result['email'], $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
+            $avatar = get_gravatar($result['data']['user_email'], $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
             $arrArgument = array(
                 'email' => $result['data']['user_email'],
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
@@ -94,7 +94,7 @@ class controller_users {
             }
         } else {
             $jsondata["success"] = false;
-            $jsondata['datos'] = $result;
+            $jsondata['data'] = $result;
             echo json_encode($jsondata);
         }
     }
