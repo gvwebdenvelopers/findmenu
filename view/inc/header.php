@@ -46,7 +46,7 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
      <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-    <link href="<?php echo MENUS_CSS_PATH; ?>main.css" rel="stylesheet"/>
+    
     
   </head>
   <body>

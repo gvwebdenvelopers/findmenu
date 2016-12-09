@@ -54,8 +54,8 @@ function refrescarUbicacion() {
 
 function cargarofertas(of) {
     for (var i = 0; i < of.length; i++) {
-        var content = '<div class="of" id="' + of[i].nombre + '"><div class="desc">' + of[i].nombre + '</div><div class="fecha"> Menú: ' + of[i].precio_menu + ' €</div><div class="hora"> Dirección: ' + of[i].direccion +  '</div><div class="precio"> Valoración: ' + of[i].valoracion + ' estrellas</div></div>';
-        $('.ofertas').append(content);
+        var content = '<div class="me" id="' + of[i].nombre + '"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td width="37%" rowspan="5" align="center" valign="middle" class="image"><img src="' + of[i].foto_menu + '></td><td>' + of[i].nombre + '</td></tr><div class="desc">' + of[i].nombre + '</div><div class="fecha"> Menú: ' + of[i].precio_menu + ' €</div><div class="hora"> Dirección: ' + of[i].direccion +  '</div><div class="precio"> Valoración: ' + of[i].valoracion + ' estrellas</div></tbody></table></div>';
+        $('.menus').append(content);
     }
 }
 
@@ -100,7 +100,8 @@ function marcar(map, menu) {
 }
 
 function cargarmap(arrArguments) {
-    var x = document.getElementById("demo");
+    //en este div pondremos el error
+    var x = document.getElementById("error");
     navigator.geolocation.getCurrentPosition(showPosition, showError);
     
     function showPosition(position){
@@ -123,6 +124,7 @@ function cargarmap(arrArguments) {
             marcar(map, arrArguments[i]);
     }
     function showError(error){
+        x.style.display="block";
         switch (error.code){
             case error.PERMISSION_DENIED:
                 x.innerHTML = "Denegada la peticion de Geolocalización en el navegador.";
