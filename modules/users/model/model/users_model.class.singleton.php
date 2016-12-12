@@ -25,8 +25,7 @@ class users_model {
     }
 
     public function count($arrArgument) {
-        return "estoy en count";
-        //return $this->bll->count_BLL($arrArgument);
+        return $this->bll->count_BLL($arrArgument);
     }
 
      public function select($arrArgument) {

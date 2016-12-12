@@ -1,420 +1,160 @@
-07/12/16 05:58:25 PM | error loadView general
+12/12/16 11:03:22 PM | error loadView general
 -> Controller:view | Function:response 200
-07/12/16 05:58:25 PM | error loadView general
+12/12/16 11:03:22 PM | error loadView general
 -> Controller:view | Function:response 200
-07/12/16 07:48:14 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 07:48:14 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:33:25 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:33:25 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:33:26 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:33:26 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:33:55 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:33:55 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:36:47 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:36:47 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:37:26 PM | error loadView general
--> Controller:var/www/findmenu/view | Function:response 200
-07/12/16 08:37:26 PM | error loadView general
--> Controller:var/www/findmenu/view | Function:response 200
-07/12/16 08:37:26 PM | error loadView general
--> Controller:var/www/findmenu/view | Function:response 200
-07/12/16 08:37:26 PM | error loadView general
--> Controller:var/www/findmenu/view | Function:response 200
-07/12/16 08:37:26 PM | error loadView general
--> Controller:var/www/findmenu/view | Function:response 200
-07/12/16 08:37:26 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:37:26 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:40:39 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:40:39 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:41:06 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:41:06 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:42:13 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:42:13 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:42:33 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:42:33 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:43:49 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:43:49 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:51:16 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:51:17 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:52:15 PM | error loadView general
--> Controller:view | Function:response 200
-07/12/16 08:52:15 PM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:10:28 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:10:28 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:12:34 AM | error loadView general
--> Controller:users/signup/http | Function:response 200
-08/12/16 04:16:40 AM | error loadView general
--> Controller:users/signup/http | Function:response 200
-08/12/16 04:18:23 AM | error loadView general
--> Controller:users/signup/http | Function:response 200
-08/12/16 04:21:46 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:21:46 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:21:47 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:21:47 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:22:04 AM | error loadView general
--> Controller:users/signup/http | Function:response 200
-08/12/16 04:37:39 AM | error loadView general
--> Controller:findmenu_localhost | Function:response 200
-08/12/16 04:38:18 AM | error loadView general
--> Controller:findmenu_localhost | Function:response 200
-08/12/16 04:52:28 AM | error loadView general
--> Controller:users | Function:response 200
-08/12/16 04:52:28 AM | error loadView general
--> Controller:modules/users/view | Function:response 200
-08/12/16 04:52:54 AM | error loadView general
--> Controller:modules/users/view | Function:response 200
-08/12/16 04:53:19 AM | error loadView general
--> Controller:modules/users/view | Function:response 200
-08/12/16 04:54:14 AM | error loadView general
--> Controller:modules/users/view | Function:response 200
-08/12/16 04:54:14 AM | error loadView general
--> Controller:modules/users/view | Function:response 200
-08/12/16 04:54:14 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:54:14 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:54:21 AM | error loadView general
--> Controller:modules/users/view | Function:response 200
-08/12/16 04:54:21 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:54:21 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:56:54 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:56:54 AM | error loadView general
--> Controller:view | Function:response 200
-08/12/16 04:57:04 AM | error loadView general
--> Controller:users | Function:response 200
-08/12/16 05:18:22 AM | ERROR: [8] Undefined index: usuario
-Notice on line 46 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:03:46 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-08/12/16 05:20:03 AM | ERROR: [8] Undefined index: usuario
-Notice on line 46 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:05:37 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-08/12/16 05:21:38 AM | ERROR: [8] Undefined index: usuario
-Notice on line 46 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:05:37 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 02:25:50 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:25:50 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:26:20 PM | ERROR: [8] Undefined index: usuario
-Notice on line 46 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:07:31 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 02:33:35 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:33:36 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:33:58 PM | ERROR: [8] Undefined index: usuario
-Notice on line 46 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:07:31 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 02:35:28 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:35:28 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:35:45 PM | ERROR: [8] Undefined index: usuario
-Notice on line 46 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:08:44 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 02:35:45 PM | ERROR: [8] Undefined variable: arrValue
-Notice on line 60 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:08:44 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 02:37:20 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:37:20 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:37:35 PM | ERROR: [8] Undefined index: usuario
-Notice on line 46 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+12/12/16 11:09:12 PM | ERROR: [8] Undefined variable: stmt
+Notice on line 59 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 02:43:01 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:43:01 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:44:35 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 02:44:35 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 03:45:43 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 03:45:43 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 03:57:55 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 03:57:55 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 03:57:56 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:48:15 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:48:15 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:50:19 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:50:19 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:51:10 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:51:10 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:51:12 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:51:12 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:59:45 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 04:59:45 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 05:00:30 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 05:00:30 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 05:00:31 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 05:00:32 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 05:00:33 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 05:00:33 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 05:16:35 PM | error loadView general
--> Controller:users | Function:response 200
-12/12/16 07:37:12 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:37:12 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:37:25 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:37:25 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:43:04 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:43:04 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:58:06 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:58:06 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:58:07 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:58:07 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:59:09 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 07:59:09 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:00:13 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:00:13 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:00:13 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:01:32 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:01:32 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:02:53 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:02:53 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:07:48 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:07:48 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:07:48 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:07:48 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:09:45 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:09:45 PM | error loadView general
--> Controller:view | Function:response 200
-12/12/16 08:20:36 PM | ERROR: [8] Array to string conversion
-Notice on line 4 in file /var/www/findmenu/utils/common.inc.php
+12/12/16 11:11:33 PM | ERROR: [4096] Object of class mysqli_result could not be converted to string
+Unknown Error on line 49 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
 
 -> Controller:user | Function:response 200
-12/12/16 08:20:58 PM | ERROR: [8] Undefined offset: 0
-Notice on line 4 in file /var/www/findmenu/utils/common.inc.php
+12/12/16 11:11:56 PM | ERROR: [8] Array to string conversion
+Notice on line 49 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
 
 -> Controller:user | Function:response 200
-12/12/16 08:22:14 PM | ERROR: [8] Array to string conversion
-Notice on line 4 in file /var/www/findmenu/utils/common.inc.php
+12/12/16 11:12:27 PM | ERROR: [8] Array to string conversion
+Notice on line 49 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
 
 -> Controller:user | Function:response 200
-12/12/16 08:22:35 PM | ERROR: [8] Undefined index: user
-Notice on line 4 in file /var/www/findmenu/utils/common.inc.php
+12/12/16 11:19:31 PM | ERROR: [8] Array to string conversion
+Notice on line 74 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
 
 -> Controller:user | Function:response 200
-12/12/16 08:45:48 PM | error loadView general
+12/12/16 11:20:29 PM | ERROR: [8] Array to string conversion
+Notice on line 75 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:20:52 PM | ERROR: [8] Array to string conversion
+Notice on line 75 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:21:48 PM | ERROR: [8] Array to string conversion
+Notice on line 74 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:23:19 PM | ERROR: [8] Array to string conversion
+Notice on line 76 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:29:11 PM | error loadView general
+-> Controller:home/init | Function:response 200
+12/12/16 11:33:28 PM | error loadView general
 -> Controller:view | Function:response 200
-12/12/16 08:45:48 PM | error loadView general
+12/12/16 11:33:28 PM | error loadView general
 -> Controller:view | Function:response 200
-12/12/16 08:45:59 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:45:59 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:47:16 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:47:16 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:47:38 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:47:38 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:48:14 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:48:14 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:48:27 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:48:27 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:49:13 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:49:13 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:50:29 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:50:29 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:50:54 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:50:54 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:55:13 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 08:55:13 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 09:06:36 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 09:06:36 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
-
--> Controller:user | Function:response 200
-12/12/16 09:12:24 PM | error loadView general
+12/12/16 11:33:29 PM | error loadView general
 -> Controller:view | Function:response 200
-12/12/16 09:12:24 PM | error loadView general
+12/12/16 11:33:29 PM | error loadView general
 -> Controller:view | Function:response 200
-12/12/16 09:12:37 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:33:43 PM | ERROR: [8] Undefined index: nombre
+Notice on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:12:37 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:33:43 PM | ERROR: [8] Undefined index: apellidos
+Notice on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:13:05 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:33:43 PM | ERROR: [8] Undefined index: date_birthday
+Notice on line 19 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:13:05 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:33:43 PM | ERROR: [8] Undefined index: usuario
+Notice on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:14:07 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:33:43 PM | ERROR: [8] Undefined index: activado
+Notice on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:14:07 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:36:57 PM | ERROR: [8] Undefined index: nombre
+Notice on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:17:54 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:36:57 PM | ERROR: [8] Undefined index: apellidos
+Notice on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:17:54 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:36:57 PM | ERROR: [8] Undefined index: date_birthday
+Notice on line 19 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:21:59 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:36:57 PM | ERROR: [8] Undefined index: usuario
+Notice on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:21:59 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:36:57 PM | ERROR: [8] Undefined index: activado
+Notice on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:24:57 PM | ERROR: [8] Use of undefined constant BLL_USERS - assumed 'BLL_USERS'
-Notice on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:46:54 PM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
-12/12/16 09:24:57 PM | ERROR: [2] require(BLL_USERSusers_bll.class.singleton.php): failed to open stream: No such file or directory
-Warning on line 2 in file /var/www/findmenu/modules/users/model/model/users_model.class.singleton.php
+12/12/16 11:48:55 PM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:48:55 PM | error loadView general
+-> Controller:home/init | Function:response 200
+12/12/16 11:49:33 PM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:49:33 PM | error loadView general
+-> Controller:home/init | Function:response 200
+12/12/16 11:53:02 PM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:53:02 PM | error loadView general
+-> Controller:home/init | Function:response 200
+12/12/16 11:54:08 PM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+12/12/16 11:55:35 PM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+13/12/16 12:05:17 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+13/12/16 12:09:09 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+13/12/16 12:09:59 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200

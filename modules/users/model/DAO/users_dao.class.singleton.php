@@ -14,14 +14,15 @@ class users_dao {
     }
 
     public function create_user_DAO($db, $arrArgument) {
-        $nombre = $arrArgument['nombre'];
-        $apellidos = $arrArgument['apellidos'];
-        $date_birthday = $arrArgument['date_birthday'];
-        $sing_in_date = "";
+        $nombre = "";
+        $apellidos = "";
+        $date_birthday = "";
+        $today = getdate();
+        $sing_in_date = $today['mday'] . "/" . $today['mon'] . "/"  . $today['year'];
         $email = $arrArgument['email'];
-        $usuario = $arrArgument['usuario'];
+        $usuario = $arrArgument['user'];
         $password = $arrArgument['password'];
-        $tipo = $arrArgument['tipo'];
+        $tipo = "client";
         $avatar = $arrArgument['avatar'];
         $pais = " ";
         $provincia = " ";
@@ -33,11 +34,12 @@ class users_dao {
         else
             $activado = 0;
 
-        $sql = "INSERT INTO usuarios ( name, lastname, birthdate, singindate, email, user,"
+        $sql = "INSERT INTO users ( name, lastname, birthdate, singindate, email, user,"
                 . " password, usertype, avatar, country, province, city, favorites, active, token"
                 . " ) VALUES ('$nombre', '$apellidos','$date_birthday', '$sing_in_date', '$email', '$usuario',"
-                . " '$password', '$tipo', '$avatar', '$pais','$provincia','$poblacion', '$favorites','$token', '$activado',)";
+                . " '$password', '$tipo', '$avatar', '$pais','$provincia','$poblacion', '$favorites', '$activado','$token')";
 
+        //return $sql;
         return $db->ejecutar($sql);
     }
 
@@ -56,7 +58,6 @@ class users_dao {
                 $sql .= " AND ";
             $sql .= $arrArgument['column'][$j] . " like '" . $arrArgument['like'][$j] . "'";
         }
-
         $stmt = $db->ejecutar($sql);
         return $db->listar($stmt);
     }

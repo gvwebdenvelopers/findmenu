@@ -39,15 +39,13 @@ class controller_users {
                 'token' => "",
                 'user' => "",
             );
-
             /* Control de registro */
             set_error_handler('ErrorHandler');
             try {
 
                 //loadModel
-                $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => 'user', 'like' => $arrArgument['user']));
-                echo $arrValue;
-                exit;
+                $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('user'), 'like' => array($arrArgument['user'])));
+
                 if ($arrValue[0]['total'] == 1) {
                     $arrValue = false;
                     $typeErr = 'Name';
@@ -60,6 +58,7 @@ class controller_users {
                         $error = "Email ya registrado";
                     }
                 }
+
             } catch (Exception $e) {
 
                 $arrValue = false;
@@ -71,8 +70,11 @@ class controller_users {
                 set_error_handler('ErrorHandler');
                 try {
                     //loadModel
+
                     $arrArgument['token'] = "Ver" . md5(uniqid(rand(), true));
-                    $arrValue = loadModel(MODEL_USER, "user_model", "create_user", $arrArgument);
+
+                    $arrValue = loadModel(MODEL_USER, "users_model", "create_user", $arrArgument);
+                    echo "en try " . $arrValue;
                 } catch (Exception $e) {
                     $arrValue = false;
                 }
@@ -92,6 +94,7 @@ class controller_users {
                     echo json_encode($jsondata);
                 }
             } else {
+                echo "en else arrargument";
                 $jsondata["success"] = false;
                 $jsondata["typeErr"] = $typeErr;
                 $jsondata["error"] = $error;
