@@ -1,7 +1,7 @@
 <?php
 
-require (MODEL_PATH . "db.class.singleton.php");
-require(DAO_PRODUCTS_FE . "users_dao.class.singleton.php");
+//require (MODEL_PATH . "db.class.singleton.php");
+//require(DAO_PRODUCTS_FE . "users_dao.class.singleton.php");
 
 class users_bll {
 
@@ -23,7 +23,7 @@ class users_bll {
     public function create_user_BLL($arrArgument) {
         return $this->dao->create_user_DAO($this->db, $arrArgument);
     }
-    
+
     public function update_BLL($arrArgument) {
         return $this->dao->update_DAO($this->db, $arrArgument);
     }

@@ -1,5 +1,5 @@
 <?php
-require(BLL_USERS . "users_bll.class.singleton.php");
+//require(BLL_USERS . "users_bll.class.singleton.php");
 
 class users_model {
 
@@ -25,7 +25,8 @@ class users_model {
     }
 
     public function count($arrArgument) {
-        return $this->bll->count_BLL($arrArgument);
+        return "estoy en count";
+        //return $this->bll->count_BLL($arrArgument);
     }
 
      public function select($arrArgument) {

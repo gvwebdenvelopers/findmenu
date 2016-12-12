@@ -41,6 +41,26 @@ class users_dao {
         return $db->ejecutar($sql);
     }
 
+    public function count_DAO($db, $arrArgument) {
+        /* $arrArgument is composed by 2 array ("column" and "like"), this iterates
+         * the number of positions the array have, this way we get a method that builds a
+         * custom sql to select with the needed arguments
+         */
+        //return "entra al count";
+        $i = count($arrArgument['column']);
+
+        $sql = "SELECT COUNT(*) as total FROM users WHERE ";
+
+        for ($j = 0; $j < $i; $j++) {
+            if ($i > 1 && $j != 0)
+                $sql .= " AND ";
+            $sql .= $arrArgument['column'][$j] . " like '" . $arrArgument['like'][$j] . "'";
+        }
+
+        $stmt = $db->ejecutar($sql);
+        return $db->listar($stmt);
+    }
+
     public function obtain_countries_DAO($url) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);

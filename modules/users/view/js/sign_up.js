@@ -62,9 +62,10 @@ function validate_user() {
     }
     if (result) {
         var data = {"user_email": email, "password": password, "password2": password2  };
-        console.log(data);
         var data_users_JSON = JSON.stringify(data);
+
         $.post(amigable("?module=users&function=signup_user"), {signup_user_json: data_users_JSON},
+        //$.post("../../users/sign_up/", {signup_user_json: data_users_JSON},
         function (response) {
             console.log(response);
             if (response.success) {
@@ -94,6 +95,7 @@ function validate_user() {
             console.log(xhr.responseText);
             if( (xhr.responseJSON === undefined) || (xhr.responseJSON === null) )
                 xhr.responseJSON = JSON.parse(xhr.responseText);
+                console.log(xhr.responseJSON);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
             } else if (xhr.status === 404) {

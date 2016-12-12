@@ -32,24 +32,28 @@ class controller_users {
         if ($result['resultado']) {
             $avatar = get_gravatar($result['data']['user_email'], $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
             $arrArgument = array(
+                'avatar' => $avatar,
                 'email' => $result['data']['user_email'],
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
                 'tipo' => "client",
-                'avatar' => $avatar,
-                'token' => ""
+                'token' => "",
+                'user' => "",
             );
 
             /* Control de registro */
             set_error_handler('ErrorHandler');
             try {
+
                 //loadModel
-                $arrValue = loadModel(MODEL_USER, "user_model", "count", array('column' => array('usuario'), 'like' => array($arrArgument['usuario'])));
+                $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => 'user', 'like' => $arrArgument['user']));
+                echo $arrValue;
+                exit;
                 if ($arrValue[0]['total'] == 1) {
                     $arrValue = false;
                     $typeErr = 'Name';
                     $error = "Nombre de usuario no disponible";
                 } else {
-                    $arrValue = loadModel(MODEL_USER, "user_model", "count", array('column' => array('email'), 'like' => array($arrArgument['email'])));
+                    $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('email'), 'like' => array($arrArgument['email'])));
                     if ($arrValue[0]['total'] == 1) {
                         $arrValue = false;
                         $typeErr = 'Email';
@@ -57,6 +61,7 @@ class controller_users {
                     }
                 }
             } catch (Exception $e) {
+
                 $arrValue = false;
             }
             restore_error_handler();
@@ -88,7 +93,7 @@ class controller_users {
                 }
             } else {
                 $jsondata["success"] = false;
-                $jsondata['typeErr'] = $typeErr;
+                $jsondata["typeErr"] = $typeErr;
                 $jsondata["error"] = $error;
                 echo json_encode($jsondata);
             }

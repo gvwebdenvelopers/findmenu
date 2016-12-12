@@ -1,5 +1,5 @@
 <?php
-	$path=$_SERVER['DOCUMENT_ROOT'].'';
+	//$path=$_SERVER['DOCUMENT_ROOT'].'';
 
     class conf {
         private $_userdb;

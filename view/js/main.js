@@ -27,6 +27,6 @@ function amigable(url) {
         link +=  "/"+aux[1];
     }
     //console.log("http://findmenu.com" + link);
-    console.log("http://findmenu.com/" + link);
-    return "http://findmenu.com/" + link;
+    console.log("http://findmenu.com" + link);
+    return "http://findmenu.com" + link;
 }

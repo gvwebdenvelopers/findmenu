@@ -3,8 +3,9 @@
         $model = $model_path . $model_name . '.class.singleton.php';
 
         if (file_exists($model)) {
-            include_once($model);
 
+            include_once($model);
+            echo $model;
             $modelClass = $model_name;
 
             if (!method_exists($modelClass, $function)){
@@ -14,6 +15,7 @@
             $obj = $modelClass::getInstance();
 
             if (isset($arrArgument)) {
+                echo "esta en el include e isset array argument";
                 return $obj->$function($arrArgument);
             }
         } else {
