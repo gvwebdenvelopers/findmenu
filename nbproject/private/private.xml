@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/jorge/Proyectos/findmenu/db/findmenu.sql</file>
+            <file>file:/home/jorge/Proyectos/findmenu/view/js/main.js</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/menus/view/js/geolocator.js</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/menus/view/main.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/menus/view/css/menus.css</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/products/view/js/modal_products.js</file>
+        </group>
     </open-files>
 </project-private>

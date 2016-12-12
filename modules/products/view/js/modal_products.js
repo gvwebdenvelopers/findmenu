@@ -12,7 +12,7 @@ $(document).ready(function () {
             $('.pagination').html('');
 
             var img_product = document.getElementById('img_product');
-            img_product.innerHTML = '<img src="../../' + product.foto +
+            img_product.innerHTML = '<img src="' + product.foto +
                     '" class="img-product"> ';
 
             var provincia = document.getElementById('provincia');
