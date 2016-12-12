@@ -3,7 +3,6 @@ font-family: 'Crayon';
 src: url('../fonts/DK Crayon Crumble.ttf');
 }
 
-
 #menus{
     font-family: 'Crayon';
     font-weight: bold;
@@ -47,7 +46,6 @@ text-align:center;
     display: inline-block;
     
 }
-
 
 /*diseño caja menus*/
 .menus{
