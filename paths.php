@@ -60,4 +60,4 @@ define('CONTACT_VIEW_PATH', 'modules/contact/view/');
 //model ofertas
 define('MENUS_CSS_PATH', '/modules/menus/view/css/');
 define('MENUS_JS_PATH', '/modules/menus/view/js/');
-define('MODEL_MENUS', SITE_ROOT . '/modules/menus/model/model/');
+define('MODEL_MENUS', SITE_ROOT . 'modules/menus/model/model/');

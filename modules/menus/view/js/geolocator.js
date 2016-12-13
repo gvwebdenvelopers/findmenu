@@ -54,27 +54,30 @@ function refrescarUbicacion() {
 
 function cargarofertas(of) {
     for (var i = 0; i < of.length; i++) {
-        var content = '<div class="me" id="' + of[i].id + '">'+
-    '<table width="100%"  cellspacing="0" cellpadding="0">'+
-        '<tbody>'+
-            '<tr><td>' + of[i].nombre + '</td><td rowspan="4" class="image"><img src="' + of[i].foto + '"></td></tr>'+
-            
-            '<tr><td> Menú: ' + of[i].precio_menu + ' €</td></tr>'+
-            '<tr><td> Dirección: ' + of[i].direccion + '</td></tr>'+
-            '<tr><td> Valoración: ' + of[i].valoracion + ' estrellas</td></tr>'+
-        '</tbody>'+
-    '</table>'+
-'</div>';
+        var content ='<div class="me" style="display: block;">'+
+                        '<div >'+
+                            '<div class="inline"><img src="' + of[i].foto + '"></div>'+
+                            '<div class="inline"><h3>' + of[i].nombre + '</h3><div> ' + of[i].poblacion + '</div><div >Menú: ' + of[i].precio_menu + ' €</div>  </div>'+
+                            '<div class="inline"><img class="stars" src="/modules/menus/view/img/estrellas-' + of[i].valoracion + '.png"></div>'+       
+                        '</div>'+
+                    '</div>';
         $('.menus').append(content);
     }
 }
 
 function marcar(map, menu) {
     var latlon = new google.maps.LatLng(menu.latitud, menu.longitud);
-    var marker = new google.maps.Marker({position: latlon, map: map, title: menu.id, animation: google.maps.Animation.DROP});
+    var marker = new google.maps.Marker({position: latlon, map: map, title: menu.precio_menu+" €",icon : '/modules/menus/view/img/findMenu_icono_png.png', animation: google.maps.Animation.DROP});
 
     var infowindow = new google.maps.InfoWindow({
-        content: '<div class="oferta_title">'+menu.nombre+'</div><img src="' + menu.foto_menu + '">'
+        content: '<div class="me" style="display: block;">'+
+                        '<div class="map">'+
+                            '<div><h3>' + menu.nombre + '</h3><div> ' + menu.poblacion + '</div><div >Menú: ' + menu.precio_menu + ' €</div>  </div>'+
+                            '<div><img src="' + menu.foto_menu + '"></div>'+  
+                            '<div><img class="stars" src="/modules/menus/view/img/estrellas-' + menu.valoracion + '.png"></div>'+       
+                        '</div>'+
+                '</div>'
+                    
     });
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
@@ -124,8 +127,13 @@ function cargarmap(arrArguments) {
         var myOptions = {
             center: latlon, zoom: 10,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            mapTypeControl: false,
-            navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL}
+            navigationControl:true,
+            mapTypeControl: true,
+            streetViewControl: true,
+            navigationControlOptions :{
+                position: google.maps.ControlPosition.TOP_RIGHT,
+                style: google.maps.NavigationControlStyle.ZOOM_PAN
+            }
         };
         var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
         // var marker = new google.maps.Marker({position: latlon, map: map, title: "You are here!"});
