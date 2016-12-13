@@ -67,7 +67,16 @@ function cargarofertas(of) {
 
 function marcar(map, menu) {
     var latlon = new google.maps.LatLng(menu.latitud, menu.longitud);
-    var marker = new google.maps.Marker({position: latlon, map: map, title: menu.precio_menu+" €",icon : '/modules/menus/view/img/findMenu_icono_png.png', animation: google.maps.Animation.DROP});
+    var image = {
+    url: '/modules/menus/view/img/findMenu_icono_png.png',
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(60, 60),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 32)
+  };
+    var marker = new google.maps.Marker({position: latlon, map: map, title: menu.precio_menu+" €",icon : image, animation: google.maps.Animation.BOUNCE});
 
     var infowindow = new google.maps.InfoWindow({
         content: '<div class="me" style="display: block;">'+
@@ -79,6 +88,7 @@ function marcar(map, menu) {
                 '</div>'
                     
     });
+    
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
         
@@ -126,14 +136,10 @@ function cargarmap(arrArguments) {
         //mapholder.style.width = '900px';
         var myOptions = {
             center: latlon, zoom: 10,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            navigationControl:true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP, 
             mapTypeControl: true,
-            streetViewControl: true,
-            navigationControlOptions :{
-                position: google.maps.ControlPosition.TOP_RIGHT,
-                style: google.maps.NavigationControlStyle.ZOOM_PAN
-            }
+            streetViewControl: true
+            
         };
         var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
         // var marker = new google.maps.Marker({position: latlon, map: map, title: "You are here!"});
