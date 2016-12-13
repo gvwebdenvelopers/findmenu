@@ -53,8 +53,7 @@
 
 							} else {
 								//die($URI_module . ' - Controlador no encontrado');
-								//showErrorPage(1, "", 'HTTP/1.0 400 Bad Request'.$path, 400);
-								handlerModule('main', 'init');
+								showErrorPage(1, "", 'HTTP/1.0 400 Bad Request'.$path, 400);
 							}
 
 				      handlerfunction(((String)$module->name), $obj, $URI_function);
@@ -63,8 +62,7 @@
 	    }
 	    if (!$exist) {
 	        //die($URI_module . ' - Controlador no encontrado');
-	        //showErrorPage(4, "", 'HTTP/1.0 400 Bad Request (!$exist)', 400);
-					handlerModule('main', 'init');
+	        showErrorPage(4, "", 'HTTP/1.0 400 Bad Request (!$exist)', 400);
 	    }
 	}
 
@@ -82,7 +80,7 @@
 	    if (!$exist) {
 	        //die($URI_function . ' - Funci&oacute;n no encontrada');
 	        //showErrorPage(4, "", 'HTTP/1.0 400 Bad Request (!$exist funciton )' . $URI_function, 400);
-					handlerModule('main', 'init');
+					handlerModule('main', 'begin');
 	    } else {
 	    	//$obj->$event();
 			call_user_func(array($obj,$event));

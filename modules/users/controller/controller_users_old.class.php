@@ -1,11 +1,11 @@
 <?php
-class controller_users {
+class users {
     function __construct() {
         require_once(UTILS_USERS . "functions_user.inc.php");
         include (LIBS . 'password_compat-master/lib/password.php');
         include (UTILS . 'upload.inc.php');
         //require_once(LIBS . 'twitteroauth/twitteroauth.php');
-        $_SESSION['module'] = "user";
+        $_SESSION['module'] = "users";
     }
 
     function init(){
@@ -18,10 +18,11 @@ class controller_users {
 
     ////////////////////////////////////////////////////begin signup///////////////////////////////////////////
     function signup() { //refactorizar loadView para hacer los requires allí
-        require_once(VIEW_PATH_INC."header.php");
+        echo "en singup";
+        /*require_once(VIEW_PATH_INC."header.php");
         require_once(VIEW_PATH_INC."menu.php");
         loadView('modules/users/view/', 'signup.php');
-        require_once(VIEW_PATH_INC."footer.php");
+        require_once(VIEW_PATH_INC."footer.php");*/
     }
 
     public function signup_user() {
@@ -30,6 +31,7 @@ class controller_users {
 
         $result = validate_user($userJSON);
         if ($result['resultado']) {
+            $username = explode('@', $result['data']['user_email']);
             $avatar = get_gravatar($result['data']['user_email'], $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
             $arrArgument = array(
                 'avatar' => $avatar,
@@ -37,7 +39,8 @@ class controller_users {
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
                 'tipo' => "client",
                 'token' => "",
-                'user' => "",
+                'user' => $username[0],
+                'activado' => false;
             );
             /* Control de registro */
             set_error_handler('ErrorHandler');
@@ -70,11 +73,8 @@ class controller_users {
                 set_error_handler('ErrorHandler');
                 try {
                     //loadModel
-
                     $arrArgument['token'] = "Ver" . md5(uniqid(rand(), true));
-
                     $arrValue = loadModel(MODEL_USER, "users_model", "create_user", $arrArgument);
-                    echo "en try " . $arrValue;
                 } catch (Exception $e) {
                     $arrValue = false;
                 }
