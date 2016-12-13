@@ -30,6 +30,7 @@ class controller_users {
 
         $result = validate_user($userJSON);
         if ($result['resultado']) {
+            $username = explode('@', $result['data']['user_email']);
             $avatar = get_gravatar($result['data']['user_email'], $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
             $arrArgument = array(
                 'avatar' => $avatar,
@@ -37,7 +38,8 @@ class controller_users {
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
                 'tipo' => "client",
                 'token' => "",
-                'user' => "",
+                'user' => $username[0],
+                'activado' => false;
             );
             /* Control de registro */
             set_error_handler('ErrorHandler');
@@ -70,11 +72,8 @@ class controller_users {
                 set_error_handler('ErrorHandler');
                 try {
                     //loadModel
-
                     $arrArgument['token'] = "Ver" . md5(uniqid(rand(), true));
-
                     $arrValue = loadModel(MODEL_USER, "users_model", "create_user", $arrArgument);
-                    echo "en try " . $arrValue;
                 } catch (Exception $e) {
                     $arrValue = false;
                 }

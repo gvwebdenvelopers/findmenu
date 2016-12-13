@@ -2,6 +2,7 @@
 <section id="banner" height="<?php if($_SESSION['module'] == "home"){ echo "100%";}else{ echo "15%";} ?>">
   <div class="bg-color">
     <header id="header">
+        <div id="alertbanner"></div>
         <div class="container">
             <div id="mySidenav" class="sidenav">
               <ul>
