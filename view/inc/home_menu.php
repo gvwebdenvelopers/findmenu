@@ -17,7 +17,10 @@
                   <a href="<?php friendly('?module=home&function=init'); ?>">Inicio</a>
                 </li>
                 <li class= <?php if($_SESSION['module'] == "menus"){ echo "active";}else{ echo "";} ?>>
-                  <a href="<?php friendly('?module=menus&function=list_menus'); ?>">Menus</a>
+                  <a href="<?php friendly('?module=menus&function=menus_maps'); ?>">Menus</a>
+                </li>
+                <li class= <?php if($_SESSION['module'] == "products"){ echo "active";}else{ echo "";} ?>>
+                  <a href="<?php friendly('?module=products&function=page_products'); ?>">Restaurantes</a>
                 </li>
                 <li class= <?php if($_SESSION['module'] == "contact"){ echo "active";}else{ echo "";} ?>>
                   <a href="<?php friendly('?module=contact&function=view_contact'); ?>">Contact</a>
