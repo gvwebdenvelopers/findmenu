@@ -29,20 +29,20 @@ $(document).ready(function () {
     }
 
     var url = window.location.href;
-    console.log("daDASDASDASDASDASD" + url);
     url = url.split("/");
-    if (url[6] === "activar" && url[7].substring(0, 3) == "Ver"){
+    console.log("4 " + url[4] + " 5 " + url[5]);
+    if (url[4] === "activar" && url[5].substring(0, 3) == "Ver"){
         $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Su email ha sido verificado, disfrute de nuestros servicios</div>");
-    }else if(url[7]==="503"){
+    }else if(url[5]==="503"){
          $("#alertbanner").html("<a href='#alertbanner' class='alertbanner alertbannerErr'>Hay un problema en la base de datos, inténtelo más tarde</div>");
-    }else if (url[6] === "init") {
-        if (url[7] === "reg"){
+    }else if (url[4] === "init") {
+        if (url[5] === "reg"){
             $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Se le ha enviado un email para verificar su cuenta</div>");
-        }else if (url[7] === "rest"){
+        }else if (url[5] === "rest"){
             $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Se ha cambiado satisfactoriamente su contraseña</div>");
         }
-    } else if (url[6] === "profile"){
-        if (url[7] === "done")
+    } else if (url[4] === "profile"){
+        if (url[5] === "done")
             $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Usuario correctamente actualizado</div>");
     }
 });
