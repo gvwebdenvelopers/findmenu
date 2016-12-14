@@ -3,7 +3,7 @@
         $model = $model_path . $model_name . '.class.singleton.php';
 
         if (file_exists($model)) {
-          
+
             include_once($model);
 
             $modelClass = $model_name;
@@ -37,6 +37,7 @@
             echo $view_path;
       			if (isset($arrPassValue))
       				$arrData = $arrPassValue;
+            
       			include_once($view_path);
 
     		} else {

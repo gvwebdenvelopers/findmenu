@@ -5,7 +5,7 @@
   $path = $_SERVER['DOCUMENT_ROOT'] ;
   define('SITE_ROOT', $path);
   //SITE path
-  define('SITE_PATH','http://'.$_SERVER['HTTP_HOST'] );
+  define('SITE_PATH','https://'.$_SERVER['HTTP_HOST'] );
   //production
   define('PRODUCTION',true);
   //amigables

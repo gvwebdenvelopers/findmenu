@@ -6,7 +6,7 @@
     <title>findMenu| <?php if(isset($_SESSION['module'])){ echo $_SESSION['module'];}else{ echo "home";} ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   	<meta name="description" content="Aplicación findMenu, encuentra menús espectaculares de bares y restaurantes cerca de tí" />
-  	<meta name="keywords" content="findMenu, bares, restaurantes, comidas,desayunos, almuerzos, cenas, donde comer, comer barato, buscar platos de menu" />
+  	<meta name="keywords" content="findMenu, bares, restaurantes, comidas, desayunos, almuerzos, cenas, donde comer, comer barato, buscar platos de menu" />
   	<meta name="author" content="Jordi Martínez Frias" />
     <meta name="author" content="Oscar Otero Millán" />
 
@@ -59,7 +59,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>cookies.js"></script>
-    <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>skel.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>skel-layers.min.js"></script>

@@ -48,7 +48,7 @@ function login() {
             if (!response.error) {
                 //create session cookies
                 Tools.createCookie("user", response[0]['usuario'] + "|" + response[0]['avatar'] + "|" + response[0]['tipo'] + "|" + response[0]['nombre'], 1);
-                window.location.href = amigable("?module=home");
+                window.location.href = friendly("?module=home");
             } else {
                 if (response.datos == 503)
                     window.location.href = friendly("?module=home&fn=init&param=503");
