@@ -101,6 +101,7 @@ ul.log li{
 #alertbanner {
     position: relative;
     z-index: 1;
+    height: 10%;
 }
 #alertbanner:hover:after {
     background: hsla(0,0%,0%,.8);

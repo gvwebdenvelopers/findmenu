@@ -1,3 +1,4 @@
+<div id="alertbanner"></div>
 <!--banner-->
 <section id="banner" height="<?php if($_SESSION['module'] == "home"){ echo "100%";}else{ echo "15%";} ?>">
   <div class="bg-color">

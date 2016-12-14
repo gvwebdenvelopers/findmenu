@@ -67,7 +67,7 @@ function validate_user() {
         $.post(amigable("?module=users&function=signup_user"), {signup_user_json: data_users_JSON},
         //$.post("../../users/sign_up/", {signup_user_json: data_users_JSON},
         function (response) {
-            console.log(response);
+            //console.log(response);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {

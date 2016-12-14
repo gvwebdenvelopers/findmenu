@@ -158,3 +158,33 @@ Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.cl
 Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:user | Function:response 200
+14/12/16 05:06:32 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+14/12/16 05:10:47 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+14/12/16 05:10:47 AM | error loadView general
+-> Controller:home/init | Function:response 200
+14/12/16 05:12:57 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+14/12/16 05:17:39 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+14/12/16 05:19:48 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+14/12/16 05:22:12 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200
+14/12/16 05:27:56 AM | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:user | Function:response 200

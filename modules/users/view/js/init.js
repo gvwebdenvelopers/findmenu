@@ -18,23 +18,24 @@ $(document).ready(function () {
     if (user) {
         //console.log(user); //yomogan|https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly//media/flowers.png|client|yomogan
         user = user.split("|");
-        $("#LogProf").html("<a href=" + friendly('?module=user&function=profile') + "><img id='menuImg' class='icon rounded' src='" + user[1] + "'/>" + user[3] + "</a>");
+        $("#LogProf").html("<a href=" + amigable('?module=user&function=profile') + "><img id='menuImg' class='icon rounded' src='" + user[1] + "'/>" + user[3] + "</a>");
         $("#LogProf").after("<li><a id='logout' href='#' >Log Out</a></li>");
         if ( (user[2] === "client")  ) {
-            $("#LogProf").before("<li><a href=" + friendly('?module=products') + ">Mis ofertas</a></li>")
+            $("#LogProf").before("<li><a href=" + amigable('?module=products') + ">Mis ofertas</a></li>")
         } else if (user[2] === "admin") {
-            $("#LogProf").before("<li><a href=" + friendly('?module=admin') + ">Administrar</a></li>")
+            $("#LogProf").before("<li><a href=" + amigable('?module=admin') + ">Administrar</a></li>")
         }
         $("head").append("<script src='https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly/modules/user/view/js/logout.js'></script>");
     }
 
     var url = window.location.href;
+    console.log("daDASDASDASDASDASD" + url);
     url = url.split("/");
     if (url[6] === "activar" && url[7].substring(0, 3) == "Ver"){
         $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Su email ha sido verificado, disfrute de nuestros servicios</div>");
     }else if(url[7]==="503"){
          $("#alertbanner").html("<a href='#alertbanner' class='alertbanner alertbannerErr'>Hay un problema en la base de datos, inténtelo más tarde</div>");
-    }else if (url[6] === "begin") {
+    }else if (url[6] === "init") {
         if (url[7] === "reg"){
             $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Se le ha enviado un email para verificar su cuenta</div>");
         }else if (url[7] === "rest"){

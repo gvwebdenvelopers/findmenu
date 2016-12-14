@@ -1,5 +1,6 @@
     <!--banner-->
     <header id="header">
+        <div id="alertbanner"></div>
         <div class="container_top_nav">
             <div id="myTopnav" class="topnav">
               <ul>
