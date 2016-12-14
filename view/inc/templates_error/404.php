@@ -36,7 +36,6 @@
     }
 </style>
     <div id="page">
-        <br><br><br><br><br><br><br>
         <div id="header" class="status4xx">
             <?php
             if (isset($arrData) && !empty($arrData)) {
@@ -46,7 +45,7 @@
             <?php
             }
             ?>
-            
+
         </div>
         <div id="content">
             <h2>The following error occurred:</h2>

@@ -45,19 +45,54 @@ CREATE TABLE `restaurantes` (
 
 
 
+<<<<<<< HEAD
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+=======
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `lastname` varchar(100) DEFAULT NULL,
+  `birthdate` varchar(10) DEFAULT NULL,
+  `singindate` varchar(10) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `user` varchar(50) DEFAULT NULL,
+  `password` varchar(100) NOT NULL,
+  `usertype` varchar(10) DEFAULT NULL,
+  `avatar` varchar(200) DEFAULT NULL,
+  `country` varchar(45) DEFAULT NULL,
+  `province` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `favorites` varchar(200) DEFAULT NULL,/*id de los menus favoritos del usuario */
+  `active` boolean DEFAULT NULL,
+  `token` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+>>>>>>> oscar_produccion
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `users`
 --
 
+<<<<<<< HEAD
 LOCK TABLES `restaurantes` WRITE;
 /*!40000 ALTER TABLE `restaurantes` DISABLE KEYS */;
 INSERT INTO `restaurantes` VALUES ('000000001','Bar el LLombo','Spain','Valencia','Ontinyent','Avenida conde Torrefiel 30',38.81858815239258,-0.6092583283003639,'Manolo Gimenez','/media/default-restaurante.jpg',10,5,12,4,'/media/default-menu-mediodia.jpg','/media/default-almuerzo.jpg','/media/default-menu-noche.jpg'),('000000002','Bar la Taska','Spain','Valencia','Ontinyent','Carrer Rafael Juan Vidal 20',38.81904216042001,-0.6104985146936248,'Rafa Lopez','/media/default-restaurante.jpg',11,5.5,14,5,'/media/default-menu-mediodia.jpg','/media/default-almuerzo.jpg','/media/default-menu-noche.jpg'),('000000003','Bar Tauro','Spain','Valencia','Ontinyent','Avenida conde Torrefiel 20',38.8195604261144,-0.6099204986509155,'Benito Sanchez','/media/default-restaurante.jpg',9,6,16,3,'/media/default-menu-mediodia.jpg','/media/default-almuerzo.jpg','/media/default-menu-noche.jpg'),('000000004','El Encuentro','Spain','Valencia','Ontinyent','Carretera cv-81',38.81368896566597,-0.6085559248145889,'Juan Muriana','/media/default-restaurante.jpg',10,7,20,2,'/media/default-menu-mediodia.jpg','/media/default-almuerzo.jpg','/media/default-menu-noche.jpg'),('000000005','Hermanos Camineros','Spain','Valencia','Villena','CalleTomasGines Galvis',38.64610936305988,-0.8678655528938228,'Pepe Soriano','/media/default-restaurante.jpg',8,4,12,5,'/media/default-menu-mediodia.jpg','/media/default-almuerzo.jpg','/media/default-menu-noche.jpg');
 /*!40000 ALTER TABLE `restaurantes` ENABLE KEYS */;
+=======
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`name`, `lastname`, `birthdate`, `singindate`, `email`, `user`, `password`, `usertype`,`avatar`,`country`,`province`,`city`, `favorites`, `active`, `token` )
+VALUES ('Jordi','Martinez Frias','20/12/1982','01/12/2016','jordimart@gmail.com','jordimart','pass_jordi123','admin','default-avatar.png','ES','46','Ontinyent', '101:103:104:105', '1', 'wefPFve09eEvveffEEFEe9E'),
+('Oscar','Otero Millán','5/5/1986','25/12/2016','oscarompro@gmail.com','Partida lombria','osotemi','pass_oscar123','default-avatar.png','ES','46','Ontinyent', '101:102:105', '1', 'wsc23eE2y5U655hefPFve09eEvveffEEFEe9E');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+>>>>>>> oscar_produccion
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

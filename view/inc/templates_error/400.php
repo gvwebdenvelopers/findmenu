@@ -3,7 +3,7 @@
         color: #444444;
         background-color: #EEEEEE;
         font-family: 'Trebuchet MS', sans-serif;
-        font-size: 80%;
+        font-size: 1.2em;
     }
     h1 {}
     h2 { font-size: 1.2em; }
@@ -46,7 +46,7 @@
             <?php
             }
             ?>
-            
+
         </div>
         <div id="content">
             <h2>The following error occurred:</h2>

@@ -23,8 +23,15 @@
    
     <!-- Include all compiled plugins (below), or include individual files as needed
     <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.js"></script>
+<<<<<<< HEAD
     <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.min.js"></script>-->
     
 
+=======
+    <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>-->
+>>>>>>> oscar_produccion
 </body>
 </html>

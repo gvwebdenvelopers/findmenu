@@ -3,7 +3,11 @@
         $model = $model_path . $model_name . '.class.singleton.php';
 
         if (file_exists($model)) {
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> oscar_produccion
             include_once($model);
             
             $modelClass = $model_name;
@@ -16,6 +20,7 @@
             $obj = $modelClass::getInstance();
 
             if (isset($arrArgument)) {
+                
                 return $obj->$function($arrArgument);
             }
         } else {
@@ -32,12 +37,15 @@
     		$arrData = '';
                   
     		if (file_exists($view_path)) {
-            
+            echo "entra al if ";
+            echo $view_path;
       			if (isset($arrPassValue))
       				$arrData = $arrPassValue;
       			include_once($view_path);
                         
     		} else {
+            echo "entra al else ";
+            echo $rutaVista . $templateName;
             $result = filter_num_int($rutaVista);
             if ($result['resultado']) {
                 $rutaVista = $result['datos'];
