@@ -22,11 +22,8 @@
   	<meta name="twitter:card" content="" />
 
   	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<<<<<<< HEAD
-  	<!--<link rel="shortcut icon" href="favicon.ico">-->
-=======
+
   	<link rel="shortcut icon" href="/view/img/FindMenu_favicon.ico">
->>>>>>> oscar_produccion
 
   	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
 
@@ -44,18 +41,9 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<<<<<<< HEAD
-    <script type="text/javascript" src="<?php echo JS_PATH ?>cookies.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-     <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-    
-    
-=======
+
     <!--form_user-->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
     <link rel="stylesheet" href="<?php echo USERS_CSS_PATH ?>users.css" type="text/css"/>
@@ -65,14 +53,19 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!--JS-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH ?>bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH ?>cookies.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>skel.min.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH ?>skel-layers.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="<?php echo USERS_JS_PATH ?>init.js"></script>
     <script type="text/javascript" src="<?php echo USERS_JS_PATH ?>sign_up.js"></script>
-    <script type="text/javascript" src="<?php echo JS_PATH ?>cookies.js"></script>
->>>>>>> oscar_produccion
+
   </head>
   <body>

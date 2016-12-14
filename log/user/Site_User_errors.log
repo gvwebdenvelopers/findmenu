@@ -1,8 +1,1 @@
-14.12.2016 05:44:47  |  User:   | ERROR: [8] Undefined index: activado
-Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
--> Controller: user | Funciton:response 200
-14.12.2016 05:47:32  |  User:   | ERROR: [8] Undefined index: activado
-Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
-
--> Controller: user | Funciton:response 200

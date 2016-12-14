@@ -4,7 +4,6 @@
         <name>home</name>
         <uri>home</uri>
     </module>
-<<<<<<< HEAD
      <module>
         <name>products</name>
         <uri>products</uri>
@@ -12,18 +11,8 @@
     <module>
         <name>contact</name>
         <uri>contact</uri>
-=======
     <module>
         <name>users</name>
         <uri>users</uri>
-    </module>
-    <!-- <module>
-        <name>users</name>
-        <uri>users</uri>
->>>>>>> oscar_produccion
-    </module>
-    <module>
-        <name>menus</name>
-        <uri>menus</uri>
     </module>
 </modules>
