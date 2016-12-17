@@ -10,13 +10,13 @@ function send_email($arr) {
     switch ($arr['type']) {
         case 'alta':
             $subject = 'Tu Alta en FindMenu';
-            $ruta = "<a href='" . friendly("?module=login&function=verify&aux=A" . $arr['token'], true) . "'>aqu&iacute;</a>";
+            $ruta = "<a href='" . friendly("?module=login&function=verify&param=" . $arr['token'], true) . "'>aqu&iacute;</a>";
             $body = 'Gracias por unirte a nuestra aplicaci&oacute;n<br> Para finalizar el registro, pulsa ' . $ruta;
             break;
 
         case 'modificacion':
             $subject = 'Tu Nuevo Password en FindMenu<br>';
-            $ruta = '<a href="' . friendly("?module=login&function=verify&aux=F" . $arr['token'], true) . '">aqu&iacute;</a>';
+            $ruta = '<a href="' . friendly("?module=login&function=verify&param=" . $arr['token'], true) . '">aqu&iacute;</a>';
             $body = 'Para recordar tu password pulsa ' . $ruta;
             break;
 
@@ -92,14 +92,19 @@ function send_email($arr) {
     set_error_handler('ErrorHandler');
     try {
         $mail = email::getInstance();
-        $mail->name = $arr['inputName'];
+        
         //Si el tipo es de admin el correo se envia con la paeticion del usuario al admin de la app
         if ($arr['type'] === 'admin') {
+            $mail->name = $arr['inputName'];
             $mail->address = 'gv.web.denvelopers@gmail.com';
             $mail->subject = $subject;
             $mail->body = $html;
             //Si el tipo es de contact le enviamos al usuario una contestación
         } else if ($arr['type'] === 'contact') {
+            $mail->address = $arr['inputEmail'];
+            $mail->subject = $subject;
+            $mail->body = $html;
+        }else if ($arr['type'] === 'alta') {
             $mail->address = $arr['inputEmail'];
             $mail->subject = $subject;
             $mail->body = $html;

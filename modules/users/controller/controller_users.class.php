@@ -82,8 +82,6 @@ class controller_users {
                 restore_error_handler();
 
                 if ($arrValue) {
-			//echo "estoy en token";
-			//exit;
                     sendtoken($arrArgument, "alta");
                     $url = friendly('?module=home&function=init&param=reg', true);
                     $jsondata["success"] = true;
@@ -190,14 +188,13 @@ class controller_users {
             echo json_encode($value);
         }
     }
-    ////////////////////////////////////////////////////end signin///////////////////////////////////////////
-    
+
     function verify() {
         if (substr($_GET['param'], 0, 3) == "Ver") {
             $arrArgument = array(
                 'column' => array('token'),
                 'like' => array($_GET['param']),
-                'field' => array('active'),
+                'field' => array('activado'),
                 'new' => array('1')
             );
 
