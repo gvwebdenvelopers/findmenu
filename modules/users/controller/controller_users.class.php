@@ -50,7 +50,7 @@ class controller_users {
                 if ($arrValue[0]['total'] == 1) {
                     $arrValue = false;
                     $typeErr = 'Name';
-                    $error = "Nombre de usuario no disponible";
+                    $error = "Ya existe un usuario con esta cuenta: ". $arrArgument['email'];
                 } else {
                     $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('email'), 'like' => array($arrArgument['email'])));
                     if ($arrValue[0]['total'] == 1) {

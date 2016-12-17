@@ -45,20 +45,17 @@ function validate_user() {
 
      if (!emailreg.test($("#user_email").val()) || $("#user_email").val() === "") {
         $("#user_email").focus().after("<span class='error'>Ingrese un email correcto</span>");
-        console.log("user_email");
         result = false;
     }  else if ($("#password").val() === "") {
         $("#password").focus().after("<span class='error'>Ingrese su contraseña</span>");
-        console.log("password");
         result = false;
     } else if ($("#password").val().length < 6) {
         $("#password").focus().after("<span class='error'>Mínimo 6 carácteres para la contraseña</span>");
         result = false;
-        console.log("password2");
     } else if ($("#conf_password").val() !== $("#conf_password").val()) {
-        $("#conf_password").focus().after("<span class='error'>Debe coincidir con la contraseña</span>");
+        $("#conf_password").focus().after("<span class='error'>Las contraseñas no coinciden</span>");
         result = false;
-        console.log("password3");
+
     }
     if (result) {
         var data = {"user_email": email, "password": password, "password2": password2  };
@@ -73,10 +70,12 @@ function validate_user() {
             } else {
                 if (response.typeErr === "Email") {
                     $("#inputEmail").focus().after("<span class='error'>" + response.error + "</span>");
-                } else {
-
-                    if (response["data"]["user_email"] !== undefined && response["data"]["user_email"] !== null) {
-                        $("#inputEmail").focus().after("<span class='error'>" + response["data"]["user_email"] + response.error.email + "</span>");
+                }else if (response.typeErr === "Name") {
+                    $("#inputEmail").focus().after("<span class='error'>" + response.error + "</span>");
+                }else {
+                    console.log(response);
+                    if (response["data"]["email"] !== undefined && response["data"]["email"] !== null) {
+                        $("#inputEmail").focus().after("<span class='error'>" + response["data"]["email"] + response.error.email + "</span>");
                     }
 
                     if (response["data"]["password"] !== undefined && response["data"]["password"] !== null) {

@@ -7,7 +7,7 @@
   //SITE path
   define('SITE_PATH','https://'.$_SERVER['HTTP_HOST'] );
   //production
-  define('PRODUCTION',true);
+  define('PRODUCTION',TRUE);
   //amigables
   define('URL_FRIENDLY', TRUE);
 
