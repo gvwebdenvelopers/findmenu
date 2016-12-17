@@ -89,9 +89,9 @@ function validate_user() {
                 }
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
-            console.log(xhr);
-            console.log(xhr.responseJSON);
-            console.log(xhr.responseText);
+            //console.log(xhr);
+            //console.log(xhr.responseJSON);
+            //console.log(xhr.responseText);
             if( (xhr.responseJSON === undefined) || (xhr.responseJSON === null) )
                 xhr.responseJSON = JSON.parse(xhr.responseText);
                 console.log(xhr.responseJSON);

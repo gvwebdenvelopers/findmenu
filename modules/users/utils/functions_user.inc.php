@@ -182,7 +182,7 @@ function sendtoken($arrArgument, $type) {
     );
     set_error_handler('ErrorHandler');
     try {
-        //enviar_email($mail);
+        send_email($mail);
         return true;
     } catch (Exception $e) {
         return false;

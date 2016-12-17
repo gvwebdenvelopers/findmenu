@@ -189,13 +189,13 @@ class controller_users {
         }
     }
     ////////////////////////////////////////////////////end signin///////////////////////////////////////////
-    /*
+    
     function verify() {
         if (substr($_GET['param'], 0, 3) == "Ver") {
             $arrArgument = array(
                 'column' => array('token'),
                 'like' => array($_GET['param']),
-                'field' => array('activado'),
+                'field' => array('active'),
                 'new' => array('1')
             );
 
@@ -215,7 +215,7 @@ class controller_users {
         }
     }
     ////////////////////////////////////////////////////end signup///////////////////////////////////////////
-
+/*
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
     function restore() {
         loadView('modules/user/view/', 'restore.php');

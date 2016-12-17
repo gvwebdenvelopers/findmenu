@@ -16,4 +16,8 @@
         <name>signup_user</name>
         <uri>signup_user</uri>
     </function>
+      <function>
+        <name>verify</name>
+        <uri>verify</uri>
+    </function>
 </functions>

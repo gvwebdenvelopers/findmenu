@@ -10,13 +10,13 @@ function send_email($arr) {
     switch ($arr['type']) {
         case 'alta':
             $subject = 'Tu Alta en FindMenu';
-            $ruta = "<a href='" . amigable("?module=login&function=activar&aux=A" . $arr['token'], true) . "'>aqu&iacute;</a>";
+            $ruta = "<a href='" . amigable("?module=login&function=verify&aux=A" . $arr['token'], true) . "'>aqu&iacute;</a>";
             $body = 'Gracias por unirte a nuestra aplicaci&oacute;n<br> Para finalizar el registro, pulsa ' . $ruta;
             break;
 
         case 'modificacion':
             $subject = 'Tu Nuevo Password en FindMenu<br>';
-            $ruta = '<a href="' . amigable("?module=login&function=activar&aux=F" . $arr['token'], true) . '">aqu&iacute;</a>';
+            $ruta = '<a href="' . amigable("?module=login&function=verify&aux=F" . $arr['token'], true) . '">aqu&iacute;</a>';
             $body = 'Para recordar tu password pulsa ' . $ruta;
             break;
 
