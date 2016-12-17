@@ -183,3 +183,5 @@ Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.cl
 Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller: users | Funciton:response 200
+17.12.2016 01:20:48  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200

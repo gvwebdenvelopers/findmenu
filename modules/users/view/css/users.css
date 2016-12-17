@@ -217,9 +217,13 @@ ul.log li{
 }
 #LogProf{
     font-weight: bold;
-
 }
 
+#LogProf img{
+    height: 120px;
+    width: 120px;
+    align-self: center; 
+}
 /****************Perfil***************************/
 
 .form-profile-heading {

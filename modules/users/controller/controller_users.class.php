@@ -95,7 +95,6 @@ class controller_users {
                     echo json_encode($jsondata);
                 }
             } else {
-                echo "en else arrargument";
                 $jsondata["success"] = false;
                 $jsondata["typeErr"] = $typeErr;
                 $jsondata["error"] = $error;
@@ -128,7 +127,7 @@ class controller_users {
         try {
             //loadModel
             $arrValue = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
-            
+
             $arrValue = password_verify($user['password'], $arrValue[0]['password']);
         } catch (Exception $e) {
             $arrValue = "error";
@@ -140,7 +139,7 @@ class controller_users {
                 set_error_handler('ErrorHandler');
                 try {
                     $arrArgument = array(
-                        'column' => array("user", "activado"),
+                        'column' => array("user", "active"),
                         'like' => array($user['user'], "1")
                     );
                     $arrValue = loadModel(MODEL_USER, "users_model", "count", $arrArgument);
@@ -153,8 +152,8 @@ class controller_users {
                             'field' => array('*')
                         );
                         $user = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
-                        //echo json_encode($user);
-                        //exit();
+                        echo json_encode($user);
+                        exit();
                     } else {
                         $value = array(
                             "error" => true,

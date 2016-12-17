@@ -10,7 +10,7 @@
                 <li class="menu_logo">
                   <span>findMenu</span>
                 </li>
-                <li id="LogProf">
+                <li id="LogProf" >
                     <a href= "<?php friendly('?module=users'); ?>";
                     class="button special" data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
                 </li>

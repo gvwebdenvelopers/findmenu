@@ -19,7 +19,7 @@ $(document).ready(function () {
     if (user) {
         //console.log(user); //yomogan|https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly//media/flowers.png|client|yomogan
         user = user.split("|");
-        $("#LogProf").html("<a href=" + amigable('?module=user&function=profile') + "><img id='menuImg' class='icon rounded' src='" + user[1] + "'/>" + user[3] + "</a>");
+        $("#LogProf").html("<a href=" + amigable('?module=users&function=profile') + "><img id='menuImg' class='icon rounded' src='" + user[1] + "'/>" + user[3] + "</a>");
         $("#LogProf").after("<li><a id='logout' href='#' >Log Out</a></li>");
         if ( (user[2] === "client")  ) {
             $("#LogProf").before("<li><a href=" + amigable('?module=products') + ">Mis ofertas</a></li>")
