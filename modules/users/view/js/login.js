@@ -39,23 +39,24 @@ function login() {
             value = true;
     }
 
-    var data = {"usuario": user, "pass": pass};
+    var data = {"user": user, "password": pass};
     var login_JSON = JSON.stringify(data);
     if (value){
-        $.post(friendly("?module=user&function=login"), {login_json: login_JSON},
+        $.post(amigable("?module=users&function=login"), {login_json: login_JSON},
         function (response) {
-            console.log(response);
+            console.log(response[0]);
             if (!response.error) {
                 //create session cookies
-                Tools.createCookie("user", response[0]['usuario'] + "|" + response[0]['avatar'] + "|" + response[0]['tipo'] + "|" + response[0]['nombre'], 1);
-                window.location.href = friendly("?module=home");
+                Tools.createCookie("user", response[0]['user'] + "|" + response[0]['avatar'] + "|" + response[0]['type'] + "|" + response[0]['name'], 1);
+                window.location.href = amigable("?module=home");
             } else {
                 if (response.datos == 503)
-                    window.location.href = friendly("?module=home&fn=init&param=503");
+                    window.location.href = amigable("?module=home&fn=init&param=503");
                 else
                     $("#inputPass").focus().after("<span class='error'>" + response.datos + "</span>");
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
+            console.log(xhr);
             console.log(xhr.responseText);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');

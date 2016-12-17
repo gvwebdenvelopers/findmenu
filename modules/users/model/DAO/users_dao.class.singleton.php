@@ -62,6 +62,31 @@ class users_dao {
         return $db->listar($stmt);
     }
 
+    public function select_DAO($db, $arrArgument) {
+        $i = count($arrArgument['column']);
+        $k = count($arrArgument['field']);
+        $sql1 = "SELECT ";
+        $sql2 = " FROM users WHERE ";
+        $fields = "";
+        $sql = "";
+
+        for ($j = 0; $j < $i; $j++) {
+            if ($i > 1 && $j != 0)
+                $sql.=" AND ";
+            $sql .= $arrArgument['column'][$j] . " like '" . $arrArgument['like'][$j] . "'";
+        }
+
+        for ($l = 0; $l < $k; $l++) {
+            if ($l > 1 && $k != 0)
+                $fields.=", ";
+            $fields .= $arrArgument['field'][$l];
+        }
+
+        $sql = $sql1 . $fields . $sql2 . $sql;
+        $stmt = $db->ejecutar($sql);
+        return $db->listar($stmt);
+    }
+
     public function obtain_countries_DAO($url) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);

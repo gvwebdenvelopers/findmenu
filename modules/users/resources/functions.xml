@@ -13,7 +13,7 @@
         <uri>signup_user</uri>
     </function>
     <function>
-        <name></name>
-        <uri></uri>
+        <name>login</name>
+        <uri>login</uri>
     </function>
 </functions>

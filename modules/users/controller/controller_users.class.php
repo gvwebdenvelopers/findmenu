@@ -5,7 +5,7 @@ class controller_users {
         include (LIBS . 'password_compat-master/lib/password.php');
         include (UTILS . 'upload.inc.php');
         //require_once(LIBS . 'twitteroauth/twitteroauth.php');
-        $_SESSION['module'] = "user";
+        $_SESSION['module'] = "users";
     }
 
     function init(){
@@ -107,6 +107,85 @@ class controller_users {
             echo json_encode($jsondata);
         }
     }
+
+    ////////////////////////////////////////////////////begin signin///////////////////////////////////////////
+    public function login() {
+        $user = json_decode($_POST['login_json'], true);
+        $column = array(
+            'user'
+        );
+        $like = array(
+            $user['user']
+        );
+
+        $arrArgument = array(
+            'column' => $column,
+            'like' => $like,
+            'field' => array('password')
+        );
+
+        set_error_handler('ErrorHandler');
+        try {
+            //loadModel
+            $arrValue = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
+            
+            $arrValue = password_verify($user['password'], $arrValue[0]['password']);
+        } catch (Exception $e) {
+            $arrValue = "error";
+        }
+        restore_error_handler();
+
+        if ($arrValue !== "error") {
+            if ($arrValue) { //OK
+                set_error_handler('ErrorHandler');
+                try {
+                    $arrArgument = array(
+                        'column' => array("user", "activado"),
+                        'like' => array($user['user'], "1")
+                    );
+                    $arrValue = loadModel(MODEL_USER, "users_model", "count", $arrArgument);
+                    //echo json_encode($arrValue);
+                    //exit();
+                    if ($arrValue[0]["total"] == 1) {
+                        $arrArgument = array(
+                            'column' => array("user"),
+                            'like' => array($user['user']),
+                            'field' => array('*')
+                        );
+                        $user = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
+                        //echo json_encode($user);
+                        //exit();
+                    } else {
+                        $value = array(
+                            "error" => true,
+                            "datos" => "El usuario no ha sido activado, revise su correo"
+                        );
+                        echo json_encode($value);
+                        exit();
+                    }
+                } catch (Exception $e) {
+                    $value = array(
+                        "error" => true,
+                        "datos" => 503
+                    );
+                    echo json_encode($value);
+                }
+            } else {
+                $value = array(
+                    "error" => true,
+                    "datos" => "El usuario y la contraseña no coinciden"
+                );
+                echo json_encode($value);
+            }
+        } else {
+            $value = array(
+                "error" => true,
+                "datos" => 503
+            );
+            echo json_encode($value);
+        }
+    }
+    ////////////////////////////////////////////////////end signin///////////////////////////////////////////
     /*
     function verify() {
         if (substr($_GET['param'], 0, 3) == "Ver") {
@@ -229,83 +308,6 @@ class controller_users {
         }
     }
     ////////////////////////////////////////////////////end restore///////////////////////////////////////////
-
-    ////////////////////////////////////////////////////begin signin///////////////////////////////////////////
-    public function login() {
-        $user = json_decode($_POST['login_json'], true);
-        $column = array(
-            'usuario'
-        );
-        $like = array(
-            $user['usuario']
-        );
-
-        $arrArgument = array(
-            'column' => $column,
-            'like' => $like,
-            'field' => array('password')
-        );
-
-        set_error_handler('ErrorHandler');
-        try {
-            //loadModel
-            $arrValue = loadModel(MODEL_USER, "user_model", "select", $arrArgument);
-            $arrValue = password_verify($user['pass'], $arrValue[0]['password']);
-        } catch (Exception $e) {
-            $arrValue = "error";
-        }
-        restore_error_handler();
-
-        if ($arrValue !== "error") {
-            if ($arrValue) { //OK
-                set_error_handler('ErrorHandler');
-                try {
-                    $arrArgument = array(
-                        'column' => array("usuario", "activado"),
-                        'like' => array($user['usuario'], "1")
-                    );
-                    $arrValue = loadModel(MODEL_USER, "user_model", "count", $arrArgument);
-
-                    if ($arrValue[0]["total"] == 1) {
-                        $arrArgument = array(
-                            'column' => array("usuario"),
-                            'like' => array($user['usuario']),
-                            'field' => array('*')
-                        );
-                        $user = loadModel(MODEL_USER, "user_model", "select", $arrArgument);
-                        echo json_encode($user);
-                        exit();
-                    } else {
-                        $value = array(
-                            "error" => true,
-                            "datos" => "El usuario no ha sido activado, revise su correo"
-                        );
-                        echo json_encode($value);
-                        exit();
-                    }
-                } catch (Exception $e) {
-                    $value = array(
-                        "error" => true,
-                        "datos" => 503
-                    );
-                    echo json_encode($value);
-                }
-            } else {
-                $value = array(
-                    "error" => true,
-                    "datos" => "El usuario y la contraseña no coinciden"
-                );
-                echo json_encode($value);
-            }
-        } else {
-            $value = array(
-                "error" => true,
-                "datos" => 503
-            );
-            echo json_encode($value);
-        }
-    }
-    ////////////////////////////////////////////////////end signin///////////////////////////////////////////
 
     ////////////////////////////////////////////////////begin profile///////////////////////////////////////////
     function profile() {
