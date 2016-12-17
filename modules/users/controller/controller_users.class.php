@@ -85,6 +85,7 @@ class controller_users {
 			//echo "estoy en token";
 			//exit;
                     sendtoken($arrArgument, "alta");
+                    
                     $url = friendly('?module=home&function=init&param=reg', true);
                     $jsondata["success"] = true;
                     $jsondata["redirect"] = $url;
@@ -197,7 +198,7 @@ class controller_users {
             $arrArgument = array(
                 'column' => array('token'),
                 'like' => array($_GET['param']),
-                'field' => array('active'),
+                'field' => array('activado'),
                 'new' => array('1')
             );
 
