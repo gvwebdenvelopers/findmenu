@@ -203,3 +203,59 @@ Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.cl
 -> Controller: users | Funciton:response 200
 17.12.2016 03:47:27  |  User:   | error loadView general
 -> Controller: users | Funciton:response 200
+17.12.2016 05:43:59  |  User:   | ERROR: [2] mysqli::mysqli(): (HY000/1045): Access denied for user 'osotemi_web'@'localhost' (using password: YES)
+Warning on line 44 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+17.12.2016 05:43:59  |  User:   | ERROR: [2] mysqli::select_db(): Couldn't fetch mysqli
+Warning on line 45 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+17.12.2016 05:43:59  |  User:   | ERROR: [2] mysqli::query(): Couldn't fetch mysqli
+Warning on line 49 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller:  | Funciton:response 200
+17.12.2016 05:44:11  |  User:   | ERROR: [2] mysqli::mysqli(): (HY000/1045): Access denied for user 'osotemi_web'@'localhost' (using password: YES)
+Warning on line 44 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: products | Funciton:response 200
+17.12.2016 05:44:11  |  User:   | ERROR: [2] mysqli::select_db(): Couldn't fetch mysqli
+Warning on line 45 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: products | Funciton:response 200
+17.12.2016 05:44:11  |  User:   | ERROR: [2] mysqli::query(): Couldn't fetch mysqli
+Warning on line 49 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: products | Funciton:response 200
+17.12.2016 05:44:11  |  User:   | ERROR: [2] mysqli::mysqli(): (HY000/1045): Access denied for user 'osotemi_web'@'localhost' (using password: YES)
+Warning on line 44 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: products | Funciton:response 200
+17.12.2016 05:44:11  |  User:   | ERROR: [2] mysqli::select_db(): Couldn't fetch mysqli
+Warning on line 45 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: products | Funciton:response 200
+17.12.2016 05:44:11  |  User:   | ERROR: [2] mysqli::query(): Couldn't fetch mysqli
+Warning on line 49 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: products | Funciton:response 200
+17.12.2016 05:52:15  |  User:   | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+17.12.2016 05:53:42  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 131 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+17.12.2016 05:54:02  |  User:   | ERROR: [8] Undefined index: activado
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+17.12.2016 05:54:21  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 131 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+17.12.2016 05:57:39  |  User:   | ERROR: [2] parse_ini_file(email.ini): failed to open stream: No such file or directory
+Warning on line 18 in file /var/www/findmenu/classes/email/email.class.singleton.php
+
+-> Controller: contact | Funciton:response 200

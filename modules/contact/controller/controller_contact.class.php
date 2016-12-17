@@ -30,7 +30,7 @@ class controller_contact {
             set_error_handler('ErrorHandler');
             try {
                 //envia un correo con los datos introducidos
-                if (responder_email($arrArgument)) {
+                if (send_email($arrArgument)) {
                     $value = true;
                 } else {
                     $value = false;
@@ -53,7 +53,7 @@ class controller_contact {
             try {
                 //envia un correo al admin dependiendo de el resultado
                 //utiliza la función de utilidades mail.inv.php
-                if (responder_email($arrArgument) && ($value==true)) {
+                if (send_email($arrArgument) && ($value==true)) {
                     echo "true|Tu mensaje ha sido enviado correctamente ";
                 } else {
                     echo "false|Error en el servidor. Intentelo más tarde...";

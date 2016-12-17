@@ -1,6 +1,6 @@
 <?php
 
-function responder_email($arr) {
+function send_email($arr) {
     $html = '';
     $subject = '';
     $body = '';
@@ -22,7 +22,7 @@ function responder_email($arr) {
 
         case 'contact':
             $subject = 'Tu Petición a Findmenu ha sido enviada';
-            $ruta = "https://solarspain.jordimart.tk";
+            $ruta = "https://findmenu.tk";
             $body = 'Para visitar nuestra web, pulsa ' . $ruta;
             break;
 
