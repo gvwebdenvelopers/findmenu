@@ -29,8 +29,8 @@ class users_dao {
         $poblacion = " ";
         $favorites = " ";
         $token = $arrArgument['token'];
-        if ($arrArgument['activado'])
-            $activado = $arrArgument['activado'];
+        if ($arrArgument['active'])
+            $activado = $arrArgument['active'];
         else
             $activado = 0;
 
