@@ -15,7 +15,7 @@ function amigable(url) {
         var aux = url[i].split("=");
         link +=  "/"+aux[1];
     }
-    console.log( "https://findmenu.es" + link);
+    //console.log( "https://findmenu.es" + link);
     return "https://findmenu.es" + link;
     //return "http://www.findmenu.tk/" + link;
 }

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <functions>
-  <function>
-      <name>init</name>
-      <uri>init</uri>
-  </function>
+    <function>
+        <name>init</name>
+        <uri>init</uri>
+    </function>
+    <function>
+        <name>login</name>
+        <uri>login</uri>
+    </function>
     <function>
         <name>signup</name>
         <uri>signup</uri>
@@ -11,9 +15,5 @@
     <function>
         <name>signup_user</name>
         <uri>signup_user</uri>
-    </function>
-    <function>
-        <name>login</name>
-        <uri>login</uri>
     </function>
 </functions>

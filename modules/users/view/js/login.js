@@ -44,11 +44,11 @@ function login() {
     if (value){
         $.post(amigable("?module=users&function=login"), {login_json: login_JSON},
         function (response) {
-            //console.log(response[0]);
+            console.log(response[0]);
             if (!response.error) {
                 //create session cookies
                 Tools.createCookie("user", response[0]['user'] + "|" + response[0]['avatar'] + "|" + response[0]['type'] + "|" + response[0]['name'], 1);
-                window.location.href = amigable("?module=home");
+                window.location.href = amigable("?module=home&fn=init");
             } else {
                 if (response.datos == 503)
                     window.location.href = amigable("?module=home&fn=init&param=503");
@@ -57,7 +57,7 @@ function login() {
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
             //console.log(xhr);
-            //console.log(xhr.responseText);
+            console.log(xhr.responseText);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
             } else if (xhr.status === 404) {

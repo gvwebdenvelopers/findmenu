@@ -152,6 +152,10 @@ class controller_users {
                             'field' => array('*')
                         );
                         $user = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
+                        $url = friendly('?module=home', true);
+                        $jsondata["success"] = true;
+                        $jsondata["redirect"] = $url;
+                        $jsondata["user"] =$user;
                         echo json_encode($user);
                         exit();
                     } else {

@@ -185,3 +185,15 @@ Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.cl
 -> Controller: users | Funciton:response 200
 17.12.2016 01:20:48  |  User:   | error loadView general
 -> Controller: users | Funciton:response 200
+17.12.2016 02:22:01  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 131 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+17.12.2016 02:22:14  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 131 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+17.12.2016 02:22:22  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 131 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200

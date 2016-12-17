@@ -26,7 +26,7 @@ $(document).ready(function () {
         } else if (user[2] === "admin") {
             $("#LogProf").before("<li><a href=" + amigable('?module=admin') + ">Administrar</a></li>")
         }
-        $("head").append("<script src='https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly/modules/user/view/js/logout.js'></script>");
+        $("head").append("<script src='https://findmenu.es/modules/users/view/js/logout.js'></script>");
     }
 
     var url = window.location.href;
