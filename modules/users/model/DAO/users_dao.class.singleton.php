@@ -29,8 +29,8 @@ class users_dao {
         $poblacion = " ";
         $favorites = " ";
         $token = $arrArgument['token'];
-        if ($arrArgument['activado'])
-            $activado = $arrArgument['activado'];
+        if ($arrArgument['active'])
+            $activado = $arrArgument['active'];
         else
             $activado = 0;
 
@@ -85,6 +85,38 @@ class users_dao {
         $sql = $sql1 . $fields . $sql2 . $sql;
         $stmt = $db->ejecutar($sql);
         return $db->listar($stmt);
+    }
+    
+    public function update_DAO($db, $arrArgument) {
+        /*
+         * @param= $arrArgument( column => array(colum),
+         *                          like => array(like),
+         *                          field => array(field),
+         *                          new => array(new)
+         *                      );
+         */
+        $i = count($arrArgument['field']);
+        $k = count($arrArgument['column']);
+
+        $sql1 = "UPDATE users SET ";
+        $sql2 = "  WHERE ";
+
+        for ($j = 0; $j < $i; $j++) {
+            if ($i > 1 && $j != 0)
+                $change.=", ";
+            $change .= $arrArgument['field'][$j] . "='" . $arrArgument['new'][$j] . "'";
+        }
+        for ($l = 0; $l < $k; $l++) {
+            if ($k > 1 && $l != 0)
+                $sql.=" AND ";
+            $sql .= $arrArgument['column'][$l] . " like '" . $arrArgument['like'][$l] . "'";
+        }
+
+
+
+        $sql = $sql1 . $change . $sql2 . $sql;
+
+        return $db->ejecutar($sql);
     }
 
     public function obtain_countries_DAO($url) {

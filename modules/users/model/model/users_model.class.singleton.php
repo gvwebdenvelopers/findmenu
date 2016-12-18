@@ -20,16 +20,16 @@ class users_model {
         return $this->bll->create_user_BLL($arrArgument);
     }
 
-    public function update($arrArgument) {
-        return $this->bll->update_BLL($arrArgument);
-    }
-
     public function count($arrArgument) {
         return $this->bll->count_BLL($arrArgument);
     }
 
      public function select($arrArgument) {
         return $this->bll->select_BLL($arrArgument);
+    }
+    
+    public function update($arrArgument) {
+        return $this->bll->update_BLL($arrArgument);
     }
 
     public function obtain_countries($url) {

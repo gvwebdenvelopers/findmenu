@@ -190,24 +190,26 @@ class controller_users {
     }
 
     function verify() {
+        
+        //a esta función se llega cuando el usuario verifica su alta
         if (substr($_GET['param'], 0, 3) == "Ver") {
             $arrArgument = array(
                 'column' => array('token'),
                 'like' => array($_GET['param']),
-                'field' => array('activado'),
+                'field' => array('active'),
                 'new' => array('1')
             );
-
             set_error_handler('ErrorHandler');
             try {
-                $value = loadModel(MODEL_USER, "user_model", "update", $arrArgument);
+                //consulta de sql que modificará el estado activado a 1 si es igual el token
+                //la consulta esta preparada para actualizar mas cosas, se usa en mas lugares.
+                $value = loadModel(MODEL_USER, "user_model", "update", $arrArgument);          
             } catch (Exception $e) {
                 $value = false;
             }
             restore_error_handler();
-
             if ($value) {
-                loadView('modules/main/view/', 'main.php');
+                loadView('modules/home/view/', 'home.php');
             } else {
                 showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
             }

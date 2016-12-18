@@ -1,0 +1,4 @@
+18.12.2016 02:29:42  |  User:   | ERROR: [8] Undefined index: active
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200

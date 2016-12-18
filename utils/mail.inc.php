@@ -10,13 +10,15 @@ function send_email($arr) {
     switch ($arr['type']) {
         case 'alta':
             $subject = 'Tu Alta en FindMenu';
-            $ruta = "<a href='" . friendly("?module=login&function=verify&param=" . $arr['token'], true) . "'>aqu&iacute;</a>";
+            $ruta = "<a href='" . friendly("?module=users&function=verify&param=" . $arr['token'], true) . "'>aqu&iacute;</a>";
+            
             $body = 'Gracias por unirte a nuestra aplicaci&oacute;n<br> Para finalizar el registro, pulsa ' . $ruta;
             break;
+        //El link de href nos dirigirá a lafunciónverify en el controlador
 
         case 'modificacion':
             $subject = 'Tu Nuevo Password en FindMenu<br>';
-            $ruta = '<a href="' . friendly("?module=login&function=verify&param=" . $arr['token'], true) . '">aqu&iacute;</a>';
+            $ruta = '<a href="' . friendly("?module=users&function=verify&param=" . $arr['token'], true) . '">aqu&iacute;</a>';
             $body = 'Para recordar tu password pulsa ' . $ruta;
             break;
 

@@ -54,16 +54,16 @@ class controller_contact {
                 //envia un correo al admin dependiendo de el resultado
                 //utiliza la función de utilidades mail.inv.php
                 if (send_email($arrArgument) && ($value==true)) {
-                    echo "true|Tu mensaje ha sido enviado correctamente ";
+                    echo "Tu mensaje ha sido enviado correctamente ";
                 } else {
-                    echo "false|Error en el servidor. Intentelo más tarde...";
+                    echo "Error en el servidor. Intentelo más tarde...";
                 }
             } catch (Exception $e) {
-                echo "false|Error en el servidor. Intentelo más tarde...";
+                echo "Error en el servidor. Intentelo más tarde...";
             }
             restore_error_handler();
         } else {
-            echo "false|Error en el servidor. Intentelo más tarde...";
+            echo "Error en el servidor. Intentelo más tarde...";
         }
     }
 
