@@ -21,13 +21,33 @@
     padding-left: 27px;
 }
 
+#fb label{
+    font-size: 0.8em;
+    padding: 10px;
+    color: #123;
+}
+#fb span{
+    background:  url("../img/fc_icon.png") ;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-size: 40px;
+    background-color: rgb(54,88,153);
+    line-height: 40px;
+    color: white;
+    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 1.3em;
+}
+
 ul.log{
     margin:0px;
 }
 
 ul.log li{
     display: inline-block;
-    padding: 13px;
+    padding: 10px;
+    margin: 5px;
 }
 .modal-body{
     background-color: #e9f2fc;
@@ -222,7 +242,7 @@ ul.log li{
 #LogProf img{
     height: 120px;
     width: 120px;
-    align-self: center; 
+    align-self: center;
 }
 /****************Perfil***************************/
 
