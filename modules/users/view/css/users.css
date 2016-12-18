@@ -39,6 +39,10 @@
     font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
     font-size: 1.3em;
 }
+#fb span:hover{
+    color: gold;
+    border: 2px solid gold;
+}
 
 ul.log{
     margin:0px;

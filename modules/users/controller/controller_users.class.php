@@ -215,7 +215,67 @@ class controller_users {
         }
     }
     ////////////////////////////////////////////////////end signup///////////////////////////////////////////
+    */
+    ////////////////////////////////////////////////////begin social///////////////////////////////////////////
+    function social_signin() { //utilitzada per Facebook i Twitter
+        $user = json_decode($_POST['user'], true);
+        if ($user['twitter']) {
+            $user['apellidos'] = "";
+            $user['email'] = "";
+            $mail = $user['user_id'] . "@gmail.com";
+        }
+        set_error_handler('ErrorHandler');
+        try {
+            $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('user'), 'like' => array($user['id'])));
+        } catch (Exception $e) {
+            $arrValue = false;
+        }
+        restore_error_handler();
 
+        if (!$arrValue[0]["total"]) {
+            if ($user['email'])
+                $avatar = 'https://graph.facebook.com/' . ($user['id']) . '/picture';
+            else
+                $avatar = get_gravatar($mail, $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
+
+            $arrArgument = array(
+              'avatar' => $avatar,
+              'email' => $user['email'],,
+              'name' => $user['nombre'],
+              'lastname' => $user['apellidos'],
+              'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
+              'tipo' => "client",
+              'active' => "1"
+              'user' => $user['id'],
+            );
+
+            set_error_handler('ErrorHandler');
+            try {
+                $value = loadModel(MODEL_USER, "users_model", "create_user", $arrArgument);
+            } catch (Exception $e) {
+                $value = false;
+            }
+            restore_error_handler();
+        } else
+            $value = true;
+
+        if ($value) {
+            set_error_handler('ErrorHandler');
+            $arrArgument = array(
+                'column' => array("user"),
+                'like' => array($user['id']),
+                'field' => array('*')
+            );
+            $user = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
+            restore_error_handler();
+            echo json_encode($user);
+        } else {
+            echo json_encode(array('error' => true, 'datos' => 503));
+        }
+    }
+
+    ////////////////////////////////////////////////////end social///////////////////////////////////////////
+    /*
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
     function restore() {
         loadView('modules/user/view/', 'restore.php');
@@ -500,62 +560,5 @@ class controller_users {
     }
     ////////////////////////////////////////////////////end profile///////////////////////////////////////////
 
-    ////////////////////////////////////////////////////begin social///////////////////////////////////////////
-    function social_signin() { //utilitzada per Facebook i Twitter
-        $user = json_decode($_POST['user'], true);
-        if ($user['twitter']) {
-            $user['apellidos'] = "";
-            $user['email'] = "";
-            $mail = $user['user_id'] . "@gmail.com";
-        }
-        set_error_handler('ErrorHandler');
-        try {
-            $arrValue = loadModel(MODEL_USER, "user_model", "count", array('column' => array('usuario'), 'like' => array($user['id'])));
-        } catch (Exception $e) {
-            $arrValue = false;
-        }
-        restore_error_handler();
-
-        if (!$arrValue[0]["total"]) {
-            if ($user['email'])
-                $avatar = 'https://graph.facebook.com/' . ($user['id']) . '/picture';
-            else
-                $avatar = get_gravatar($mail, $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
-
-            $arrArgument = array(
-                'usuario' => $user['id'],
-                'nombre' => $user['nombre'],
-                'apellidos' => $user['apellidos'],
-                'email' => $user['email'],
-                'tipo' => 'client',
-                'avatar' => $avatar,
-                'activado' => "1"
-            );
-
-            set_error_handler('ErrorHandler');
-            try {
-                $value = loadModel(MODEL_USER, "user_model", "create_user", $arrArgument);
-            } catch (Exception $e) {
-                $value = false;
-            }
-            restore_error_handler();
-        } else
-            $value = true;
-
-        if ($value) {
-            set_error_handler('ErrorHandler');
-            $arrArgument = array(
-                'column' => array("usuario"),
-                'like' => array($user['id']),
-                'field' => array('*')
-            );
-            $user = loadModel(MODEL_USER, "user_model", "select", $arrArgument);
-            restore_error_handler();
-            echo json_encode($user);
-        } else {
-            echo json_encode(array('error' => true, 'datos' => 503));
-        }
-    }
-*/
-    ////////////////////////////////////////////////////end social///////////////////////////////////////////
+    */
 }
