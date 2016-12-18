@@ -192,7 +192,7 @@ class controller_users {
     function verify() {
         
         //a esta función se llega cuando el usuario verifica su alta
-        if (substr($_GET['param'], 0, 3) == "Ver") {
+        //if (substr($_GET['param'], 0, 3) == "Ver") {
             $arrArgument = array(
                 'column' => array('token'),
                 'like' => array($_GET['param']),
@@ -203,29 +203,36 @@ class controller_users {
             try {
                 //consulta de sql que modificará el estado activado a 1 si es igual el token
                 //la consulta esta preparada para actualizar mas cosas, se usa en mas lugares.
-                $value = loadModel(MODEL_USER, "user_model", "update", $arrArgument);          
+                $value = loadModel(MODEL_USER, "users_model", "update", $arrArgument);          
             } catch (Exception $e) {
                 $value = false;
             }
             restore_error_handler();
             if ($value) {
+                require_once(VIEW_PATH_INC."header.php");
+                require_once(VIEW_PATH_INC."menu.php");
                 loadView('modules/home/view/', 'home.php');
+                require_once(VIEW_PATH_INC."footer.php");
             } else {
                 showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
             }
-        }
+        //}
     }
     ////////////////////////////////////////////////////end signup///////////////////////////////////////////
-/*
+
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
     function restore() {
-        loadView('modules/user/view/', 'restore.php');
+        
+        require_once(VIEW_PATH_INC."header.php");
+        require_once(VIEW_PATH_INC."menu.php");
+        loadView('modules/users/view/', 'restore.php');
+        require_once(VIEW_PATH_INC."footer.php");
     }
 
     public function process_restore() {
         $result = array();
         if (isset($_POST['inputEmail'])) {
-            $result = validatemail($_POST['inputEmail']);
+            $result = valida_email($_POST['inputEmail']);
             if ($result) {
                 $column = array(
                     'email'
@@ -248,9 +255,9 @@ class controller_users {
                     'field' => $field,
                     'new' => $new
                 );
-                $arrValue = loadModel(MODEL_USER, "user_model", "count", $arrArgument);
+                $arrValue = loadModel(MODEL_USER, "users_model", "count", $arrArgument);
                 if ($arrValue[0]['total'] == 1) {
-                    $arrValue = loadModel(MODEL_USER, "user_model", "update", $arrArgument);
+                    $arrValue = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
                     if ($arrValue) {
                         //////////////// Envio del correo al usuario
                         $arrArgument = array(
@@ -272,11 +279,16 @@ class controller_users {
     }
 
     function changepass() {
-        if (substr($_GET['param'], 0, 3) == "Cha") {
-            loadView('modules/user/view/', 'changepass.php');
-        } else {
-            showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
-        }
+        //if (substr($_GET['param'], 0, 3) == "Cha") {
+            
+            require_once(VIEW_PATH_INC."header.php");
+            require_once(VIEW_PATH_INC."menu.php");
+            loadView('modules/users/view/', 'changepass.php');
+            require_once(VIEW_PATH_INC."footer.php");
+            
+        //} else {
+            //showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
+       // }
     }
 
     function update_pass() {
@@ -291,20 +303,20 @@ class controller_users {
 
         set_error_handler('ErrorHandler');
         try {
-            $value = loadModel(MODEL_USER, "user_model", "update", $arrArgument);
+            $value = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
         } catch (Exception $e) {
             $value = false;
         }
         restore_error_handler();
 
         if ($value) {
-            $url = amigable('?module=main&function=begin&param=rest', true);
+            $url = amigable('?module=home&function=begin&param=rest', true);
             $jsondata["success"] = true;
             $jsondata["redirect"] = $url;
             echo json_encode($jsondata);
             exit;
         } else {
-            $url = amigable('?module=main&function=begin&param=503', true);
+            $url = amigable('?module=home&function=begin&param=503', true);
             $jsondata["success"] = true;
             $jsondata["redirect"] = $url;
             echo json_encode($jsondata);
@@ -312,7 +324,7 @@ class controller_users {
         }
     }
     ////////////////////////////////////////////////////end restore///////////////////////////////////////////
-
+/*
     ////////////////////////////////////////////////////begin profile///////////////////////////////////////////
     function profile() {
         loadView('modules/user/view/', 'profile.php');

@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/jorge/Proyectos/findmenu/utils/utils.inc.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/.htaccess_2</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/changepass.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/js/changepass.js</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/controller/controller_users.class.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/resources/functions.xml</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/js/init.js</file>
+            <file>file:/home/jorge/Proyectos/findmenu/utils/mail.inc.php</file>
+        </group>
     </open-files>
 </project-private>
