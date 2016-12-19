@@ -65,6 +65,7 @@
 
     <script type="text/javascript" src="<?php echo USERS_JS_PATH ?>init.js"></script>
     <script type="text/javascript" src="<?php echo USERS_JS_PATH ?>sign_up.js"></script>
+    <script type="text/javascript" src="<?php echo USERS_JS_PATH ?>facebook.js"></script>
 
   </head>
   <body>

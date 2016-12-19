@@ -16,4 +16,8 @@
         <name>signup_user</name>
         <uri>signup_user</uri>
     </function>
+    <function>
+        <name>social_signin</name>
+        <uri>social_signin</uri>
+    </function>
 </functions>
