@@ -102,16 +102,14 @@ class users_dao {
         $sql2 = "  WHERE ";
 
         for ($j = 0; $j < $i; $j++) {
-            if ($i > 1 && $j != 0) {
-                $change .=", ";
-            }
+            if ($i > 1 && $j != 0) 
+                $change .=", ";     
             $change .= $arrArgument['field'][$j] . "='" . $arrArgument['new'][$j] . "'";
             
         }
         for ($l = 0; $l < $k; $l++) {
-            if ($k > 1 && $l != 0){
+            if ($k > 1 && $l != 0)
                 $sql3.=" AND ";
-            }
             $sql3 .= $arrArgument['column'][$l] . " like '" . $arrArgument['like'][$l] . "'";
             
         }
