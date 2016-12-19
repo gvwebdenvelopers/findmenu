@@ -1,7 +1,7 @@
 <script src="<?php echo CONTACT_LIB_PATH; ?>bootstrap-button.js"></script>
 <script src="<?php echo USERS_JS_PATH; ?>changepass.js"></script>
 
-<br>
+<br><br><br>
 <div class="container">
     <form id="changepass_form" name="changepass_form" class="form-contact">
         <br />

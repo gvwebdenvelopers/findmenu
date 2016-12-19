@@ -2,7 +2,7 @@
 <script src="<?php echo CONTACT_LIB_PATH; ?>jquery.validate.min.js"></script>
 <script src="<?php echo CONTACT_LIB_PATH; ?>jquery.validate.extended.js"></script>
 <script src="<?php echo USERS_JS_PATH; ?>restore.js"></script>
-
+<br><br><br>
 <div class="container">
     <form id="restore_form" name="restore_form" class="form-contact">
         <br />

@@ -34,8 +34,9 @@ function changepass() {
         value = true;
         var token = window.location.href;
         token = token.split("/");
+        //console.log("este es el token: "+token[5]);
         
-        var data = {"password": password, "token": token[7]};
+        var data = {"password": password, "token": token[5]};
         var change_JSON = JSON.stringify(data);
             $.post(amigable("?module=users&function=update_pass"), {passw: change_JSON},
             function (response) {
@@ -43,7 +44,7 @@ function changepass() {
                     window.location.href = response.redirect;
                 }
             }, "json").fail(function (xhr, textStatus, errorThrown) {
-                console.log(xhr);
+                //console.log(xhr);
                 //console.log(xhr.responseJSON);
                 //console.log(xhr.responseText);
                 if( (xhr.responseJSON === undefined) || (xhr.responseJSON === null) )

@@ -192,7 +192,7 @@ class controller_users {
     function verify() {
         
         //a esta función se llega cuando el usuario verifica su alta
-        //if (substr($_GET['param'], 0, 3) == "Ver") {
+        if (substr($_GET['param'], 0, 3) == "Ver") {
             $arrArgument = array(
                 'column' => array('token'),
                 'like' => array($_GET['param']),
@@ -216,13 +216,14 @@ class controller_users {
             } else {
                 showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
             }
-        //}
+        }
     }
     ////////////////////////////////////////////////////end signup///////////////////////////////////////////
 
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
     function restore() {
-        
+        //1- La función restore solo carga la vista en la que el usuario introducirá 
+        //su email para que le cambiemos la contraseña
         require_once(VIEW_PATH_INC."header.php");
         require_once(VIEW_PATH_INC."menu.php");
         loadView('modules/users/view/', 'restore.php');
@@ -230,6 +231,8 @@ class controller_users {
     }
 
     public function process_restore() {
+        //2- La función process_restore cambia el token si existe el correo
+        //introducido y envia un correo con el token
         $result = array();
         if (isset($_POST['inputEmail'])) {
             $result = valida_email($_POST['inputEmail']);
@@ -257,6 +260,8 @@ class controller_users {
                 );
                 $arrValue = loadModel(MODEL_USER, "users_model", "count", $arrArgument);
                 if ($arrValue[0]['total'] == 1) {
+                    //Esta consulta meda error de variables no definidas change y sql3 pero realiza 
+                    //realiza la consulta igual aunque al fallar no redirecciona
                     $arrValue = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
                     if ($arrValue) {
                         //////////////// Envio del correo al usuario
@@ -279,19 +284,22 @@ class controller_users {
     }
 
     function changepass() {
-        //if (substr($_GET['param'], 0, 3) == "Cha") {
+        //3-esta funcioón la utilizamos para entrar a la vista changepass desde el correo enviado
+        if (substr($_GET['param'], 0, 3) == "Cha") {
             
             require_once(VIEW_PATH_INC."header.php");
             require_once(VIEW_PATH_INC."menu.php");
             loadView('modules/users/view/', 'changepass.php');
             require_once(VIEW_PATH_INC."footer.php");
             
-        //} else {
-            //showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
-       // }
+        } else {
+            showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
+        }
     }
 
     function update_pass() {
+        //4-cuando ya hemos validado el password con js utilizamos esta función
+        //para actualizar el password en la base de datos
         $jsondata = array();
         $pass = json_decode($_POST['passw'], true);
         $arrArgument = array(
@@ -310,13 +318,13 @@ class controller_users {
         restore_error_handler();
 
         if ($value) {
-            $url = amigable('?module=home&function=begin&param=rest', true);
+            $url = friendly('?module=home&function=init&param=rest', true);
             $jsondata["success"] = true;
             $jsondata["redirect"] = $url;
             echo json_encode($jsondata);
             exit;
         } else {
-            $url = amigable('?module=home&function=begin&param=503', true);
+            $url = friendly('?module=home&function=init&param=503', true);
             $jsondata["success"] = true;
             $jsondata["redirect"] = $url;
             echo json_encode($jsondata);

@@ -2,7 +2,8 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALz3o_cMEcTa8pzYf5jUhJcBDn48Wlpn8" async defer></script>
 <script src="<?php echo MENUS_JS_PATH ?>geolocator.js"></script>
 <link href="<?php echo MENUS_CSS_PATH; ?>menus.css" rel="stylesheet"/>
-<div class="container">
+<br><br><br><br>
+<div class="container_maps">
   <section id="menus" >
 
           <nav class="options">

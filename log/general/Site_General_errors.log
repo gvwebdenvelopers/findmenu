@@ -1,28 +1,18 @@
-18/12/16 04:35:40 AM | ERROR: [8] Undefined index: active
-Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+19/12/16 02:27:05 AM | ERROR: [8] Undefined variable: change
+Notice on line 108 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:users | Function:response 200
-18/12/16 04:38:29 AM | ERROR: [8] Undefined index: active
-Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+19/12/16 02:27:05 AM | ERROR: [8] Undefined variable: sql3
+Notice on line 115 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:users | Function:response 200
-18/12/16 04:38:40 AM | ERROR: [8] Undefined variable: change
-Notice on line 107 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+19/12/16 02:27:21 AM | error loadView general
+-> Controller:users | Function:response 200
+19/12/16 02:28:15 AM | ERROR: [8] Undefined variable: change
+Notice on line 108 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:users | Function:response 200
-18/12/16 04:38:40 AM | ERROR: [8] Undefined variable: sql
-Notice on line 112 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
-
--> Controller:users | Function:response 200
-18/12/16 05:12:47 AM | ERROR: [8] Undefined variable: change
-Notice on line 107 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
-
--> Controller:users | Function:response 200
-18/12/16 05:12:47 AM | ERROR: [8] Undefined variable: sql
-Notice on line 112 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
-
--> Controller:users | Function:response 200
-18/12/16 12:51:56 PM | ERROR: [8] Undefined index: active
-Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+19/12/16 02:28:15 AM | ERROR: [8] Undefined variable: sql3
+Notice on line 115 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller:users | Function:response 200

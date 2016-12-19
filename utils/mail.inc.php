@@ -10,19 +10,17 @@ function send_email($arr) {
     switch ($arr['type']) {
         case 'alta':
             $subject = 'Tu Alta en FindMenu';
-            $ruta = "<a href='" . friendly("?module=users&function=verify&param=" . $arr['token'], true) . "'>aqu&iacute;</a>";
-            //$ruta = "<a href='" . friendly("?module=users&function=verify", true) . "'>aqu&iacute;</a>";
+            $ruta = "<a href='" . friendly("?module=users&function=verify" , true). $arr['token'] . "'>aqu&iacute;</a>";
             $body = 'Gracias por unirte a nuestra aplicaci&oacute;n<br> Para finalizar el registro, pulsa ' . $ruta;
             break;
-        //El link de href nos dirigirá a lafunciónverify en el controlador
+        //El link de href nos dirigirá a la función verify en el controlador y le pasará el token
 
         case 'modificacion':
             $subject = 'Tu Nuevo Password en FindMenu<br>';
-            $ruta = '<a href="' . friendly("?module=users&function=changepass&param=" . $arr['token'], true) . '">aqu&iacute;</a>';
-            //$ruta = '<a href="' . friendly("?module=users&function=changepass",true).'">aqu&iacute;</a>';
+            $ruta = '<a href="' . friendly("?module=users&function=changepass" , true). $arr['token'] . '">aqu&iacute;</a>';
             $body = 'Para recordar tu password pulsa ' . $ruta;
             break;
-
+        //El link de href nos dirigirá a la función changepass en el controlador y le pasará el token
         case 'contact':
             $subject = 'Tu Petición a Findmenu ha sido enviada';
             $ruta = "https://findmenu.tk";
