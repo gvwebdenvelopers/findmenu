@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $("#fb").click(function () {
+    $('#fb').click(function () {
+        console.log("on click");
         Login();
     });
 });
@@ -12,23 +13,26 @@ window.fbAsyncInit = function () {
         cookie: true, // enable cookies to allow the server to access the session
         xfbml: true  // parse XFBML
     });
-
+    console.log("fbAsyncInit");
     FB.Event.subscribe('auth.authResponseChange', function (response) {
+        console.log("Event.subscribe");
         if (response.status === 'connected') {
-            //document.getElementById("message").innerHTML += "<br>Connected to Facebook";
-            //SUCCESS
+            document.getElementById("message").innerHTML += "<br>Connected to Facebook";
+            SUCCESS
         } else if (response.status === 'not_authorized') {
-            //FB.login();
-            //FAILED
+            FB.login();
+            FAILED
         } else {
-            //FB.login();
+            FB.login();
             //UNKNOWN ERROR
         }
     });
 };
 
 function Login() {
+    console.log("En Login");
     FB.login(function (response) {
+        console.log("En Login response");
         if (response.authResponse) {
             getUserInfo();
         } else {
@@ -44,7 +48,7 @@ function getUserInfo() {
             var data = {"id": response.id, "nombre": response.first_name, "apellidos": response.last_name, "email": response.email};
             var datos_social = JSON.stringify(data);
 
-            $.post(amigable('?module=user&function=social_signin'), {user: datos_social},
+            $.post(amigable('?module=users&function=social_signin'), {user: datos_social},
             function (response) {
                 if (!response.error) {
                     Tools.createCookie("user", response[0]['usuario'] + "|" + response[0]['avatar'] + "|" + response[0]['tipo'] + "|" + response[0]['nombre'], 1);
