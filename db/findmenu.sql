@@ -77,7 +77,7 @@ CREATE TABLE `users` (
   `token` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
->>>>>>> oscar_produccion
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
