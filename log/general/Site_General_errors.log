@@ -393,3 +393,27 @@ Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.cl
 
 -> Controller:users | Function:response 200
 >>>>>>> FacebookLogIn
+20/12/16 12:57:04 PM | ERROR: [8] Undefined index: active
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:users | Function:response 200
+20/12/16 12:57:29 PM | ERROR: [8] Undefined variable: change
+Notice on line 108 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:users | Function:response 200
+20/12/16 12:57:29 PM | ERROR: [8] Undefined variable: sql
+Notice on line 115 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:users | Function:response 200
+20/12/16 01:02:52 PM | ERROR: [8] Undefined offset: 0
+Notice on line 133 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+20/12/16 01:16:44 PM | ERROR: [8] Undefined variable: change
+Notice on line 108 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:users | Function:response 200
+20/12/16 01:16:44 PM | ERROR: [8] Undefined variable: sql
+Notice on line 115 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller:users | Function:response 200

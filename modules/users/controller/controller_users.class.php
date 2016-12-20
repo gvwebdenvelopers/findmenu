@@ -277,10 +277,10 @@ class controller_users {
             echo json_encode(array('error' => true, 'datos' => 503));
         }
     }
-}
+
 
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
-    function restore() {
+    function restores() {
         //1- La función restore solo carga la vista en la que el usuario introducirá
         //su email para que le cambiemos la contraseña
         require_once(VIEW_PATH_INC."header.php");
@@ -581,3 +581,4 @@ class controller_users {
     ////////////////////////////////////////////////////end profile///////////////////////////////////////////
 
     */
+}
