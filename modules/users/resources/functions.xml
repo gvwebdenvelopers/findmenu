@@ -17,8 +17,8 @@
         <uri>process_restore</uri>
     </function>
     <function>
-        <name>restores</name>
-        <uri>restores</uri>
+        <name>restore</name>
+        <uri>restore</uri>
     </function>
     <function>
         <name>signup</name>

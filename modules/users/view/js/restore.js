@@ -14,7 +14,7 @@ function paint(dataString) {
     // Enable button after processing
     $('#restoreBtn').attr('disabled', false);
 
-    $url = amigable('?module=home');
+    $url = amigable('?module=home&function=init');
     setTimeout(function () {
         window.location.href = $url;
     }, 3000);

@@ -31,6 +31,9 @@ class users_model {
     public function update($arrArgument) {
         return $this->bll->update_BLL($arrArgument);
     }
+    public function update_one($arrArgument) {
+        return $this->bll->update_one_BLL($arrArgument);
+    }
 
     public function obtain_countries($url) {
         return $this->bll->obtain_countries_BLL($url);

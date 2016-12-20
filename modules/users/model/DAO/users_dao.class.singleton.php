@@ -116,9 +116,14 @@ class users_dao {
             
         }
 
-
-
         $sql = $sql1 . $change . $sql2 . $sql;
+
+        return $db->ejecutar($sql);
+    }
+    
+    public function update_one_DAO($db, $arrArgument) {
+
+        $sql = "UPDATE users SET ". $arrArgument['field'][0]."='". $arrArgument['new'][0]."' WHERE ".$arrArgument['column'][0] ." like '" . $arrArgument['like'][0] . "'"; 
 
         return $db->ejecutar($sql);
     }

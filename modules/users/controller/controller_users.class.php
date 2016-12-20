@@ -206,7 +206,7 @@ class controller_users {
             try {
                 //consulta de sql que modificará el estado activado a 1 si es igual el token
                 //la consulta esta preparada para actualizar mas cosas, se usa en mas lugares.
-                $value = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
+                $value = loadModel(MODEL_USER, "users_model", "update_one", $arrArgument);
             } catch (Exception $e) {
                 $value = false;
             }
@@ -280,7 +280,7 @@ class controller_users {
 
 
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
-    function restores() {
+    function restore() {
         //1- La función restore solo carga la vista en la que el usuario introducirá
         //su email para que le cambiemos la contraseña
         require_once(VIEW_PATH_INC."header.php");
@@ -321,17 +321,21 @@ class controller_users {
                 if ($arrValue[0]['total'] == 1) {
                     //Esta consulta meda error de variables no definidas change y sql3 pero realiza
                     //realiza la consulta igual aunque al fallar no redirecciona
-                    $arrValue = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
+                    $arrValue = loadModel(MODEL_USER, "users_model", "update_one", $arrArgument);
                     if ($arrValue) {
                         //////////////// Envio del correo al usuario
                         $arrArgument = array(
                             'token' => $token,
                             'email' => $_POST['inputEmail']
                         );
-                        if (sendtoken($arrArgument, "modificacion"))
-                            echo "Tu nueva contraseña ha sido enviada al email";
-                        else
+                         
+                        if (sendtoken($arrArgument, "modificacion")){
+                                
+                                echo "Tu nueva contraseña ha sido enviada al email";
+                        }else{
+                         
                             echo "Error en el servidor. Intentelo más tarde";
+                        }
                     }
                 } else {
                     echo "El email introducido no existe ";
@@ -370,7 +374,7 @@ class controller_users {
 
         set_error_handler('ErrorHandler');
         try {
-            $value = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
+            $value = loadModel(MODEL_USER, "users_model", "update_one", $arrArgument);
         } catch (Exception $e) {
             $value = false;
         }

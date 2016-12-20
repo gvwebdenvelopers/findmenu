@@ -416,3 +416,183 @@ Notice on line 108 in file /var/www/findmenu/modules/users/model/DAO/users_dao.c
 Notice on line 115 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller: users | Funciton:response 200
+20.12.2016 01:32:23  |  User:   | ERROR: [8] Undefined index: active
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Undefined variable: l
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Undefined index: 
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 127 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Undefined variable: sql1
+Notice on line 127 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | ERROR: [8] Undefined variable: sql2
+Notice on line 127 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:32:34  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 01:37:25  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:37:25  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:37:25  |  User:   | ERROR: [8] Undefined variable: l
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:37:25  |  User:   | ERROR: [8] Undefined index: 
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:37:25  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:37:25  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 01:39:08  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:39:08  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:39:08  |  User:   | ERROR: [8] Undefined variable: l
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:39:08  |  User:   | ERROR: [8] Undefined index: 
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:39:08  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:39:08  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 01:40:32  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:40:32  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:40:32  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:40:32  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:40:32  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 01:42:11  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:42:11  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:42:11  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:42:11  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:42:11  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 01:45:14  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:45:14  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:45:14  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:45:14  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:45:14  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 01:48:36  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:48:36  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:48:36  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:48:36  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 126 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 01:48:36  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 01:59:12  |  User:   | error loadView general
+-> Controller: users | Funciton:response 200
+20.12.2016 02:01:47  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 108 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 02:01:47  |  User:   | ERROR: [8] Undefined variable: sql
+Notice on line 115 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 02:02:30  |  User:   | ERROR: [8] Undefined index: active
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 02:18:39  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 108 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 02:18:39  |  User:   | ERROR: [8] Undefined variable: sql
+Notice on line 115 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 02:23:38  |  User:   | ERROR: [8] Undefined index: active
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200

@@ -35,6 +35,9 @@ class users_bll {
     public function update_BLL($arrArgument) {
         return $this->dao->update_DAO($this->db, $arrArgument);
     }
+    public function update_one_BLL($arrArgument) {
+        return $this->dao->update_one_DAO($this->db, $arrArgument);
+    }
 
     public function obtain_countries_BLL($url) {
         return $this->dao->obtain_countries_DAO($url);
