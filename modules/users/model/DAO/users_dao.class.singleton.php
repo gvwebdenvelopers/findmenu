@@ -14,8 +14,8 @@ class users_dao {
     }
 
     public function create_user_DAO($db, $arrArgument) {
-        $nombre = "";
-        $apellidos = "";
+        $nombre = $arrArgument['name'];;
+        $apellidos = $arrArgument['lastname'];
         $date_birthday = "";
         $today = getdate();
         $sing_in_date = $today['mday'] . "/" . $today['mon'] . "/"  . $today['year'];

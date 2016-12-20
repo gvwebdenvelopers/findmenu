@@ -29,7 +29,7 @@
   //JS
   define('JS_PATH', SITE_PATH . '/view/js/');
   //log
-  define('LOG_DIR', SITE_ROOT . 'classes/log.class.singleton.php');
+  define('LOG_DIR', SITE_ROOT . 'classes/log/log.class.singleton.php');
   define('USER_LOG_DIR', SITE_ROOT . 'log/user/Site_User_errors.log');
   define('GENERAL_LOG_DIR', SITE_ROOT . 'log/general/Site_General_errors.log');
   //view

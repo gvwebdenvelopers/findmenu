@@ -35,6 +35,8 @@ class controller_users {
             $arrArgument = array(
                 'avatar' => $avatar,
                 'email' => $result['data']['user_email'],
+                'name' => "",
+                'lastname' => "",
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
                 'tipo' => "client",
                 'token' => "",
@@ -188,9 +190,10 @@ class controller_users {
             echo json_encode($value);
         }
     }
+    ////////////////////////////////////////////////////end signin///////////////////////////////////////////
 
     function verify() {
-        
+
         //a esta función se llega cuando el usuario verifica su alta
         if (substr($_GET['param'], 0, 3) == "Ver") {
             $arrArgument = array(
@@ -203,7 +206,7 @@ class controller_users {
             try {
                 //consulta de sql que modificará el estado activado a 1 si es igual el token
                 //la consulta esta preparada para actualizar mas cosas, se usa en mas lugares.
-                $value = loadModel(MODEL_USER, "users_model", "update", $arrArgument);          
+                $value = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
             } catch (Exception $e) {
                 $value = false;
             }
@@ -220,9 +223,65 @@ class controller_users {
     }
     ////////////////////////////////////////////////////end signup///////////////////////////////////////////
 
+    public function social_signin() { //utilitzada per Facebook i Twitter
+        $user = json_decode($_POST['user'], true);
+
+        set_error_handler('ErrorHandler');
+        try {
+
+            $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('user'), 'like' => array($user['id'])));
+
+        } catch (Exception $e) {
+            $arrValue = false;
+        }
+        restore_error_handler();
+
+        if (!$arrValue[0]["total"]) {
+            if ($user['email'])
+                $avatar = 'https://graph.facebook.com/' . ($user['id']) . '/picture';
+            else
+                $avatar = get_gravatar($mail, $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
+
+            $arrArgument = array(
+              'active' => "1",
+              'avatar' => $avatar,
+              'email' => $user['email'],
+              'lastname' => $user['apellidos'],
+              'name' => $user['nombre'],
+              'password' => "",
+              'tipo' => "client",
+              'token' => "",
+              'user' => $user['id']
+            );
+            set_error_handler('ErrorHandler');
+            try {
+                $value = loadModel(MODEL_USER, "users_model", "create_user", $arrArgument);
+            } catch (Exception $e) {
+                $value = false;
+            }
+            restore_error_handler();
+        } else
+            $value = true;
+
+        if ($value) {
+            set_error_handler('ErrorHandler');
+            $arrArgument = array(
+                'column' => array("user"),
+                'like' => array($user['id']),
+                'field' => array('*')
+            );
+            $user = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
+            restore_error_handler();
+            echo json_encode($user);
+        } else {
+            echo json_encode(array('error' => true, 'datos' => 503));
+        }
+    }
+}
+
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
     function restore() {
-        //1- La función restore solo carga la vista en la que el usuario introducirá 
+        //1- La función restore solo carga la vista en la que el usuario introducirá
         //su email para que le cambiemos la contraseña
         require_once(VIEW_PATH_INC."header.php");
         require_once(VIEW_PATH_INC."menu.php");
@@ -260,7 +319,7 @@ class controller_users {
                 );
                 $arrValue = loadModel(MODEL_USER, "users_model", "count", $arrArgument);
                 if ($arrValue[0]['total'] == 1) {
-                    //Esta consulta meda error de variables no definidas change y sql3 pero realiza 
+                    //Esta consulta meda error de variables no definidas change y sql3 pero realiza
                     //realiza la consulta igual aunque al fallar no redirecciona
                     $arrValue = loadModel(MODEL_USER, "users_model", "update", $arrArgument);
                     if ($arrValue) {
@@ -286,12 +345,12 @@ class controller_users {
     function changepass() {
         //3-esta funcioón la utilizamos para entrar a la vista changepass desde el correo enviado
         if (substr($_GET['param'], 0, 3) == "Cha") {
-            
+
             require_once(VIEW_PATH_INC."header.php");
             require_once(VIEW_PATH_INC."menu.php");
             loadView('modules/users/view/', 'changepass.php');
             require_once(VIEW_PATH_INC."footer.php");
-            
+
         } else {
             showErrorPage(1, "", 'HTTP/1.0 503 Service Unavailable', 503);
         }
@@ -521,62 +580,4 @@ class controller_users {
     }
     ////////////////////////////////////////////////////end profile///////////////////////////////////////////
 
-    ////////////////////////////////////////////////////begin social///////////////////////////////////////////
-    function social_signin() { //utilitzada per Facebook i Twitter
-        $user = json_decode($_POST['user'], true);
-        if ($user['twitter']) {
-            $user['apellidos'] = "";
-            $user['email'] = "";
-            $mail = $user['user_id'] . "@gmail.com";
-        }
-        set_error_handler('ErrorHandler');
-        try {
-            $arrValue = loadModel(MODEL_USER, "user_model", "count", array('column' => array('usuario'), 'like' => array($user['id'])));
-        } catch (Exception $e) {
-            $arrValue = false;
-        }
-        restore_error_handler();
-
-        if (!$arrValue[0]["total"]) {
-            if ($user['email'])
-                $avatar = 'https://graph.facebook.com/' . ($user['id']) . '/picture';
-            else
-                $avatar = get_gravatar($mail, $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
-
-            $arrArgument = array(
-                'usuario' => $user['id'],
-                'nombre' => $user['nombre'],
-                'apellidos' => $user['apellidos'],
-                'email' => $user['email'],
-                'tipo' => 'client',
-                'avatar' => $avatar,
-                'activado' => "1"
-            );
-
-            set_error_handler('ErrorHandler');
-            try {
-                $value = loadModel(MODEL_USER, "user_model", "create_user", $arrArgument);
-            } catch (Exception $e) {
-                $value = false;
-            }
-            restore_error_handler();
-        } else
-            $value = true;
-
-        if ($value) {
-            set_error_handler('ErrorHandler');
-            $arrArgument = array(
-                'column' => array("usuario"),
-                'like' => array($user['id']),
-                'field' => array('*')
-            );
-            $user = loadModel(MODEL_USER, "user_model", "select", $arrArgument);
-            restore_error_handler();
-            echo json_encode($user);
-        } else {
-            echo json_encode(array('error' => true, 'datos' => 503));
-        }
-    }
-*/
-    ////////////////////////////////////////////////////end social///////////////////////////////////////////
-}
+    */
