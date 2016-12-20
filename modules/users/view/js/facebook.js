@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('#fb').click(function () {
-        console.log("on click");
         Login();
     });
 });
@@ -13,15 +12,14 @@ window.fbAsyncInit = function () {
         cookie: true, // enable cookies to allow the server to access the session
         xfbml: true  // parse XFBML
     });
-    console.log("fbAsyncInit");
     FB.Event.subscribe('auth.authResponseChange', function (response) {
-        console.log("Event.subscribe");
+        console.log(response.status);
         if (response.status === 'connected') {
-            document.getElementById("message").innerHTML += "<br>Connected to Facebook";
-            SUCCESS
+            //document.getElementById("message").innerHTML += "<br>Connected to Facebook";
+            //SUCCESS
         } else if (response.status === 'not_authorized') {
             FB.login();
-            FAILED
+            //FAILED
         } else {
             FB.login();
             //UNKNOWN ERROR
@@ -30,9 +28,7 @@ window.fbAsyncInit = function () {
 };
 
 function Login() {
-    console.log("En Login");
     FB.login(function (response) {
-        console.log("En Login response");
         if (response.authResponse) {
             getUserInfo();
         } else {
@@ -45,20 +41,27 @@ function getUserInfo() {
     FB.api('/me', function (response) {
         FB.api('/me', {fields: 'id, first_name, last_name, email'},
         function (response) {
+            //console.log("response");
             var data = {"id": response.id, "nombre": response.first_name, "apellidos": response.last_name, "email": response.email};
             var datos_social = JSON.stringify(data);
-
+            console.log(datos_social);
             $.post(amigable('?module=users&function=social_signin'), {user: datos_social},
             function (response) {
+                console.log(response);
+                console.log(response[0]);
                 if (!response.error) {
                     Tools.createCookie("user", response[0]['usuario'] + "|" + response[0]['avatar'] + "|" + response[0]['tipo'] + "|" + response[0]['nombre'], 1);
-                    window.location.href = amigable("?module=main");
+                    window.location.href = amigable("?module=home&fn=init");
                 } else {
                     if (response.datos == 503)
-                        window.location.href = amigable("?module=main&fn=init&param=503");
+                        window.location.href = amigable("?module=home&fn=init&param=503");
                 }
             }, "json").fail(function (xhr, textStatus, errorThrown) {
-                console.log(xhr.responseText);
+                //console.log(xhr);
+                //console.log(textStatus);
+                //console.log(errorThrown);
+                //console.log(xhr.status);
+                //console.log(xhr.responseText);
                 if (xhr.status === 0) {
                     alert('Not connect: Verify Network.');
                 } else if (xhr.status === 404) {

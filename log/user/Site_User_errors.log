@@ -197,3 +197,195 @@ Notice on line 131 in file /var/www/findmenu/modules/users/controller/controller
 Notice on line 131 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
 
 -> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'name'
+Warning on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'lastname'
+Warning on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'email'
+Warning on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'user'
+Warning on line 23 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 23 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'password'
+Warning on line 24 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 24 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'avatar'
+Warning on line 26 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 26 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'token'
+Warning on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [2] Illegal string offset 'activado'
+Warning on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:52:36  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'name'
+Warning on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'lastname'
+Warning on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'email'
+Warning on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'user'
+Warning on line 23 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 23 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'password'
+Warning on line 24 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 24 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'avatar'
+Warning on line 26 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 26 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'token'
+Warning on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [2] Illegal string offset 'active'
+Warning on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:54:32  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'name'
+Warning on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 17 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'lastname'
+Warning on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 18 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'email'
+Warning on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 22 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'user'
+Warning on line 23 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 23 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'password'
+Warning on line 24 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 24 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'avatar'
+Warning on line 26 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 26 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'token'
+Warning on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 31 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [2] Illegal string offset 'active'
+Warning on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+20.12.2016 03:59:19  |  User:   | ERROR: [8] Uninitialized string offset: 0
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200

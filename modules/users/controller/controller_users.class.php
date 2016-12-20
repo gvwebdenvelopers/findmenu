@@ -35,6 +35,8 @@ class controller_users {
             $arrArgument = array(
                 'avatar' => $avatar,
                 'email' => $result['data']['user_email'],
+                'name' => "",
+                'lastname' => "",
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
                 'tipo' => "client",
                 'token' => "",
@@ -189,7 +191,6 @@ class controller_users {
         }
     }
     ////////////////////////////////////////////////////end signin///////////////////////////////////////////
-    /*
     function verify() {
         if (substr($_GET['param'], 0, 3) == "Ver") {
             $arrArgument = array(
@@ -215,18 +216,15 @@ class controller_users {
         }
     }
     ////////////////////////////////////////////////////end signup///////////////////////////////////////////
-    */
-    ////////////////////////////////////////////////////begin social///////////////////////////////////////////
-    function social_signin() { //utilitzada per Facebook i Twitter
+
+    public function social_signin() { //utilitzada per Facebook i Twitter
         $user = json_decode($_POST['user'], true);
-        if ($user['twitter']) {
-            $user['apellidos'] = "";
-            $user['email'] = "";
-            $mail = $user['user_id'] . "@gmail.com";
-        }
+
         set_error_handler('ErrorHandler');
         try {
+
             $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('user'), 'like' => array($user['id'])));
+
         } catch (Exception $e) {
             $arrValue = false;
         }
@@ -239,16 +237,16 @@ class controller_users {
                 $avatar = get_gravatar($mail, $s = 400, $d = 'identicon', $r = 'g', $img = false, $atts = array());
 
             $arrArgument = array(
+              'active' => "1",
               'avatar' => $avatar,
-              'email' => $user['email'],,
-              'name' => $user['nombre'],
+              'email' => $user['email'],
               'lastname' => $user['apellidos'],
-              'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
+              'name' => $user['nombre'],
+              'password' => "",
               'tipo' => "client",
-              'active' => "1"
-              'user' => $user['id'],
+              'token' => "",
+              'user' => $user['id']
             );
-
             set_error_handler('ErrorHandler');
             try {
                 $value = loadModel(MODEL_USER, "users_model", "create_user", $arrArgument);
@@ -273,8 +271,7 @@ class controller_users {
             echo json_encode(array('error' => true, 'datos' => 503));
         }
     }
-
-    ////////////////////////////////////////////////////end social///////////////////////////////////////////
+}
     /*
     ////////////////////////////////////////////////////begin restore///////////////////////////////////////////
     function restore() {
@@ -561,4 +558,3 @@ class controller_users {
     ////////////////////////////////////////////////////end profile///////////////////////////////////////////
 
     */
-}
