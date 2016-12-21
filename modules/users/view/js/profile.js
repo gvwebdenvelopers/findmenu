@@ -184,4 +184,5 @@ function validate_user() {
             }
         });
     }
+    }
 }
