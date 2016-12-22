@@ -1,13 +1,13 @@
 <?php
+
 class controller_menus {
-    function __construct() {}
+
+    function __construct() {
+        
+    }
 
     function menus_maps() {
-        
-        require_once(VIEW_PATH_INC . "header.php");
-        require_once(VIEW_PATH_INC . "menu.php");
         loadView('modules/menus/view/', 'main.php');
-        require_once(VIEW_PATH_INC . "footer.php");
     }
 
     function maploader() {
@@ -29,4 +29,5 @@ class controller_menus {
             echo json_encode($arrArguments);
         }
     }
+
 }

@@ -4,7 +4,7 @@
   <div class="bg-color">
     <header id="header">
         <div class="container">
-            <div id="mySidenav" class="sidenav">
+            <div id="navBar" >
               <ul>
                 <li>
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

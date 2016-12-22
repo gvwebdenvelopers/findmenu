@@ -3,14 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/jorge/Proyectos/findmenu/utils/utils.inc.php</file>
-            <file>file:/home/jorge/Proyectos/findmenu/.htaccess_2</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/changepass.php</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/js/changepass.js</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/users/controller/controller_users.class.php</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/users/resources/functions.xml</file>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/js/init.js</file>
-            <file>file:/home/jorge/Proyectos/findmenu/utils/mail.inc.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/menus/view/main.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/home/view/home.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/view/css/style.css</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/menus/view/css/menus.css</file>
         </group>
     </open-files>
 </project-private>

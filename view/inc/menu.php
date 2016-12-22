@@ -1,18 +1,18 @@
-    <!--banner-->
-    <header id="header">
+    <link href= "/modules/home/view/home.css" rel="stylesheet">
+<div id="alertbanner"></div>
+<!--banner-->
+    
         <div id="alertbanner"></div>
-        <div class="container_top_nav">
-            <div id="myTopnav" class="topnav">
-              <ul>
-                <li class="menu_logo">
-                  <img src="/view/img/FindMenu_favicon.ico" alt="image favicon"/>
+        <div >
+            <div id="navbar" >
+                <nav>
+              <ul>               
+                <li class="logotipo">
+                  <img src="/view/img/findmenu_2.png" alt="logo findmenu"/>
                 </li>
-                <li class="menu_logo">
-                  <span>findMenu</span>
-                </li>
-                <li id="LogProf" >
-                    <a href= "<?php friendly('?module=users'); ?>";
-                    class="button special" data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
+                <li >
+                    <a href="/modules/users/view/modal.html"
+                     data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
                 </li>
                 <li class= <?php if($_SESSION['module'] == "home"){ echo "active";}else{ echo "";} ?> >
                   <a href="<?php friendly('?module=home'); ?>">Inicio</a>
@@ -27,8 +27,9 @@
                   <a href="<?php friendly('?module=contact&function=view_contact'); ?>">Contact</a>
                 </li>
               </ul>
+                </nav>
             </div>
         </div>
-    </header>
+    
     <div id="LoginModal"></div>
     <!-- / banner -->

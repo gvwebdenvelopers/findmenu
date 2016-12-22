@@ -7,18 +7,12 @@ class controller_contact {
     }
 
     public function view_contact() {
-        require_once(VIEW_PATH_INC . "header.php");
-        require_once(VIEW_PATH_INC . "menu.php");
-
         loadView(CONTACT_VIEW_PATH, 'contact.php');
-
-        require_once(VIEW_PATH_INC . "footer.php");
     }
 
     public function process_contact() {
         if ($_POST['token'] === "contact_form") {
-
-           //Envio un correo al admin de la peticion
+            //Envio un correo al admin de la peticion
             $arrArgument = array(
                 'type' => 'admin',
                 'token' => '',
@@ -39,8 +33,7 @@ class controller_contact {
                 $value = false;
             }
             restore_error_handler();
-
-             //Enviamos el correo al usuario
+            //Enviamos el correo al usuario
             $arrArgument = array(
                 'type' => 'contact',
                 'token' => '',
@@ -53,7 +46,7 @@ class controller_contact {
             try {
                 //envia un correo al admin dependiendo de el resultado
                 //utiliza la función de utilidades mail.inv.php
-                if (send_email($arrArgument) && ($value==true)) {
+                if (send_email($arrArgument) && ($value == true)) {
                     echo "Tu mensaje ha sido enviado correctamente ";
                 } else {
                     echo "Error en el servidor. Intentelo más tarde...";

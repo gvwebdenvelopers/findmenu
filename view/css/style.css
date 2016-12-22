@@ -37,6 +37,9 @@ body {
     font-weight: 400;
     overflow-x: hidden;
 }
+.container{
+    padding-top: 80px;
+}
 ol, ul {
 	list-style: none;
 }

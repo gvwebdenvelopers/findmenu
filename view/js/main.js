@@ -7,15 +7,15 @@ function closeNav() {
 }
 
 function amigable(url) {
-    var link="";
+    var link = "";
     url = url.replace("?", "");
     url = url.split("&");
 
-    for (var i=0;i<url.length;i++) {
+    for (var i = 0; i < url.length; i++) {
         var aux = url[i].split("=");
-        link +=  "/"+aux[1];
+        link += "/" + aux[1];
     }
-    
-    //return "https://findmenu.es" + link;
-    return "https://findmenu.tk" + link;
+
+    return "https://findmenu.es" + link;
+    //return "https://findmenu.tk" + link;
 }

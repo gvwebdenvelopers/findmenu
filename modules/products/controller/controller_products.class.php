@@ -9,12 +9,7 @@ class controller_products {
     }
 
     public function page_products() {
-        require_once(VIEW_PATH_INC . "header.php");
-        require_once(VIEW_PATH_INC . "menu.php");
-
         loadView('modules/products/view/', 'page_products.php');
-
-        require_once(VIEW_PATH_INC . "footer.php");
     }
 
     public function autocomplete_products() {
@@ -22,7 +17,6 @@ class controller_products {
             set_error_handler('ErrorHandler');
 
             try {
-
                 $nameProducts = loadModel(MODEL_PRODUCTS, "products_model", "select_column_products", "provincia");
             } catch (Exception $e) {
                 showErrorPage(2, "ERROR - 503 BD", 'HTTP/1.0 503 Service Unavailable', 503);
@@ -51,7 +45,6 @@ class controller_products {
             }
             set_error_handler('ErrorHandler');
             try {
-
                 $arrArgument = array(
                     'column' => 'provincia',
                     'like' => $search
@@ -86,7 +79,6 @@ class controller_products {
 
             set_error_handler('ErrorHandler');
             try {
-
                 $arrArgument = array(
                     "column" => "provincia",
                     "like" => $search
@@ -123,7 +115,6 @@ class controller_products {
             } else {
                 $search = '';
             }
-
             //definimos el número de productos por página
             $item_per_page = 6;
             //buscamos el modelo
@@ -271,5 +262,4 @@ class controller_products {
             showErrorPage(0, "ERROR - 404 NO PRODUCTS");
         }
     }
-
 }
