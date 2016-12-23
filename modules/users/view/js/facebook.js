@@ -41,16 +41,16 @@ function getUserInfo() {
     FB.api('/me', function (response) {
         FB.api('/me', {fields: 'id, first_name, last_name, email'},
         function (response) {
-            //console.log("response");
+            console.log("response");
             var data = {"id": response.id, "nombre": response.first_name, "apellidos": response.last_name, "email": response.email};
             var datos_social = JSON.stringify(data);
-            console.log(datos_social);
+            //console.log(datos_social);
             $.post(amigable('?module=users&function=social_signin'), {user: datos_social},
             function (response) {
-                console.log(response);
-                console.log(response[0]);
+               // console.log(response);
+                //console.log(response[0]);
                 if (!response.error) {
-                    Tools.createCookie("user", response[0]['usuario'] + "|" + response[0]['avatar'] + "|" + response[0]['tipo'] + "|" + response[0]['nombre'], 1);
+                    Tools.createCookie("user", response[0]['email'] + "|" + response[0]['avatar'] + "|" + response[0]['name'] + "|" + response[0]['lastname'], 1);
                     window.location.href = amigable("?module=home&fn=init");
                 } else {
                     if (response.datos == 503)

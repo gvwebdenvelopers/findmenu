@@ -19,8 +19,9 @@ $(document).ready(function () {
     if (user) {
         //console.log(user); //yomogan|https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly//media/flowers.png|client|yomogan
         user = user.split("|");
-        $("#LogProf").html("<a href=" + amigable('?module=users&function=profile') + "><img id='menuImg' class='icon rounded' src='" + user[1] + "'/>" + user[3] + "</a>");
-        $("#LogProf").after("<li><a id='logout' href='#' >Log Out</a></li>");
+        $("#contact_li").after("<li><a href=" + amigable('?module=users&function=profile') + "><img id='menuImg' class='icon rounded' height='70' width='70' src='" + user[1] + "'/>" + user[0] + "</a></li>");
+        $(".logotipo").after("<li><a id='logout' href='#' >Log Out</a></li>");
+        $("#users").fadeOut();
         if ( (user[2] === "client")  ) {
             $("#LogProf").before("<li><a href=" + amigable('?module=products') + ">Mis ofertas</a></li>")
         } else if (user[2] === "admin") {

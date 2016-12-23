@@ -1,8 +1,4 @@
-22/12/16 01:04:40 AM | error loadView general
+23/12/16 02:16:18 AM | ERROR: [8] Undefined index: active
+Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
 -> Controller:users | Function:response 200
-22/12/16 02:13:32 PM | error loadView general
--> Controller:menus | Function:response 200
-22/12/16 02:13:36 PM | error loadView general
--> Controller:menus | Function:response 200
-22/12/16 02:13:38 PM | error loadView general
--> Controller:menus | Function:response 200

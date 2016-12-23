@@ -1,4 +1,4 @@
-    <link href= "/modules/home/view/home.css" rel="stylesheet">
+   
 <div id="alertbanner"></div>
 <!--banner-->
     
@@ -10,7 +10,7 @@
                 <li class="logotipo">
                   <img src="/view/img/findmenu_2.png" alt="logo findmenu"/>
                 </li>
-                <li class= <?php if($_SESSION['module'] == "users"){ echo "active";}else{ echo "";} ?>>
+                <li id="users" class= <?php if($_SESSION['module'] == "users"){ echo "active";}else{ echo "";} ?>>
                     <a href="/modules/users/view/modal.html"
                      data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
                 </li>
@@ -23,8 +23,8 @@
                 <li class= <?php if($_SESSION['module'] == "products"){ echo "active";}else{ echo "";} ?>>
                   <a href="<?php friendly('?module=products&function=page_products'); ?>">Restaurantes</a>
                 </li>
-                <li class= <?php if($_SESSION['module'] == "contact"){ echo "active";}else{ echo "";} ?>>
-                  <a href="<?php friendly('?module=contact&function=view_contact'); ?>">Contact</a>
+                <li id="contact_li" class= <?php if($_SESSION['module'] == "contact"){ echo "active";}else{ echo "";} ?>>
+                  <a href="<?php friendly('?module=contact&function=view_contact'); ?>" ">Contact</a>
                 </li>
               </ul>
                 </nav>
