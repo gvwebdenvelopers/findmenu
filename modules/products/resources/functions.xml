@@ -9,10 +9,6 @@
         <uri>autocomplete_products</uri>
     </function>
     <function>
-        <name>trademark</name>
-        <uri>trademark</uri>
-    </function>
-    <function>
         <name>count_product</name>
         <uri>count_product</uri>
     </function>
@@ -35,5 +31,9 @@
     <function>
         <name>obtain_products</name>
         <uri>obtain_products</uri>
+    </function>
+    <function>
+        <name>provincia</name>
+        <uri>provincia</uri>
     </function>
 </functions>

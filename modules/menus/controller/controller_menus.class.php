@@ -7,7 +7,7 @@ class controller_menus {
     }
 
     function menus_maps() {
-        loadView('modules/menus/view/', 'main.php');
+        loadView('modules/menus/view/', 'menus.php');
     }
 
     function maploader() {

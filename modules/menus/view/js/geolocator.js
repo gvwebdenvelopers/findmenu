@@ -56,7 +56,7 @@ function cargarofertas(of) {
     for (var i = 0; i < of.length; i++) {
         var content ='<div class="me" style="display: block;">'+
                         '<div >'+
-                            '<div class="inline"><img src="' + of[i].foto + '"></div>'+
+                            '<div class="inline"><img class="list" src="' + of[i].foto + '"></div>'+
                             '<div class="inline"><h3>' + of[i].nombre + '</h3><div> ' + of[i].poblacion + '</div><div >Menú: ' + of[i].precio_menu + ' €</div>  </div>'+
                             '<div class="inline"><img class="stars" src="/modules/menus/view/img/estrellas-' + of[i].valoracion + '.png"></div>'+       
                         '</div>'+
@@ -68,9 +68,9 @@ function cargarofertas(of) {
 function marcar(map, menu) {
     var latlon = new google.maps.LatLng(menu.latitud, menu.longitud);
     var image = {
-    url: '/modules/menus/view/img/findMenu_icono_png.png',
+    url: '/modules/menus/view/img/findMenu_icono.png',
     // This marker is 20 pixels wide by 32 pixels high.
-    size: new google.maps.Size(60, 60),
+    size: new google.maps.Size(70, 70),
     // The origin for this image is (0, 0).
     origin: new google.maps.Point(0, 0),
     // The anchor for this image is the base of the flagpole at (0, 32).

@@ -4,9 +4,9 @@
 <script src="<?php echo CONTACT_LIB_PATH; ?>jquery.validate.extended.js"></script>
 <script src="<?php echo CONTACT_JS_PATH; ?>contact.js"></script>
 
-<link href="<?php echo CONTACT_CSS_PATH; ?>bootstrap.min.css" rel="stylesheet">
+<!--<link href="<?php echo CONTACT_CSS_PATH; ?>bootstrap.min.css" rel="stylesheet">-->
 <link href="<?php echo CONTACT_CSS_PATH; ?>custom.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>-->
 
 <br><br><br><br>
 <div class="container">
@@ -45,6 +45,6 @@
 
         <img src="<?php echo CONTACT_IMG_PATH; ?>ajax-loader.gif" alt="ajax loader icon" class="ajaxLoader" /><br/><br/>
 
-        <div id="resultMessage" style="display: none;"></div>
+        <div id="resultMessage" class='alert alert-success' style="display: none;"></div>
     </form>
 </div> <!-- /container -->

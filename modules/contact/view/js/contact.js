@@ -56,10 +56,14 @@ $(document).ready(function(){
             var dataString = $("#contact_form").serialize();
             $.ajax({
                 type: "POST",
-                url: "../../contact/process_contact/",
+                url: amigable("?module=contact&function=process_contact"),
                 data: dataString,
                 success: function(dataString) {
-                    paint(dataString);
+                    dataString = dataString.split("|");
+                    if (dataString[0].substring(1,5) == "true")
+                        paint("<div class='alert alert-success'>" + dataString[1] + "</div>");
+                    else
+                        paint("<div class='alert alert-error'>" + dataString[1] + "</div>");
                 }
             })
             .fail(function() {

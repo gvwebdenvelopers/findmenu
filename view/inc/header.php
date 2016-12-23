@@ -23,7 +23,7 @@
 
   	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-  	<link rel="shortcut icon" href="/view/img/FindMenu_favicon.ico">
+  	<link rel="shortcut icon" href="/view/img/FindMenu_favicon.png">
 
   	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
 
@@ -37,6 +37,7 @@
     <link type="text/css" href='https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans' rel='stylesheet'>
     <!-- Custom CSS -->
     <link type="text/css" href="<?php echo CSS_PATH ?>style.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo CSS_PATH ?>general.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

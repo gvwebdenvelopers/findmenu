@@ -3,13 +3,14 @@ $(document).ready(function () {
     $('.product_name').click(function () {
         var id = this.getAttribute('id');
         console.log(id);
-        $.post("../../products/id_product/", {'idProduct': id}, function (data, status) {
+        $.post(amigable("?module=products&function=id_product"), {'idProduct': id}, function (data, status) {
 
             var json = JSON.parse(data);
             var product = json.product;
 
             $('#results').html('');
             $('.pagination').html('');
+            $('#details').fadeIn();
 
             var img_product = document.getElementById('img_product');
             img_product.innerHTML = '<img src="' + product.foto +
@@ -32,7 +33,7 @@ $(document).ready(function () {
         })
                 .fail(function (xhr) {
                     $("#results").load(
-                            "../../products/view_error_true/", {'view_error': true}
+                            amigable("?module=products&function=view_error_true"), {'view_error': true}
                     );
                 });
     });

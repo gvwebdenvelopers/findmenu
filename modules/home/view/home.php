@@ -1,38 +1,4 @@
--    <!--about-->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center marb-35">
-                    <h1 class="header-h">Delicious Journey</h1>
-                    <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    <br>nibh euismod tincidunt ut laoreet dolore magna aliquam. </p>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="about-info">
-                            <h2 class="heading">vel illum qui dolorem eum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit inventore culpa vero accusamus in nostrum dignissimos modi, molestiae. Autem iusto esse necessitatibus ex corporis earum quaerat voluptates quibusdam dicta!</p>
-                            <div class="details-list">
-                                <ul>
-                                    <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                                    <li><i class="fa fa-check"></i>Quisque finibus eu lorem quis elementum</li>
-                                    <li><i class="fa fa-check"></i>Vivamus accumsan porttitor justo sed </li>
-                                    <li><i class="fa fa-check"></i>Curabitur at massa id tortor fermentum luctus</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <img src="<?php echo TEMPLATE_IMAGE_PATH?>res01.jpg" alt="image about" class="img-responsive">
-                    </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
-    </section>
-    <!--/about-->
-    <!-- event -->
+
     <section id="event">
         <div class="bg-color" class="section-padding">
             <div class="container">

@@ -64,6 +64,7 @@
   define('MENUS_CSS_PATH', '/modules/menus/view/css/');
   define('MENUS_JS_PATH', '/modules/menus/view/js/');
   define('MODEL_MENUS', SITE_ROOT . 'modules/menus/model/model/');
+  define('MENUS_VIEW_PATH', 'modules/menus/view/');
 
   //model users
   define('USERS_VIEW', '/modules/users/view/');

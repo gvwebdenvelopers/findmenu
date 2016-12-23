@@ -9,16 +9,17 @@ function validate_search(search_value) {
 function refresh() {
     $('.pagination').html = '';
     $('.pagination').val = '';
+    $('#details').fadeOut();
 }
 
 function search(keyword) {
 
-    $.post("../../products/num_pages/", {'num_pages': true, 'keyword': keyword}, function (data, status) {
+    $.post(amigable("?module=products&function=num_pages"), {'num_pages': true, 'keyword': keyword}, function (data, status) {
 
         var json = JSON.parse(data);
         var pages = json.pages;
 
-        $("#results").load("../../products/obtain_products/", {'keyword': keyword});
+        $("#results").load(amigable("?module=products&function=obtain_products"), {'keyword': keyword});
 
         if (pages !== 0) {
             refresh();
@@ -33,20 +34,20 @@ function search(keyword) {
                 e.preventDefault();
                 if (!keyword)
                     $("#results").load(
-                            "../../products/obtain_products/", {
-                                'page_num': num
-                            });
+                            amigable("?module=products&function=obtain_products"), {
+                        'page_num': num
+                    });
                 else
                     $("#results").load(
-                            "../../products/obtain_products/", {
-                                'page_num': num,
-                                'keyword': keyword
-                            });
+                            amigable("?module=products&function=obtain_products"), {
+                        'page_num': num,
+                        'keyword': keyword
+                    });
                 reset();
             });
         } else {
             $("#results").load(
-                    "../../products/view_error_false/", {'view_error': false}
+                    amigable("?module=products&function=view_error_false"), {'view_error': false}
             );
             $('.pagination').html('');
             reset();
@@ -55,7 +56,7 @@ function search(keyword) {
 
     }).fail(function (xhr) {
         $("#results").load(
-                "../../products/view_error_true/", {'view_error': true}
+                amigable("?module=products&function=view_error_true"), {'view_error': true}
         );
         $('.pagination').html('');
         reset();
@@ -64,7 +65,7 @@ function search(keyword) {
 
 function search_product(keyword) {
     $.post(
-            "../../products/provincia/", {'provincia': keyword},
+            amigable("?module=products&function=provincia"), {'provincia': keyword},
             function (data, status) {
                 var json = JSON.parse(data);
                 var product = json.product_autocomplete;
@@ -81,11 +82,11 @@ function search_product(keyword) {
                 var nombre = document.getElementById('nombre');
                 nombre.innerHTML = "Nombre: " + product[0].nombre;
                 var precio_menu = document.getElementById('precio_menu');
-                precio_menu.innerHTML = "Menu del día: " + product[0].precio_menu+" € ";
+                precio_menu.innerHTML = "Menu del día: " + product[0].precio_menu + " € ";
                 var precio_menu_almuerzo = document.getElementById('precio_menu_almuerzo');
-                precio_menu_almuerzo.innerHTML = "Almuerzo popular: " + product[0].precio_menu_almuerzo+" € ";
+                precio_menu_almuerzo.innerHTML = "Almuerzo popular: " + product[0].precio_menu_almuerzo + " € ";
                 var precio_menu_noche = document.getElementById('precio_menu_noche');
-                precio_menu_noche.innerHTML = "Menu cena: " + product[0].precio_menu_noche+" € ";
+                precio_menu_noche.innerHTML = "Menu cena: " + product[0].precio_menu_noche + " € ";
                 var valoracion = document.getElementById('valoracion');
                 valoracion.innerHTML = "Valoracion: " + product[0].valoracion +
                         " estrellas";
@@ -93,7 +94,7 @@ function search_product(keyword) {
 
             }).fail(function (xhr) {
         $("#results").load(
-                "../../products/view_error_false/", {'view_error': false}
+                amigable("?module=products&function=view_error_false"), {'view_error': false}
         );
         $('.pagination').html('');
         reset();
@@ -102,14 +103,14 @@ function search_product(keyword) {
 
 function count_product(keyword) {
     $.post(
-            "../../products/count_product/", {'count_product': keyword},
+            amigable("?module=products&function=count_product"), {'count_product': keyword},
             function (data, status) {
                 var json = JSON.parse(data);
                 var num_products = json.num_products;
 
                 if (num_products == 0) {
                     $("#results").load(
-                            "../../products/view_error_false/", {'view_error': false}
+                            amigable("?module=products&function=view_error_false"), {'view_error': false}
                     ); //view_error=false
                     $('.pagination').html('');
                     reset();
@@ -122,7 +123,7 @@ function count_product(keyword) {
                 }
             }).fail(function () {
         $("#results").load(
-                "../../products/view_error_false/", {'view_error': false}
+                amigable("?module=products&function=view_error_false"), {'view_error': false}
         ); //view_error=false
         $('.pagination').html('');
         reset();
@@ -192,7 +193,7 @@ $(document).ready(function () {
     });
 
     $.post(
-            "../../products/autocomplete_products/", {'autocomplete': true},
+            amigable("?module=products&function=autocomplete_products"), {'autocomplete': true},
             function (data, status) {
 
                 var json = JSON.parse(data);
@@ -213,9 +214,9 @@ $(document).ready(function () {
                 });
             }).fail(function (xhr) {
         if (xhr.status === 404) {
-            $("#results").load("../../products/view_error_false/", {'view_error': false});
+            $("#results").load(amigable("?module=products&function=view_error_false"), {'view_error': false});
         } else {
-            $("#results").load("../../products/view_error_true/", {'view_error': true});
+            $("#results").load(amigable("?module=products&function=view_error_true"), {'view_error': true});
         }
         $('.pagination').html('');
         reset();

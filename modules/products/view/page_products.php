@@ -1,7 +1,7 @@
 <script type="text/javascript" src="<?php echo PRODUCTS_JS_PATH ?>page_products.js" ></script>
 <script type="text/javascript" src="<?php echo PRODUCTS_JS_LIB_PATH ?>jquery.bootpag.min.js" ></script>
 <link rel="stylesheet" type="text/css" href="<?php echo PRODUCTS_CSS_PATH ?>main.css">
-<br><br><br><br><br><br>
+
 <!--input de autocomplete añadida-->
 <center>
     <form name="search_prod" id="search_prod" class="search_prod">
@@ -24,7 +24,7 @@
 
 <!-- modal window details_product -->
 
-<section >
+<section id="details">
     <div class="container" id="product">
         <div class="media">
             <div class="pull-left">

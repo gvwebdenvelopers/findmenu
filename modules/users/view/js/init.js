@@ -13,7 +13,7 @@ $(document).ready(function () {
             '</div>' +
             '</div>';
     $("#LoginModal").append(modalbase);
-    //$('#linkReg').href(amigable('?module=users&function=signup'));
+   
     ////**user menu*///
     var user = Tools.readCookie("user");
     if (user) {

@@ -4,13 +4,13 @@
     
         <div id="alertbanner"></div>
         <div >
-            <div id="navbar" >
+            <div class="navbar" >
                 <nav>
               <ul>               
                 <li class="logotipo">
                   <img src="/view/img/findmenu_2.png" alt="logo findmenu"/>
                 </li>
-                <li >
+                <li class= <?php if($_SESSION['module'] == "users"){ echo "active";}else{ echo "";} ?>>
                     <a href="/modules/users/view/modal.html"
                      data-toggle="modal" id="Login" data-target="#modalLog">Acceder</a>
                 </li>

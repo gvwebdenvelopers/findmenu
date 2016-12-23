@@ -1,5 +1,5 @@
 <section id='page'>
-    <br><br>
+    <br><br><br><br><br><br>
     <div id='header' class='status4xx'>
         <?php
         if (isset($arrData) && !empty($arrData)) {
