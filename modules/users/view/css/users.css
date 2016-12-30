@@ -1,97 +1,4 @@
-.modal-header{
-    background-color: #061C33;
-    text-align: center;
-    padding: 9px;
-}
 
-.modal-header h4{
-    color:#ffffff;
-    margin: 0px;
-}
-
-#modalLog form{
-    display: inline-block;
-    width: 50%;
-}
-
-#modalLog .social{
-    display: inline-block;
-    max-width: 40%;
-    vertical-align: top;
-    padding-left: 27px;
-}
-
-#fb label{
-    font-size: 0.8em;
-    padding: 10px;
-    color: #123;
-}
-#fb span{
-    background:  url("../img/fc_icon.png") ;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-size: 40px;
-    background-color: rgb(54,88,153);
-    line-height: 40px;
-    color: white;
-    font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
-    font-size: 1.3em;
-}
-#fb span:hover{
-    color: gold;
-    border: 2px solid gold;
-}
-
-ul.log{
-    margin:0px;
-}
-
-ul.log li{
-    display: inline-block;
-    padding: 10px;
-    margin: 5px;
-}
-.modal-body{
-    background-color: #e9f2fc;
-}
-.modal-body .btn{
-    float: right;
-}
-
-.modal-body .separator{
-    display: inline-block;
-    min-width: 8%;
-    text-align: center;
-    color: #858585;
-}
-.modal-body .form-contact{
-    padding-top: 15px;
-}
-#login_form .btn{
-    margin-bottom: 8px;
-}
-
-
-
-.modal-footer{
-    background-color: #061C33;
-    color:#ffffff;
-    text-align: center;
-}
-
-.modal-footer div{
-    width: 100%;
-}
-.modal-body .reg p{
-    text-align: center;
-    margin-bottom: 1em;
-}
-.modal-body .reg a{
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 /*----------------Signup------------------*/
 
@@ -335,13 +242,6 @@ input[type="file"] {
     padding: 8px 10px;
 }
 
-form {
-    display: block;
-    margin: 20px auto;
-    background: #eee;
-    border-radius: 10px;
-    padding: 15px
-}
 
 #progress {
     position: relative;
@@ -374,12 +274,4 @@ form {
     right: -155px;
     text-transform: uppercase;
     min-width: 121px;
-}
-
-.msg_ok {
-    background: #589D05;
-}
-
-.msg_error {
-    background: red;
 }

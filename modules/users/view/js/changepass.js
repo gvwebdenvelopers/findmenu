@@ -4,13 +4,13 @@ $(document).ready(function () {
     });
     $("#inputPassword").keyup(function () {
         if ($(this).val().length != "") {
-            $(".error").fadeOut();
+            $(".msg_error").fadeOut();
             return false;
         }
     });
     $("#inputPassword2").keyup(function () {
         if ($(this).val().length != "") {
-            $(".error").fadeOut();
+            $(".msg_error").fadeOut();
             return false;
         }
     });
@@ -22,13 +22,13 @@ function changepass() {
     var value = false;
 
     if (password == '') {
-        $("#inputPassword").after('<span class="error">Introduzca un password</span>');
+        $("#error").append('<span class="msg_error">Introduzca un password</span>');
         value = false;
     } else if (password2 == '') {
-        $("#inputPassword2").after('<span class="error">Por favor vuelve a introducir el password</span>');
+        $("#error_2").append('<span class="msg_error">Por favor vuelve a introducir el password</span>');
         value = false;
     } else if (password != password2) {
-        $("#inputPassword2").after('<span class="error">Las passwords no coiciden</span>');
+        $("#error_2").append('<span class="msg_error">Las passwords no coiciden</span>');
         value = false;
     } else if (password === password2) {
         value = true;

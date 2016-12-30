@@ -1,4 +1,9 @@
-23.12.2016 02:16:18  |  User:   | ERROR: [8] Undefined index: active
-Notice on line 32 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+30.12.2016 05:06:55  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 123 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+30.12.2016 05:07:04  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 123 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
 
 -> Controller: users | Funciton:response 200

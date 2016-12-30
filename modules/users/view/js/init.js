@@ -1,17 +1,8 @@
 $(document).ready(function () {
     /////**modal login*///
-    var modalbase = '<div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
-            '<div class="modal-dialog" role="document">' +
-            '<div class="modal-content">' +
-            '</div>' +
-            '<div class="modal-footer">' +
-            '<div class="8u 12u$(medium)">' +
-            '<div class="copyright">' +
-            '&copy; 2016 findMenu. All rights reserved.' +
-            ' </div>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
+    var modalbase = '<div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +   
+                    '<div class="modal-content"></div>' +
+                    '</div>';
     $("#LoginModal").append(modalbase);
    
     ////**user menu*///

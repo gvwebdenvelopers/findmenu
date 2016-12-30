@@ -29,10 +29,11 @@ class users_dao {
         $poblacion = " ";
         $favorites = " ";
         $token = $arrArgument['token'];
-        if ($arrArgument['active'])
+        //$activado = 0;
+        //if ($arrArgument['active'])
             $activado = $arrArgument['active'];
-        else
-            $activado = 0;
+        //else
+            //$activado = 0;
 
         $sql = "INSERT INTO users ( name, lastname, birthdate, singindate, email, user,"
                 . " password, usertype, avatar, country, province, city, favorites, active, token"

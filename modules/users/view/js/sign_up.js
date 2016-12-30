@@ -36,7 +36,7 @@ $(document).ready(function () {
 function validate_user() {
 
     var result = true;
-    var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;;
+    var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
     var email = $("#user_email").val();
     var password = $("#password").val();
     var password2 = $("#conf_password").val();
@@ -44,16 +44,16 @@ function validate_user() {
     $(".error").remove();
 
      if (!emailreg.test($("#user_email").val()) || $("#user_email").val() === "") {
-        $("#user_email").focus().after("<span class='error'>Ingrese un email correcto</span>");
+        $("#user_email").focus().after("<span class='msg_error'>Ingrese un email correcto</span>");
         result = false;
     }  else if ($("#password").val() === "") {
-        $("#password").focus().after("<span class='error'>Ingrese su contraseña</span>");
+        $("#password").focus().after("<span class='msg_error'>Ingrese su contraseña</span>");
         result = false;
     } else if ($("#password").val().length < 6) {
-        $("#password").focus().after("<span class='error'>Mínimo 6 carácteres para la contraseña</span>");
+        $("#password").focus().after("<span class='msg_error'>Mínimo 6 carácteres para la contraseña</span>");
         result = false;
-    } else if ($("#conf_password").val() !== $("#conf_password").val()) {
-        $("#conf_password").focus().after("<span class='error'>Las contraseñas no coinciden</span>");
+    } else if ($("#conf_password").val() !== $("#password").val()) {
+        $("#conf_password").focus().after("<span class='msg_error'>Las contraseñas no coinciden</span>");
         result = false;
 
     }

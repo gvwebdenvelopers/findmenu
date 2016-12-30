@@ -1,25 +1,23 @@
-<script src="<?php echo CONTACT_LIB_PATH; ?>bootstrap-button.js"></script>
+
 <script src="<?php echo CONTACT_LIB_PATH; ?>jquery.validate.min.js"></script>
 <script src="<?php echo CONTACT_LIB_PATH; ?>jquery.validate.extended.js"></script>
 <script src="<?php echo USERS_JS_PATH; ?>restore.js"></script>
-<br><br><br>
-<div class="container">
-    <form id="restore_form" name="restore_form" class="form-contact">
-        <br />
-        <div class="form-title"><h2 class="form-contact-heading">¿Has olvidado la contraseña?</h2></div>
-        <p>Por favor introduce tu email. En breve recibirás un correo con un enlace para cambiar tu contraseña.</p>
 
-        <div class="control-group">
-            <input type="text" id="inputEmail" name="inputEmail" placeholder="Email" class="input-block-level" maxlength="100">
-        </div>
+<div class="contact">
+    <form id="restore_form" name="restore_form" class="details-holder">
         
+        <div class="modal-header"><h2>¿Has olvidado la contraseña?</h2></div>
+        <div class="modal-body">
+        <p class="subject">Por favor introduce tu email. En breve recibirás un correo con un enlace para cambiar tu contraseña.</p>
+        <div >
+            <input type="text" id="inputEmail" name="inputEmail" placeholder="Email" class="text" >
+        </div>    
         <input type="hidden" name="token" value="restore_form" />
+        <input class="btn-read-more" type="submit" name="submit" id="restoreBtn" disabled="disabled" value="Send" />
 
-        <input class="btn btn-primary" type="submit" name="submit" id="restoreBtn" disabled="disabled" value="Enviar" />
-
-        <!--<img src="<?php echo CONTACT_IMG_PATH; ?>ajax-loader.gif" alt="ajax loader icon" class="ajaxLoader" /><br/><br/>-->
-
+        <img src="<?php echo CONTACT_IMG_PATH; ?>ajax-loader.gif" alt="ajax loader icon" class="ajaxLoader" />
         <div id="resultMessage" style="display: none;"></div>
+        </div>
     </form>
 </div> <!-- /container -->
 

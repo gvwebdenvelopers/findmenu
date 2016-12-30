@@ -30,7 +30,8 @@ class controller_users {
                 'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
                 'tipo' => "client",
                 'token' => "",
-                'user' => $userName[0]
+                'user' => $userName[0],
+                'active'=>0
             );
             /* Control de registro */
             set_error_handler('ErrorHandler');

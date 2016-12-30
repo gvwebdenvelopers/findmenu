@@ -29,11 +29,11 @@ function login() {
 
     $(".error").remove();
     if (!user) {
-        $("#inputUser").focus().after("<span class='error'>Usuario vacío</span>");
+        $("#inputUser").focus().after("<span class='msg_error'>Usuario vacío</span>");
         value = false;
     } else {
         if (!pass) {
-            $("#inputPass").focus().after("<span class='error'>Contraseña vacía</span>");
+            $("#inputPass").focus().after("<span class='msg_error'>Contraseña vacía</span>");
             value = false;
         } else
             value = true;
@@ -53,7 +53,7 @@ function login() {
                 if (response.datos == 503)
                     window.location.href = amigable("?module=home&fn=init&param=503");
                 else
-                    $("#inputPass").focus().after("<span class='error'>" + response.datos + "</span>");
+                    $("#inputPass").focus().after("<span class='msg_error'>" + response.datos + "</span>");
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
             //console.log(xhr);
