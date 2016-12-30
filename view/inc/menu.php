@@ -30,6 +30,6 @@
                 </nav>
             </div>
         </div>
-    
+    <!--Modal Login hidden-->
     <div id="LoginModal"></div>
     <!-- / banner -->

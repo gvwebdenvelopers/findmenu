@@ -191,12 +191,7 @@ and open the template in the editor.
     text-transform: uppercase;
     min-width: 121px;
 }
-.msg_ok{
-    background: #589D05;
-}
-.msg_error{
-    background: red;
-}
+
 
 .table_check{
   height: 100%;

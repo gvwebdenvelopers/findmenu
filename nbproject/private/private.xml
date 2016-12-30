@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/jorge/Proyectos/findmenu/modules/products/view/js/page_products.js</file>
+            <file>file:/home/jorge/Proyectos/findmenu/view/inc/menu.php</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/css/users_style.css</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/css/signup.css</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/modal.html</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/js/init.js</file>
+            <file>file:/home/jorge/Proyectos/findmenu/view/css/forms.css</file>
+            <file>file:/home/jorge/Proyectos/findmenu/modules/users/view/css/userss.css</file>
         </group>
     </open-files>
 </project-private>
