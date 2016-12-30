@@ -1,0 +1,5 @@
+Archivos a modificar:
+
+- modules/users/view/js/init.js
+- modules/users/view/modal.html
+- view/js/main.js

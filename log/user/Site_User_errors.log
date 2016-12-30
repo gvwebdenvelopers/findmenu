@@ -1,0 +1,24 @@
+30.12.2016 01:33:46  |  User:   | ERROR: [2] mysqli::__construct(): (HY000/1045): Access denied for user 'jordimart'@'localhost' (using password: NO)
+Warning on line 44 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+30.12.2016 01:33:46  |  User:   | ERROR: [2] mysqli::select_db(): Couldn't fetch mysqli
+Warning on line 45 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+30.12.2016 01:33:46  |  User:   | ERROR: [2] mysqli::query(): Couldn't fetch mysqli
+Warning on line 49 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+30.12.2016 01:35:50  |  User:   | ERROR: [2] mysqli::__construct(): (HY000/1045): Access denied for user 'jordimart'@'localhost' (using password: NO)
+Warning on line 44 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+30.12.2016 01:35:50  |  User:   | ERROR: [2] mysqli::select_db(): Couldn't fetch mysqli
+Warning on line 45 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+30.12.2016 01:35:50  |  User:   | ERROR: [2] mysqli::query(): Couldn't fetch mysqli
+Warning on line 49 in file /var/www/findmenu/model/db.class.singleton.php
+
+-> Controller: users | Funciton:response 200

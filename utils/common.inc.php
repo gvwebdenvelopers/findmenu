@@ -21,7 +21,7 @@ function loadModel($model_path, $model_name, $function, $arrArgument = '') {
 function loadView($rutaVista = "", $templateName = "", $arrPassValue = '') {
     $view_path = $rutaVista . $templateName;
     $arrData = '';
-
+    echo $view_path;
     if (file_exists($view_path)) {
         if (isset($arrPassValue))
             $arrData = $arrPassValue;

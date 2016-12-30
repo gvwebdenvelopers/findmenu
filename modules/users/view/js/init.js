@@ -13,7 +13,7 @@ $(document).ready(function () {
             '</div>' +
             '</div>';
     $("#LoginModal").append(modalbase);
-   
+
     ////**user menu*///
     var user = Tools.readCookie("user");
     if (user) {
@@ -27,7 +27,7 @@ $(document).ready(function () {
         } else if (user[2] === "admin") {
             $("#LogProf").before("<li><a href=" + amigable('?module=admin') + ">Administrar</a></li>")
         }
-        $("head").append("<script src='https://findmenu.tk/modules/users/view/js/logout.js'></script>");
+        $("head").append("<script src='https://findmenu.es/modules/users/view/js/logout.js'></script>");
     }
 
     var url = window.location.href;

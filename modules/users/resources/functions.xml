@@ -17,6 +17,10 @@
         <uri>process_restore</uri>
     </function>
     <function>
+        <name>profile</name>
+        <uri>profile</uri>
+    </function>
+    <function>
         <name>restore</name>
         <uri>restore</uri>
     </function>

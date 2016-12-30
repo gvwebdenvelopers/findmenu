@@ -10,7 +10,7 @@ class controller_users {
     }
 
     ////////////////////////////////////////////////////begin signup///////////////////////////////////////////
-    function signup() { //refactorizar loadView para hacer los requires allí     
+    function signup() { //refactorizar loadView para hacer los requires allí
         loadView('modules/users/view/', 'signup.php');
     }
 
@@ -374,11 +374,11 @@ class controller_users {
     }
 
     ////////////////////////////////////////////////////end restore///////////////////////////////////////////
-    /*
-      ////////////////////////////////////////////////////begin profile///////////////////////////////////////////
-      function profile() {
-      loadView('modules/user/view/', 'profile.php');
-      }
+
+    ////////////////////////////////////////////////////begin profile///////////////////////////////////////////
+    function profile() {
+      loadView('modules/users/view/', 'profile.php');
+    }
 
       function upload_avatar() {
       $result_avatar = upload_files();
@@ -562,6 +562,4 @@ class controller_users {
       }
       }
       ////////////////////////////////////////////////////end profile///////////////////////////////////////////
-
-     */
 }
