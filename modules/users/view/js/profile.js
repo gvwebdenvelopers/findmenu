@@ -169,6 +169,7 @@ $(document).ready(function () {
         console.log(user[0]);
         $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
         function (response) {
+            console.log(response);
             if (response.success) {
                 fill(response.user);
                 load_countries_v1(response.user['pais']);

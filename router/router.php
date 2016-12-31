@@ -7,7 +7,7 @@
 	include(UTILS . "utils.inc.php");
 	include(UTILS . "common.inc.php");
         include(UTILS . "mail.inc.php");
-	
+
 
 	if(PRODUCTION){ //estamos en producción
 		ini_set('display_errors', '1');
@@ -22,16 +22,16 @@
 
 	function handlerRouter() {
 	    if (!empty($_GET['module'])) {
-			$URI_module = $_GET['module'];
-		} else {
-			$URI_module = 'home';
-		}
+				$URI_module = $_GET['module'];
+			} else {
+				$URI_module = 'home';
+			}
 
-		if (!empty($_GET['function'])) {
-			$URI_function = $_GET['function'];
-		} else {
-			$URI_function = 'init';
-		}
+			if (!empty($_GET['function'])) {
+				$URI_function = $_GET['function'];
+			} else {
+				$URI_function = 'init';
+			}
 
 	    handlerModule($URI_module, $URI_function);
 	}

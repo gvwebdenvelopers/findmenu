@@ -19,7 +19,7 @@ $(document).ready(function () {
     if (user) {
         //console.log(user); //yomogan|https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly//media/flowers.png|client|yomogan
         user = user.split("|");
-        $("#contact_li").after("<li><a href=" + amigable('?module=users&function=profile') + "><img id='menuImg' class='icon rounded' height='70' width='70' src='" + user[1] + "'/>" + user[0] + "</a></li>");
+        $("#contact_li").after("<li><a href=" + amigable('?module=users&function=profile') + "><img id='menuImg' class='icon rounded' height='70' width='70' src='" + user[1] + "'/>" + user[3] + "</a></li>");
         $(".logotipo").after("<li><a id='logout' href='#' >Log Out</a></li>");
         $("#users").fadeOut();
         if ( (user[2] === "client")  ) {
@@ -42,6 +42,8 @@ $(document).ready(function () {
             $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Se le ha enviado un email para verificar su cuenta</div>");
         }else if (url[5] === "rest"){
             $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Se ha cambiado satisfactoriamente su contraseña</div>");
+        }else if (url[5] === "social"){
+            $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Bienvenido </div>");
         }
     } else if (url[4] === "profile"){
         if (url[5] === "done")

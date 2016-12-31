@@ -23,3 +23,39 @@ Warning on line 45 in file /var/www/findmenu/model/db.class.singleton.php
 Warning on line 49 in file /var/www/findmenu/model/db.class.singleton.php
 
 -> Controller:users | Function:response 200
+31/12/16 04:10:45 AM | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:10:45 AM | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:10:45 AM | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:11:33 AM | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:11:33 AM | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:11:33 AM | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:12:03 AM | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:12:03 AM | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200
+31/12/16 04:12:03 AM | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller:users | Function:response 200

@@ -21,6 +21,10 @@
         <uri>profile</uri>
     </function>
     <function>
+        <name>profile_filler</name>
+        <uri>profile_filler</uri>
+    </function>
+    <function>
         <name>restore</name>
         <uri>restore</uri>
     </function>

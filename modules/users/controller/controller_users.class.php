@@ -42,15 +42,8 @@ class controller_users {
                 if ($arrValue[0]['total'] == 1) {
                     $arrValue = false;
                     $typeErr = 'Name';
-                    $error = "Ya existe un usuario con esta cuenta: " . $arrArgument['email'];
-                } else {
-                    $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('email'), 'like' => array($arrArgument['email'])));
-                    if ($arrValue[0]['total'] == 1) {
-                        $arrValue = false;
-                        $typeErr = 'Email';
-                        $error = "Email ya registrado";
-                    }
-                }
+                    $error = "Ya existe un usuario con este email: " . $arrArgument['email'];
+                } 
             } catch (Exception $e) {
 
                 $arrValue = false;
@@ -411,7 +404,7 @@ class controller_users {
                 echo json_encode($jsondata);
                 exit();
             } else {
-                $url = amigable('?module=main', true);
+                $url = amigable('?module=home&fn=init&param=503', true);
                 $jsondata["success"] = false;
                 $jsondata['redirect'] = $url;
                 echo json_encode($jsondata);
