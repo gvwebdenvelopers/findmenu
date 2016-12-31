@@ -377,7 +377,7 @@ class controller_users {
 
     ////////////////////////////////////////////////////begin profile///////////////////////////////////////////
     function profile() {
-      loadView('modules/users/view/', 'profile.php');
+        loadView('modules/users/view/', 'profile.php');
     }
 
       function upload_avatar() {
@@ -395,36 +395,36 @@ class controller_users {
       }
       }
 
-      function profile_filler() {
-      if (isset($_POST['usuario'])) {
-      set_error_handler('ErrorHandler');
-      try {
-      $arrValue = loadModel(MODEL_USER, "user_model", "select", array(column => array('usuario'), like => array($_POST['usuario']), field => array('*')));
-      } catch (Exception $e) {
-      $arrValue = false;
-      }
-      restore_error_handler();
+    function profile_filler() {
+        if (isset($_POST['user'])) {
+            set_error_handler('ErrorHandler');
+            try {
+                $arrValue = loadModel(MODEL_USER, "user_model", "select", array(column => array('user'), like => array($_POST['user']), field => array('*')));
+            } catch (Exception $e) {
+                $arrValue = false;
+            }
+            restore_error_handler();
 
-      if ($arrValue) {
-      $jsondata["success"] = true;
-      $jsondata['user'] = $arrValue[0];
-      echo json_encode($jsondata);
-      exit();
-      } else {
-      $url = amigable('?module=main', true);
-      $jsondata["success"] = false;
-      $jsondata['redirect'] = $url;
-      echo json_encode($jsondata);
-      exit();
-      }
-      } else {
-      $url = amigable('?module=main', true);
-      $jsondata["success"] = false;
-      $jsondata['redirect'] = $url;
-      echo json_encode($jsondata);
-      exit();
-      }
-      }
+            if ($arrValue) {
+                $jsondata["success"] = true;
+                $jsondata['user'] = $arrValue[0];
+                echo json_encode($jsondata);
+                exit();
+            } else {
+                $url = amigable('?module=main', true);
+                $jsondata["success"] = false;
+                $jsondata['redirect'] = $url;
+                echo json_encode($jsondata);
+                exit();
+            }
+        } else {
+            $url = amigable('?module=home', true);
+            $jsondata["success"] = false;
+            $jsondata['redirect'] = $url;
+            echo json_encode($jsondata);
+            exit();
+        }
+    }
 
       function load_pais_user() {
       if ((isset($_GET["param"])) && ($_GET["param"] == true)) {

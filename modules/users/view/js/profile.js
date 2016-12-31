@@ -29,14 +29,14 @@ $(document).ready(function () {
         validate_user();
     });
 
-    $("#input_name, #birth_date, #last_name , #user_email, #user,#password, #conf_password").keyup(function () {
+    $("#input_name, #birth_date, #last_name , #user_email, #user,#password").keyup(function () {
         if ($(this).val() !== "") {
             $(".error").fadeOut();
             return false;
         }
     });
 
-    $("#input_name,").keyup(function () {
+    $("#input_name").keyup(function () {
         if ($(this).val().length >= 2) {
             $(".error").fadeOut();
             return false;
@@ -70,12 +70,138 @@ $(document).ready(function () {
             return false;
         }
     });
-    $("#conf_password").keyup(function () {
-        if ($(this).val().length >= 6) {
-            $(".error").fadeOut();
-            return false;
+    $("#progress").hide();
+
+    Dropzone.autoDiscover = false;
+    $("#dropzone").dropzone({
+        url: amigable("?module=users&function=upload_avatar"),
+        addRemoveLinks: true,
+        maxFileSize: 1000,
+        dictResponseError: "Ha ocurrido un error en el server",
+        acceptedFiles: 'image/*,.jpeg,.jpg,.png,.gif,.JPEG,.JPG,.PNG,.GIF,.rar,application/pdf,.psd',
+        init: function () {
+            this.on("success", function (file, response) {
+                $("#progress").show();
+                $("#bar").width('100%');
+                $("#percent").html('100%');
+                $('.msg').text('').removeClass('msg_error');
+                $('.msg').text('Success Upload image!!').addClass('msg_ok').animate({'right': '300px'}, 300);
+            });
+        },
+        complete: function (file) {
+            //if(file.status == "success"){
+            //alert("El archivo se ha subido correctamente: " + file.name);
+            //}
+        },
+        error: function (file) {
+            //alert("Error subiendo el archivo " + file.name);
+        },
+        removedfile: function (file, serverFileName) {
+            var name = file.name;
+            $.ajax({
+                type: "GET",
+                url: amigable("?module=user&function=delete_avatar&delete=true"),
+                data: {"filename": name},
+                success: function (data) {
+                    $("#progress").hide();
+                    $('.msg').text('').removeClass('msg_ok');
+                    $('.msg').text('').removeClass('msg_error');
+                    $("#e_avatar").html("");
+
+                    var json = JSON.parse(data);
+                    if (json.res === true) {
+                        var element;
+                        if ((element = file.previewElement) != null) {
+                            element.parentNode.removeChild(file.previewElement);
+                            //alert("Imagen eliminada: " + name);
+                        } else {
+                            false;
+                        }
+                    } else { //json.res == false, elimino la imagen también
+                        var element;
+                        if ((element = file.previewElement) != null) {
+                            element.parentNode.removeChild(file.previewElement);
+                        } else {
+                            false;
+                        }
+                    }
+                }
+            });
         }
     });
+
+    $("#provincia").empty();
+    $("#provincia").append('<option value="" selected="selected">Selecciona una Provincia</option>');
+    $("#provincia").prop('disabled', true);
+    $("#poblacion").empty();
+    $("#poblacion").append('<option value="" selected="selected">Selecciona una Poblacion</option>');
+    $("#poblacion").prop('disabled', true);
+
+    $("#pais").change(function () {
+        var pais = $(this).val();
+        var provincia = $("#provincia");
+        var poblacion = $("#poblacion");
+
+        if (pais !== 'ES') {
+            provincia.prop('disabled', true);
+            poblacion.prop('disabled', true);
+            $("#provincia").empty();
+            $("#poblacion").empty();
+        } else {
+            provincia.prop('disabled', false);
+            poblacion.prop('disabled', false);
+            load_provincias_v1("");
+        }
+    });
+
+    $("#provincia").change(function () {
+        var prov = $(this).val();
+        if (prov > 0) {
+            load_poblaciones_v1(prov, "");
+        } else {
+            $("#poblacion").prop('disabled', false);
+        }
+    });
+
+    var user = Tools.readCookie("user");
+    if (user) {
+        user = user.split("|");
+        console.log(user[0]);
+        $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
+        function (response) {
+            if (response.success) {
+                fill(response.user);
+                load_countries_v1(response.user['pais']);
+                if (response.user['pais'] === "ES") {
+                    $("#provincia").prop('disabled', false);
+                    $("#poblacion").prop('disabled', false);
+                    load_provincias_v1(response.user['provincia']);
+                    load_poblaciones_v1(response.user['provincia'], response.user['poblacion']);
+                }
+            } else {
+                window.location.href = response.redirect;
+            }
+        }, "json").fail(function (xhr, textStatus, errorThrown) {
+            console.log(xhr.responseText);
+            if (xhr.status === 0) {
+                alert('Not connect: Verify Network.');
+            } else if (xhr.status === 404) {
+                alert('Requested page not found [404]');
+            } else if (xhr.status === 500) {
+                alert('Internal Server Error [500].');
+            } else if (textStatus === 'parsererror') {
+                alert('Requested JSON parse failed.');
+            } else if (textStatus === 'timeout') {
+                alert('Time out error.');
+            } else if (textStatus === 'abort') {
+                alert('Ajax request aborted.');
+            } else {
+                alert('Uncaught Error: ' + xhr.responseText);
+            }
+        });
+    }else{
+        alert('User profile not available');
+    }
 }); //ready
 
 function validate_user() {
