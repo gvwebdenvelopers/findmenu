@@ -31,7 +31,7 @@ class users_bll {
     public function select_BLL($arrArgument) {
         return $this->dao->select_DAO($this->db, $arrArgument);
     }
-    
+
     public function update_BLL($arrArgument) {
         return $this->dao->update_DAO($this->db, $arrArgument);
     }
@@ -47,7 +47,7 @@ class users_bll {
         return $this->dao->obtain_provinces_DAO();
     }
 
-    public function obtain_towns_BLL($arrArgument) {
+    public function obtain_cities_BLL($arrArgument) {
         return $this->dao->obtain_towns_DAO($arrArgument);
     }
 }

@@ -37,17 +37,48 @@
                         <p>Tipo de usuario:
                         <select class="form-control" id="inputType" name="Tipo de usuario">
                             <option value="client">Cliente</option>
-                            <option value="worker">Ofertante</option>
+                            <option value="offeror">Ofertante</option>
                         </select></p>
                       </div>
+                    </div>
+                    <div id="inputfavoriteMenus" class="col-md-6 col-sm-6 contact-form">
+                        <label class="pefil">Menus preferidos:</label>
+                        <div class="form-group label-floating is-empty">
+                            <input id="favoriteMenus" name="Menus preferidos" readonly></input>
+                        </div>
                     </div>
                     <div class="col-md-6 col-sm-6 contact-form">
                         <div class="form-group label-floating is-empty">
                           <input id="password" class="form-control" type="pass" placeholder="Contraseña" required>
                         </div>
                     </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <label class="pefil">Pais:</label>
+                        <div class="form-group label-floating is-empty">
+                            <select id="country" name="pais"></select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <label class="pefil">Provincia:</label>
+                        <div class="form-group label-floating is-empty">
+                            <select id="province" name="provincia"></select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact-form">
+                        <label class="pefil">Poblacion:</label>
+                        <div class="form-group label-floating is-empty">
+                            <select id="city" name="poblacion"></select>
+
+                        </div>
+                    </div>
                     <br />
                     <div class="col-md-12 contact-form">
+                      <h1 class="form-profile-heading" id="username">Profile Image</h1>
+                      <img id="avatar_user" src="" />
+
+                      <span id="e_avatar" class="styerror" style="color:#FF0000"></span>
                       <div class="form-group" id="progress">
                           <div id="bar"></div>
                           <div id="percent">0%</div >

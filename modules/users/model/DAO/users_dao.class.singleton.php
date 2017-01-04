@@ -160,7 +160,7 @@ class users_dao {
         return $json;
     }
 
-    public function obtain_towns_DAO($arrArgument) {
+    public function obtain_cities_DAO($arrArgument) {
         $json = array();
         $tmp = array();
 

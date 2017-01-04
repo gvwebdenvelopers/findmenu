@@ -27,14 +27,13 @@ class users_model {
      public function select($arrArgument) {
         return $this->bll->select_BLL($arrArgument);
     }
-    
+
     public function update($arrArgument) {
         return $this->bll->update_BLL($arrArgument);
     }
     public function update_one($arrArgument) {
         return $this->bll->update_one_BLL($arrArgument);
     }
-
     public function obtain_countries($url) {
         return $this->bll->obtain_countries_BLL($url);
     }
@@ -43,7 +42,7 @@ class users_model {
         return $this->bll->obtain_provinces_BLL();
     }
 
-    public function obtain_towns($arrArgument) {
-        return $this->bll->obtain_towns_BLL($arrArgument);
+    public function obtain_cities($arrArgument) {
+        return $this->bll->obtain_cities_BLL($arrArgument);
     }
 }
