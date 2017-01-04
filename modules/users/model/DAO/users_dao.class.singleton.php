@@ -84,6 +84,7 @@ class users_dao {
 
         $sql = $sql1 . $fields . $sql2 . $sql;
         //return $sql;
+        //echo $sql;
         $stmt = $db->ejecutar($sql);
         return $db->listar($stmt);
     }

@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     var url = window.location.href;
     url = url.split("/");
-    //console.log("4 " + url[4] + " 5 " + url[5]);
+    console.log("4 " + url[4] + " 5 " + url[5]);
     if (url[4] === "verify" && url[5].substring(0, 3) == "Ver"){
         $("#alertbanner").html("<a href='#alertbanner' class='alertbanner'>Su email ha sido verificado, disfrute de nuestros servicios</div>");
     }else if(url[5]==="503"){

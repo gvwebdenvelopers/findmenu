@@ -43,7 +43,7 @@ class controller_users {
                     $arrValue = false;
                     $typeErr = 'Name';
                     $error = "Ya existe un usuario con este email: " . $arrArgument['email'];
-                } 
+                }
             } catch (Exception $e) {
 
                 $arrValue = false;
@@ -392,10 +392,15 @@ class controller_users {
         if (isset($_POST['user'])) {
             set_error_handler('ErrorHandler');
             try {
-                $arrValue = loadModel(MODEL_USER, "user_model", "select", array(column => array('user'), like => array($_POST['user']), field => array('*')));
+                $arrValue = loadModel(MODEL_USER, "users_model", "select", array(column => array('user'), like => array($_POST['user']), field => array('*')));
+                //$jsondata["arrValue"] = $arrValue;
+                //$jsondata["msg"] = "en try";
             } catch (Exception $e) {
+                //$jsondata["msg"] = "en excepcion";
                 $arrValue = false;
             }
+            //echo json_encode($jsondata);
+            //exit();
             restore_error_handler();
 
             if ($arrValue) {
@@ -404,14 +409,14 @@ class controller_users {
                 echo json_encode($jsondata);
                 exit();
             } else {
-                $url = amigable('?module=home&fn=init&param=503', true);
+                $url = friendly('?module=home&function=init&param=503', true);
                 $jsondata["success"] = false;
                 $jsondata['redirect'] = $url;
                 echo json_encode($jsondata);
                 exit();
             }
         } else {
-            $url = amigable('?module=home', true);
+            $url = friendly('?module=home', true);
             $jsondata["success"] = false;
             $jsondata['redirect'] = $url;
             echo json_encode($jsondata);

@@ -58,3 +58,283 @@ Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller
 Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
 
 -> Controller: users | Funciton:response 200
+04.01.2017 12:36:07  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 12:36:07  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 12:36:07  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 12:39:20  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 12:39:20  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 12:39:20  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:33:27  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:33:27  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:33:27  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:38:40  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:38:40  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:38:40  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:48:12  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:48:12  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:48:12  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:49:58  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:49:58  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 01:49:58  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:03:31  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:03:31  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:11:13  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:11:13  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:16:56  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:16:56  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:16:56  |  User:   | ERROR: [8] Undefined index: field
+Notice on line 67 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:25:03  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:25:03  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:25:03  |  User:   | ERROR: [8] Undefined index: field
+Notice on line 67 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:32:37  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:32:37  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:32:37  |  User:   | ERROR: [8] Undefined index: field
+Notice on line 67 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:34:24  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:34:24  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:34:24  |  User:   | ERROR: [8] Undefined index: field
+Notice on line 67 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:38:52  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:38:52  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:38:52  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:40:52  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:40:52  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:40:52  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:41:51  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:41:51  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:41:51  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:44:37  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:44:37  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:44:37  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:46:31  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:46:31  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:46:31  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:48:21  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:48:21  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:48:21  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:49:01  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:49:01  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:49:01  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:50:14  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:50:14  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:50:14  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:50:25  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:50:25  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:50:25  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:52:06  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:52:06  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:52:06  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:52:35  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:52:35  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:52:35  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:53:30  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:53:30  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+04.01.2017 02:53:30  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 395 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200

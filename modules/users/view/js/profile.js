@@ -164,12 +164,15 @@ $(document).ready(function () {
     });
 
     var user = Tools.readCookie("user");
+    console.log( user );
     if (user) {
         user = user.split("|");
         console.log(user[0]);
         $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
         function (response) {
             console.log(response);
+            console.log(response.msg);
+            console.log(response.success);
             if (response.success) {
                 fill(response.user);
                 load_countries_v1(response.user['pais']);
@@ -183,6 +186,8 @@ $(document).ready(function () {
                 window.location.href = response.redirect;
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
+            console.log(xhr.errorThrown);
+            console.log(xhr.textStatus);
             console.log(xhr.responseText);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
