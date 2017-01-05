@@ -425,17 +425,17 @@ class controller_users {
     }
 
     function load_country_user() {
-      $json = "entra";
-      echo $json;
-      exit;
       if ((isset($_GET["param"])) && ($_GET["param"] == true)) {
           $json = array();
           $url = 'http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso/ListOfCountryNamesByName/JSON';
           set_error_handler('ErrorHandler');
           try {
-              $json = loadModel(MODEL_USER, "users_model", "obtain_cities", $url);
+              $json = loadModel(MODEL_USER, "users_model", "obtain_countries", $url);
+
           } catch (Exception $e) {
               $json = false;
+              echo  "en extepcion";
+              exit;
           }
           restore_error_handler();
 

@@ -48,6 +48,6 @@ class users_bll {
     }
 
     public function obtain_cities_BLL($arrArgument) {
-        return $this->dao->obtain_towns_DAO($arrArgument);
+        return $this->dao->obtain_cities_DAO($arrArgument);
     }
 }

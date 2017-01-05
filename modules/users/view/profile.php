@@ -91,7 +91,7 @@
                     </div>
                     <div class="col-md-12 btnpad">
                         <div class="contacts-btn-pad">
-                            <button type="button" id ="submit_users" name="submit_users" class="contacts-btn" value="submit">Registrate</button>
+                            <button type="button" id ="submit_users" name="submit_users" class="contacts-btn" value="submit">Actualizar perfil</button>
                         </div>
                     </div>
                 </div>

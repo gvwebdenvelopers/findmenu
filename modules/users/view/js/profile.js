@@ -139,48 +139,48 @@ $(document).ready(function () {
 
     $("#country").change(function () {
         var pais = $(this).val();
-        var provincia = $("#provincia");
-        var poblacion = $("#poblacion");
-
+        var provincia = $("#province");
+        var poblacion = $("#city");
+        console.log( pais );
         if (pais !== 'ES') {
             provincia.prop('disabled', true);
             poblacion.prop('disabled', true);
-            $("#provincia").empty();
-            $("#poblacion").empty();
+            $("#province").empty();
+            $("#city").empty();
         } else {
             provincia.prop('disabled', false);
             poblacion.prop('disabled', false);
-            load_provincias_v1("");
+            load_provinces_v1("");
         }
     });
 
-    $("#provincia").change(function () {
+    $("#province").change(function () {
         var prov = $(this).val();
         if (prov > 0) {
-            load_poblaciones_v1(prov, "");
+            load_cities_v1(prov, "");
         } else {
-            $("#poblacion").prop('disabled', false);
+            $("#city").prop('disabled', false);
         }
     });
 
     var user = Tools.readCookie("user");
-    console.log( user );
+    //console.log( user );
     if (user) {
         user = user.split("|");
-        console.log(user[0]);
+        //console.log(user[0]);
         $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
         function (response) {
-            console.log(response);
-            console.log(response.msg);
-            console.log(response.success);
+            //console.log(response);
+            //console.log(response.msg);
+            //console.log(response.success);
             if (response.success) {
                 fill(response.user);
                 load_countries_v1(response.user['country']);
                 if (response.user['country'] === "ES") {
-                    $("#provincia").prop('disabled', false);
+                    $("#province").prop('disabled', false);
                     $("#poblacion").prop('disabled', false);
-                    load_provincias_v1(response.user['provincia']);
-                    load_poblaciones_v1(response.user['provincia'], response.user['poblacion']);
+                    load_provinces_v1(response.user['province']);
+                    load_poblaciones_v1(response.user['province'], response.user['city']);
                 }
             } else {
                 window.location.href = response.redirect;
@@ -358,17 +358,19 @@ function load_countries_v2(cad, country) {
 
 function load_countries_v1(country) {
     //$.get( "modules/products/controller/controller_products.class.php?load_countries=true",
-    $.get(amigable("?module=users&function=load_cities_user&load_pais=true"),
+    $.get(amigable("?module=users&function=load_country_user&load_countries=true"),
         function( response ) {
-          console.log( response );
-            if(response === 'error'){
+          //console.log( response );
+            if(response.match(/error/)){
+                //console.log("en error");
                 load_countries_v2("resources/ListOfCountryNamesByName.json", country);
             }else{
+                //console.log("response succsefully");
                 load_countries_v2(amigable("?module=users&function=load_country_user&load_countries=true"), country); //oorsprong.org
             }
     })
     .fail(function(response) {
-        console.log(response);
+        //console.log(response);
         load_countries_v2(amigable("?module=users&function=load_country_user&load_countries=true"), country);
     });
 }
@@ -444,16 +446,13 @@ function load_cities_v2(prov, pobl) {
     });
 }
 
-function load_cities_v1(prov) { //provincesycityes.xml - xpath
+function load_cities_v1(prov, pobl) { //provincesycityes.xml - xpath
     var data = { idCity : prov  };
-    $.post(amigable("?module=user&function=load_poblaciones_user"), data, function (response) {
-	  //$.post("modules/products/controller/controller_products.class.php", data, function(response) {
-	    alert(response);
+    $.post(amigable("?module=users&function=load_cities_user"), data, function (response) {
+	    //$.post("modules/products/controller/controller_products.class.php", data, function(response) {
+	    //alert(response);
       var json = JSON.parse(response);
 		  var cities=json.cities;
-		  //alert(cities);
-		  //console.log(cityes);
-		  //alert(cityes[0].city);
 
   		$("#city").empty();
 	    $("#city").append('<option value="" selected="selected">Select a city</option>');
