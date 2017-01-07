@@ -206,7 +206,8 @@ class controller_users {
 
     public function social_signin() { //utilitzada per Facebook i Twitter
         $user = json_decode($_POST['user'], true);
-
+        //echo json_encode($user);
+				//exit();
         set_error_handler('ErrorHandler');
         try {
 
@@ -215,7 +216,8 @@ class controller_users {
             $arrValue = false;
         }
         restore_error_handler();
-
+        //json_encode($arrValue);
+				//exit;
         if (!$arrValue[0]["total"]) {
             if ($user['email'])
                 $avatar = 'https://graph.facebook.com/' . ($user['id']) . '/picture';
@@ -253,6 +255,7 @@ class controller_users {
             $user = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
             restore_error_handler();
             echo json_encode($user);
+            exit();
         } else {
             echo json_encode(array('error' => true, 'datos' => 503));
         }
@@ -542,14 +545,14 @@ class controller_users {
           }
           restore_error_handler();
           if ($arrValue) {
-              $url = amigable('?module=users&function=profile&param=done', true);
+              $url = friendly('?module=users&function=profile&param=done', true);
               $jsondata["success"] = true;
               $jsondata["redirect"] = $url;
               echo json_encode($jsondata);
               exit;
           } else {
               $jsondata["success"] = false;
-              $jsondata["redirect"] = $url = amigable('?module=users&function=profile&param=503', true);
+              $jsondata["redirect"] = $url = friendly('?module=users&function=profile&param=503', true);
               echo json_encode($jsondata);
           }
       } else {
