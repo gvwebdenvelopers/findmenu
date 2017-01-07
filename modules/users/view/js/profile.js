@@ -25,11 +25,11 @@ $(document).ready(function () {
         yearRange: "1930:2006"
     });
 
-    $('#submitBtn').click(function () {
+    $('#submit_users').click(function () {
         validate_user();
     });
 
-    $("#input_name, #birth_date, #last_name , #user_email, #user,#password").keyup(function () {
+    $("#input_name, #birth_date, #last_name , #user_email, #password").keyup(function () {
         if ($(this).val() !== "") {
             $(".error").fadeOut();
             return false;
@@ -52,13 +52,6 @@ $(document).ready(function () {
     $("#user_email").keyup(function () {
         var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
         if ($(this).val() !== "" && emailreg.test($(this).val())) {
-            $(".error").fadeOut();
-            return false;
-        }
-    });
-
-    $("#user").keyup(function () {
-        if ($(this).val().length >= 3) {
             $(".error").fadeOut();
             return false;
         }
@@ -170,7 +163,7 @@ $(document).ready(function () {
         //console.log(user[0]);
         $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
         function (response) {
-            //console.log(response);
+            console.log(response.user.password);
             //console.log(response.msg);
             //console.log(response.success);
             if (response.success) {
@@ -178,17 +171,24 @@ $(document).ready(function () {
                 load_countries_v1(response.user['country']);
                 if (response.user['country'] === "ES") {
                     $("#province").prop('disabled', false);
-                    $("#poblacion").prop('disabled', false);
+                    $("#city").prop('disabled', false);
                     load_provinces_v1(response.user['province']);
-                    load_poblaciones_v1(response.user['province'], response.user['city']);
+                    load_cities_v1(response.user['province'], response.user['city']);
+                }
+                if(response.user.password === ""){
+                    console.log("El usuario ha entrado por facebook");
+                    $("#inputPassword").hide();
+                }else {
+                    console.log("El usuario ha entrado por email login");
+                    $("#inputPassword").prop('display', 'block');
                 }
             } else {
                 window.location.href = response.redirect;
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
-            console.log(xhr.errorThrown);
-            console.log(xhr.textStatus);
-            console.log(xhr.responseText);
+            //console.log(xhr.errorThrown);
+            //console.log(xhr.textStatus);
+            //console.log(xhr.responseText);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
             } else if (xhr.status === 404) {
@@ -216,17 +216,17 @@ function validate_user() {
     var nomreg = /^\D{3,30}$/;
     var apelreg = /^(\D{3,30})+$/;
     var name = $("#input_name").val();
-    var apellidos = $("#last_name").val();
+    var lastname = $("#last_name").val();
     var date_birthday = $("#birth_date").val();
     var email = $("#user_email").val();
-    var usuario = $("#user").val();
     var password = $("#password").val();
-    var password2 = $("#conf_password").val();
     var tipo = $("#inputType").val();
-
+    var pais = $("#country").val();
+    var provincia = $("#province").val();
+    var poblacion = $("#city").val();
+    var avatar = $("#avatar_user").src();
 
     $(".error").remove();
-
     if ($("#input_name").val() === "" || !nomreg.test($("#input_name").val())) {
         $("#input_name").focus().after("<span class='error'>Introduzca su nombre</span>");
         result = false;
@@ -242,28 +242,52 @@ function validate_user() {
     } else if (!emailreg.test($("#user_email").val()) || $("#user_email").val() === "") {
         $("#user_email").focus().after("<span class='error'>Ingrese un email correcto</span>");
         result = false;
-    } else if ($("#user").val() === "" || !nomreg.test($("#user").val())) {
-        $("#user").focus().after("<span class='error'>Usuario no válido</span>");
-        result = false;
-    } else if ($("#user").val().length < 3) {
-        $("#user").focus().after("<span class='error'>Mínimo 3 carácteres para el usuario</span>");
-        result = false;
-    } else if ($("#password").val() === "") {
-        $("#password").focus().after("<span class='error'>Ingrese su contraseña</span>");
-        result = false;
-    } else if ($("#password").val().length < 6) {
-        $("#password").focus().after("<span class='error'>Mínimo 6 carácteres para la contraseña</span>");
-        result = false;
-    } else if ($("#conf_password").val() !== $("#conf_password").val()) {
-        $("#conf_password").focus().after("<span class='error'>Debe coincidir con la contraseña</span>");
-        result = false;
+    } else if( $("#password").val() == "") {
 
+        console.log("usuario_facebook");
+        password = "usuario_facebook";
+    } else if ( $("#password").prop('display') != null ){
+
+        console.log($("#password").val());
+        if( $("#password").val() === "" ) {
+            $("#password").focus().after("<span class='error'>Ingrese su contraseña</span>");
+            result = false;
+        } else if($("#password").val().length < 6 ) {
+            $("#password").focus().after("<span class='error'>Mínimo 6 carácteres para la contraseña</span>");
+            result = false;
+        } else if( $("#password").val() === "usuario_facebook" ) {
+            $("#password").focus().after("<span class='error'>Lo sentimos, contraseña invalida en el sistema</span>");
+            $("#password").val() === "";
+            result = false;
+        }
+    }
+    console.log(result);
     if (result) {
+        if (provincia == null) {
+            provincia = '';
+        } else if (provincia.length == 0) {
+            provincia = '';
+        } else if (provincia === 'Selecciona una Provincia') {
+            return '';
+        }
+
+        if (poblacion == null) {
+            poblacion = '';
+        } else if (poblacion.length == 0) {
+            poblacion = '';
+        } else if (poblacion === 'Selecciona una Poblacion') {
+            return '';
+        }
+
         var data = {"name": name, "last_name": lastname, "date_birthday": date_birthday, "user_email": email,
-            "user": usuario, "password": password, "password2": password2, "tipo": tipo};
+            "password": password, "type": tipo, "country": pais, "province": provincia, "city": poblacion
+            "avatar": avatar};
         var data_users_JSON = JSON.stringify(data);
-        $.post(friendly("?module=user&function=signup_user"), {signup_user_json: data_users_JSON},
+        console.log(data_users_JSON);
+        $.post(amigable("?module=users&function=modify"), {mod_user_json: data_users_JSON},
         function (response) {
+            console.log(response);
+            console.log(response.success);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {
@@ -284,9 +308,6 @@ function validate_user() {
                     if (response["data"]["user_email"] !== undefined && response["data"]["user_email"] !== null) {
                         $("#inputEmail").focus().after("<span class='error'>" + response["data"]["user_email"] + "</span>");
                     }
-                    if (response["data"]["user"] !== undefined && response["data"]["user"] !== null) {
-                        $("#user").focus().after("<span class='error'>" + response["data"]["user"] + "</span>");
-                    }
 
                     if (response["data"]["password"] !== undefined && response["data"]["password"] !== null) {
                         $("#password").focus().after("<span class='error'>" + response.error.password + "</span>");
@@ -294,9 +315,9 @@ function validate_user() {
                 }
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
-            //console.log(xhr);
-            //console.log(xhr.responseJSON);
-            //console.log(xhr.responseText);
+            console.log(xhr);
+            console.log(xhr.responseJSON);
+            console.log(xhr.responseText);
             if( (xhr.responseJSON === undefined) || (xhr.responseJSON === null) )
                 xhr.responseJSON = JSON.parse(xhr.responseText);
             if (xhr.status === 0) {
@@ -315,7 +336,6 @@ function validate_user() {
                 alert('Uncaught Error: ' + xhr.responseText);
             }
         });
-    }
     }
 }
 

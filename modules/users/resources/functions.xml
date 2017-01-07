@@ -25,6 +25,10 @@
         <uri>login</uri>
     </function>
     <function>
+        <name>modify</name>
+        <uri>modify</uri>
+    </function>
+    <function>
         <name>process_restore</name>
         <uri>process_restore</uri>
     </function>

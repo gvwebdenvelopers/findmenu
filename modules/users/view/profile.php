@@ -28,11 +28,6 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6 contact-form">
-                        <div class="form-group label-floating is-empty">
-                          <input id="user_name" class="form-control" type="text" placeholder="Nombre de usuario">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 contact-form">
                       <div class="form-group label-floating is-empty">
                         <p>Tipo de usuario:
                         <select class="form-control" id="inputType" name="Tipo de usuario">
@@ -47,8 +42,9 @@
                             <input id="favoriteMenus" name="Menus preferidos" readonly></input>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 contact-form">
+                    <div id="inputPassword" class="col-md-6 col-sm-6 contact-form">
                         <div class="form-group label-floating is-empty">
+                          <label class="pefil">Introduce tu contraseña para modificar tus datos:</label>
                           <input id="password" class="form-control" type="pass" placeholder="Contraseña" required>
                         </div>
                     </div>

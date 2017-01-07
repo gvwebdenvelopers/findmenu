@@ -134,11 +134,16 @@ class users_dao {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+        curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
         $file_contents = curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-
-        return ($file_contents) ? $file_contents : FALSE;
+        $accepted_response = array(200, 301, 302);
+        if(!in_array($httpcode, $accepted_response)){
+            return FALSE;
+        }else{
+            return ($file_contents) ? $file_contents : FALSE;
+        }
     }
 
     public function obtain_provinces_DAO() {
