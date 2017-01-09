@@ -102,12 +102,9 @@ class controller_users {
     ////////////////////////////////////////////////////begin signin///////////////////////////////////////////
     public function login() {
         $user = json_decode($_POST['login_json'], true);
-        $column = array(
-            'user'
-        );
-        $like = array(
-            $user['user']
-        );
+        $column = array('user');
+        $userName = explode('@', $user['user']);
+        $like = array( $userName[0] );
 
         $arrArgument = array(
             'column' => $column,
@@ -119,8 +116,8 @@ class controller_users {
         try {
             //loadModel
             $arrValue = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
-
             $arrValue = password_verify($user['password'], $arrValue[0]['password']);
+
         } catch (Exception $e) {
             $arrValue = "error";
         }
@@ -132,7 +129,7 @@ class controller_users {
                 try {
                     $arrArgument = array(
                         'column' => array("user", "active"),
-                        'like' => array($user['user'], "1")
+                        'like' => array($userName[0], "1")
                     );
                     $arrValue = loadModel(MODEL_USER, "users_model", "count", $arrArgument);
                     //echo json_encode($arrValue);

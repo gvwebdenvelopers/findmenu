@@ -44,10 +44,11 @@ function login() {
     if (value){
         $.post(amigable("?module=users&function=login"), {login_json: login_JSON},
         function (response) {
-            console.log(response[0]);
+            //console.log(response);
+            //console.log(response[0]);
             if (!response.error) {
                 //create session cookies
-                Tools.createCookie("user", response[0]['user'] + "|" + response[0]['avatar'] + "|" + response[0]['type'] + "|" + response[0]['name'], 1);
+                Tools.createCookie("user", response[0]['user'] + "|" + response[0]['avatar'] + "|" + response[0]['type'] + "|" + response[0]['user'], 1);
                 window.location.href = amigable("?module=home&fn=init");
             } else {
                 if (response.datos == 503)

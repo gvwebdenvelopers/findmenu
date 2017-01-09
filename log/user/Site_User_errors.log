@@ -1,0 +1,44 @@
+09.01.2017 10:22:35  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 123 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:38:02  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 77 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:38:02  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 119 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:39:57  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 77 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:39:57  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 119 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:41:34  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 77 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:41:34  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 119 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:46:52  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 77 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:46:52  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 119 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:47:39  |  User:   | ERROR: [8] Undefined variable: value
+Notice on line 121 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 10:57:22  |  User:   | ERROR: [8] Array to string conversion
+Notice on line 60 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
