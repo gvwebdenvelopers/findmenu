@@ -1,12 +1,8 @@
-   
-<div id="alertbanner"></div>
-<!--banner-->
-    
         <div id="alertbanner"></div>
         <div >
             <div class="navbar" >
                 <nav>
-              <ul>               
+              <ul>
                 <li class="logotipo">
                   <img src="/view/img/findmenu_2.png" alt="logo findmenu"/>
                 </li>
@@ -24,7 +20,7 @@
                   <a href="<?php friendly('?module=products&function=page_products'); ?>">Restaurantes</a>
                 </li>
                 <li id="contact_li" class= <?php if($_SESSION['module'] == "contact"){ echo "active";}else{ echo "";} ?>>
-                  <a href="<?php friendly('?module=contact&function=view_contact'); ?>" ">Contact</a>
+                  <a href="<?php friendly('?module=contact&function=view_contact'); ?>">Contact</a>
                 </li>
               </ul>
                 </nav>

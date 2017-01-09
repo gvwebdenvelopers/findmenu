@@ -56,7 +56,7 @@ function login() {
                     $("#inputPass").focus().after("<span class='msg_error'>" + response.datos + "</span>");
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
-            //console.log(xhr);
+            console.log(xhr);
             console.log(xhr.responseText);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
