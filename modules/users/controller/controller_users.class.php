@@ -516,7 +516,7 @@ class controller_users {
       if ($result['resultado']) {
           $arrArgument = array(
               'avatar' => $userJSON['avatar'],
-              'date_birthday' => strtoupper($result['data']['date_birthday']),
+              'birthdate' => strtoupper($result['data']['date_birthday']),
               'email' => $result['data']['user_email'],
               'name' => $result['data']['name'],
               'lastname' => $result['data']['last_name'],

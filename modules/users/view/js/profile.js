@@ -20,6 +20,7 @@ $(document).ready(function () {
 
     $("#birth_date").datepicker({
         maxDate: '0',
+        defaultDate: "-18Y",
         changeMonth: true,
         changeYear: true,
         yearRange: "1930:2006"
@@ -286,8 +287,8 @@ function validate_user() {
         $.post(amigable("?module=users&function=modify"), {mod_user_json: data_users_JSON},
         function (response) {
             console.log(response.data);
-            //console.log(response.success);
-            //console.log(response.arrValue);
+            console.log(response.success);
+            console.log(response.arrValue);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {
@@ -437,16 +438,12 @@ function load_provinces_v1(prov) { //provincesycityes.xml - xpath
                 load_provinces_v2(prov);
             }else{
                 for (var i = 0; i < provinces.length; i++) {
-                    if (prov == provincias[i].id)
+                    if (prov == provinces[i].id)
                         $("#province").append("<option value='" + provinces[i].id + "' selected='selected'>" + provinces[i].nombre + "</option>");
                     else
                         $("#province").append("<option value='" + provinces[i].id + "'>" + provinces[i].nombre + "</option>");
-
                 }
-
-
     		    }
-          }
     })
     .fail(function(response) {
         load_provinces_v2();

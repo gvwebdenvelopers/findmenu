@@ -3,6 +3,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.css">
 <link type="text/css" href="<?php echo USERS_CSS_PATH ?>users_style.css" rel="stylesheet">
+<link type="text/css" href="<?php echo USERS_CSS_PATH ?>profile.css" rel="stylesheet">
 <section id="form_users" class="section-padding">
   <div class="container">
           <h1 class="header-h"> Editar perfil</h1>
@@ -14,7 +15,7 @@
               </div>
               <div class="col-md-6 col-sm-6 contact-form">
                   <div class="form-group label-floating is-empty">
-                      <input id="birth_date" class="form-control" type="date" placeholder="Fecha de nacimiento: Date">
+                      <input id="birth_date" class="form-control" type="text" placeholder="Fecha de nacimiento: ">
                   </div>
               </div>
               <div class="col-md-6 col-sm-6 contact-form pad-form">
@@ -36,7 +37,7 @@
                   </select></p>
                 </div>
               </div>
-              <div id="inputfavoriteMenus" class="col-md-6 col-sm-6 contact-form">
+              <!--<div id="inputfavoriteMenus" class="col-md-6 col-sm-6 contact-form">
                   <label class="pefil">Menus preferidos:</label>
                   <div class="form-group label-floating is-empty">
                       <input id="favoriteMenus" name="Menus preferidos" readonly></input>
@@ -47,7 +48,7 @@
                     <label class="pefil">Introduce tu contraseña para modificar tus datos:</label>
                     <input id="password" class="form-control" type="pass" placeholder="Contraseña" required>
                   </div>
-              </div>
+              </div>-->
               <div class="col-md-6 col-sm-6 contact-form">
                   <label class="pefil">Pais:</label>
                   <div class="form-group label-floating is-empty">
