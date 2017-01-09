@@ -287,7 +287,7 @@ function validate_user() {
         function (response) {
             console.log(response);
             console.log(response.success);
-            console.log(response.data);
+            console.log(response.arrValue);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {

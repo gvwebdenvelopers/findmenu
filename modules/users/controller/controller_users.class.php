@@ -521,10 +521,10 @@ class controller_users {
               'name' => $result['data']['name'],
               'lastname' => $result['data']['last_name'],
               'password' => password_hash($result['data']['password'], PASSWORD_BCRYPT),
-              'pais' => $result['data']['country'],
-              'provincia' => $result['data']['province'],
-              'poblacion' => $result['data']['city'],
-              'type' => $result['data']['type'],
+              'country' => $result['data']['country'],
+              'province' => $result['data']['province'],
+              'city' => $result['data']['city'],
+              'usertype' => $result['data']['type'],
           );
           $arrayDatos = array( 'column' => array('user'), 'like' => array( $userJSON['user'] ) );
           $j = 0;
@@ -545,11 +545,13 @@ class controller_users {
           restore_error_handler();
           if ($arrValue) {
               $url = friendly('?module=users&function=profile&param=done', true);
+              $jsondata["arrValue"] = $arrValue;
               $jsondata["success"] = true;
               $jsondata["redirect"] = $url;
               echo json_encode($jsondata);
               exit;
           } else {
+              $jsondata["arrValue"] = $arrValue;
               $jsondata["success"] = false;
               $jsondata["redirect"] = $url = friendly('?module=users&function=profile&param=503', true);
               echo json_encode($jsondata);

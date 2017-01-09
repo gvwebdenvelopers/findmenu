@@ -914,3 +914,243 @@ Notice on line 110 in file /var/www/findmenu/modules/users/model/DAO/users_dao.c
 Notice on line 117 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller: users | Funciton:response 200
+09.01.2017 07:26:01  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:26:01  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:26:01  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:26:01  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:26:02  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:26:32  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 110 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:29:09  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:29:09  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:29:09  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:29:09  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:29:10  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:29:22  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 110 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:31:57  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:31:57  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:31:57  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:31:57  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:31:58  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:32:13  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 110 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:44  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:44  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:44  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:44  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:44  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:51  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 110 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:59  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:59  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:59  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:59  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:33:59  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 137 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:34:02  |  User:   | ERROR: [8] Undefined variable: change
+Notice on line 110 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:35:24  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:35:24  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:35:24  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:35:24  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:35:25  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:36:00  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:36:00  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:36:00  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:36:00  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:36:03  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:39:49  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:39:49  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:39:49  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:39:49  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:39:50  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:41:49  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:41:49  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:41:49  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:41:49  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:41:55  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:44:13  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:44:13  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:44:13  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:44:13  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:44:19  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:46:27  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:46:27  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:46:27  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:46:28  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 07:46:28  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200

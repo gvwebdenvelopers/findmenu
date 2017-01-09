@@ -99,7 +99,8 @@ class users_dao {
          */
         $i = count($arrArgument['field']);
         $k = count($arrArgument['column']);
-
+        $sql ="";
+        $change ="";
         $sql1 = "UPDATE users SET ";
         $sql2 = "  WHERE ";
 
@@ -118,8 +119,8 @@ class users_dao {
 
         }
 
-        $sql = $sql1 . $change . $sql2 . $sql;
-
+        $sql = $sql1 . $change . $sql2 . $sql . ";";
+        //return $sql;
         return $db->ejecutar($sql);
     }
 
