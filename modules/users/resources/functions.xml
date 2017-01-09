@@ -9,8 +9,24 @@
         <uri>init</uri>
     </function>
     <function>
+        <name>load_country_user</name>
+        <uri>load_country_user</uri>
+    </function>
+    <function>
+        <name>load_province_user</name>
+        <uri>load_province_user</uri>
+    </function>
+    <function>
+        <name>load_cities_user</name>
+        <uri>load_cities_user</uri>
+    </function>
+    <function>
         <name>login</name>
         <uri>login</uri>
+    </function>
+    <function>
+        <name>modify</name>
+        <uri>modify</uri>
     </function>
     <function>
         <name>process_restore</name>

@@ -20,6 +20,8 @@
   define('MEDIA_PATH', SITE_ROOT . 'media/');
   //modules
   define('MODULES_PATH', SITE_ROOT . 'modules/');
+  //resources
+  define('RESOURCES', SITE_ROOT . '/resources/');
   //utils
   define('UTILS', SITE_ROOT . '/utils/');
 

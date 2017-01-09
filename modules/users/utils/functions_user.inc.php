@@ -1,4 +1,125 @@
 <?php
+function validate_profile($value) {
+    $error = array();
+    $valido = true;
+    $filtro = array(
+        'name' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[A-Za-z]{2,30}$/')
+        ),
+        'last_name' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[A-Za-z]{2,30}$/')
+        ),
+        'date_birthday' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d$/')
+        ),
+        'password' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[0-9a-zA-Z]{6,32}$/')
+        ),
+        'user_email' => array(
+            'filter' => FILTER_CALLBACK,
+            'options' => 'valida_email'
+        ),
+        /*
+        'country' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[a-zA-Z_]*$/')
+        )
+        ,
+        'province' => array(
+            'filter' => FILTER_VALIDATE_REGEXP,
+            'options' => array('regexp' => '/^[a-zA-Z0-9, _]*$/')
+        )
+        ,
+        'city' => array(
+            'filter' => FILTER_CALLBACK,
+            'options' => 'validate_city'
+        )
+        */
+    );
+
+
+    $resultado = filter_var_array($value, $filtro);
+
+    if ($resultado['date_birthday']) {
+        //validate to user's over 16
+        $dates = validateAge($resultado['date_birthday']);
+
+        if (!$dates) {
+            $error['date_birthday'] = 'User must have more than 16 years';
+            $valido = false;
+        }
+    }
+
+    /*
+    if ($resultado['date_birthday'] && $resultado['title_date']) {
+        //compare date of birth with title_date
+        $dates = valida_dates($resultado['birth_date'], $resultado['title_date']);
+
+        if (!$dates) {
+            $error['birth_date'] = 'birth date must be before the date of registration and must have more than 16 years.';
+            $valido = false;
+        }
+    }
+    */
+
+    if ($resultado != null && $resultado) {
+
+
+        if (!$resultado['name']) {
+            if($value['name'] === "")
+                $resultado['name'] = $value['name'];
+            else
+                $error['name'] = 'Name must be 2 to 30 letters';
+        }
+
+        if (!$resultado['last_name']) {
+            $error['last_name'] = 'Last name must be 2 to 30 letters';
+        }
+
+        if (!$resultado['user_email']) {
+            $error['user_email'] = 'error format email (example@example.com)';
+            $valido = false;
+        }
+
+
+        if (!$resultado['password']) {
+            $error['password'] = 'Pass must be 6 to 32 characters';
+
+        }
+        else if( $resultado['password'] === "usuario_facebook" ){
+            $resultado['password'] = "";
+        }
+
+        if (!$resultado['date_birthday']) {
+            if ($resultado['date_birthday'] == "") {
+                $error['date_birthday'] = "this camp can't empty";
+            } else {
+                $error['date_birthday'] = 'error format date (mm/dd/yyyy)';
+            }
+        }
+        if( !$value['avatar']){
+            $resultado['avatar'] = "";
+        }
+        else{
+            $resultado['avatar'] = $value['avatar'];
+        }
+
+    } else {
+        $valido = false;
+    };
+
+    $resultado['country'] = $value['country'];
+    $resultado['province'] = $value['province'];
+    $resultado['city'] = $value['city'];
+    $resultado['type'] = $value['type'];
+
+    return $return = array('resultado' => $valido, 'error' => $error, 'data' => $resultado);
+}
+
 
 function validate_user($value) {
     $error = array();

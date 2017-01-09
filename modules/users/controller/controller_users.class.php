@@ -406,7 +406,7 @@ class controller_users {
                 //$jsondata["msg"] = "en excepcion";
                 $arrValue = false;
             }
-            
+
             restore_error_handler();
 
             if ($arrValue) {
@@ -485,7 +485,7 @@ class controller_users {
 
           set_error_handler('ErrorHandler');
           try {
-              $json = loadModel(MODEL_USER, "users_model", "obtain_cities", $_POST['idCity']);
+              $json = loadModel(MODEL_USER, "users_model", "obtain_towns", $_POST['idCity']);
           } catch (Exception $e) {
               $json = false;
           }
@@ -507,19 +507,15 @@ class controller_users {
       $jsondata = array();
       $userJSON = json_decode($_POST['mod_user_json'], true);
 
-      if($_SESSION['avatar']['data']){
+      if(isset($_SESSION['avatar']['data'])){
             $userJSON['avatar'] = $_SESSION['avatar']['data'];
       }
 
-      //echo json_encode( $userJSON );
-      //exit();
       $result = validate_profile($userJSON);
-      //$jsondata = $result['data'];
-      //echo json_encode( $jsondata );
-      //exit();
+
       if ($result['resultado']) {
           $arrArgument = array(
-              'avatar' => "",
+              'avatar' => $userJSON['avatar'],
               'date_birthday' => strtoupper($result['data']['date_birthday']),
               'email' => $result['data']['user_email'],
               'name' => $result['data']['name'],
@@ -530,7 +526,7 @@ class controller_users {
               'poblacion' => $result['data']['city'],
               'type' => $result['data']['type'],
           );
-          $arrayDatos = array( column => array('email'), like => array( $arrArgument['email'] ) );
+          $arrayDatos = array( 'column' => array('user'), 'like' => array( $userJSON['user'] ) );
           $j = 0;
           foreach ($arrArgument as $clave => $valor) {
               if ($valor != "") {

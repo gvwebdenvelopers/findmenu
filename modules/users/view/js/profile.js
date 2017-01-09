@@ -217,8 +217,14 @@ function validate_user() {
     var pais = $("#country").val();
     var provincia = $("#province").val();
     var poblacion = $("#city").val();
-    var avatar = $("#avatar_user").src();
-
+    var avatar = $("#avatar_user").attr('src');
+    var user_id = "";
+    var user = Tools.readCookie("user");
+    //console.log( user );
+    if (user) {
+        user = user.split("|");
+        user_id = user[0];
+    }
     $(".error").remove();
     if ($("#input_name").val() === "" || !nomreg.test($("#input_name").val())) {
         $("#input_name").focus().after("<span class='error'>Introduzca su nombre</span>");
@@ -274,22 +280,25 @@ function validate_user() {
 
         var data = {"name": name, "last_name": lastname, "date_birthday": date_birthday, "user_email": email,
             "password": password, "type": tipo, "country": pais, "province": provincia, "city": poblacion,
-            "avatar": avatar};
+            "avatar": avatar, "user": user_id};
         var data_users_JSON = JSON.stringify(data);
         console.log(data_users_JSON);
         $.post(amigable("?module=users&function=modify"), {mod_user_json: data_users_JSON},
         function (response) {
             console.log(response);
             console.log(response.success);
+            console.log(response.data);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {
-                if (response.typeErr === "Name") {
+                if (!response.success) {
+                    window.location.href = response.redirect;
+                } else if (response.typeErr === "Name") {
                     $("#inputUser").focus().after("<span class='error'>" + response.error + "</span>");
                 } else if (response.typeErr === "Email") {
                     $("#inputEmail").focus().after("<span class='error'>" + response.error + "</span>");
                 } else {
-                    if (response["data"]["name"] !== undefined && response["data"]["name"] !== null) {
+                    /*if (response["data"]["name"] !== undefined && response["data"]["name"] !== null) {
                         $("#input_name").focus().after("<span class='error'>" + response["data"]["name"] + "</span>");
                     }
                     if (response["data"]["last_name"] !== undefined && response["data"]["last_name"] !== null) {
@@ -304,7 +313,7 @@ function validate_user() {
 
                     if (response["data"]["password"] !== undefined && response["data"]["password"] !== null) {
                         $("#password").focus().after("<span class='error'>" + response.error.password + "</span>");
-                    }
+                    }*/
                 }
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
@@ -410,7 +419,7 @@ function load_provinces_v2(prov) {
 
 function load_provinces_v1() { //provincesycityes.xml - xpath
     //$.get( "modules/products/controller/controller_products.class.php?load_provinces=true",
-    $.get(amigable("?module=users&function=load_province_user&load_provincias=true"),
+    $.get(amigable("?module=users&function=load_province_user&load_provinces=true"),
         function( response ) {
             $("#province").empty();
 	          $("#province").append('<option value="" selected="selected">Select a province</option>');
