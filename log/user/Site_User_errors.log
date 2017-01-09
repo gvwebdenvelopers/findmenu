@@ -1154,3 +1154,79 @@ Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.c
 Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
 
 -> Controller: users | Funciton:response 200
+09.01.2017 09:12:52  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:12:52  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:12:52  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:12:52  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:12:52  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:16:11  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:16:11  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:16:11  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:16:12  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:16:12  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:17:13  |  User:   | ERROR: [8] Use of undefined constant column - assumed 'column'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:17:13  |  User:   | ERROR: [8] Use of undefined constant like - assumed 'like'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:17:13  |  User:   | ERROR: [8] Use of undefined constant field - assumed 'field'
+Notice on line 402 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:17:13  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:17:14  |  User:   | ERROR: [8] Undefined variable: timeout
+Notice on line 138 in file /var/www/findmenu/modules/users/model/DAO/users_dao.class.singleton.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:39:14  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 123 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:39:20  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 123 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:39:47  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 123 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200
+09.01.2017 09:39:53  |  User:   | ERROR: [8] Undefined offset: 0
+Notice on line 123 in file /var/www/findmenu/modules/users/controller/controller_users.class.php
+
+-> Controller: users | Funciton:response 200

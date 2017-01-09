@@ -44,8 +44,8 @@ class controller_users {
                     $arrValue = false;
                     $typeErr = 'Name';
                     $error = "Ya existe un usuario con esta cuenta: " . $arrArgument['email'];
-                } else {
-                    $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('email'), 'like' => array($arrArgument['email'])));
+                } else if ($arrValue[0]['total'] >= 1){
+                    $arrValue = loadModel(MODEL_USER, "users_model", "count", array('column' => array('user', 'email'), 'like' => array($arrArgument['user'], $arrArgument['email'])));
                     if ($arrValue[0]['total'] == 1) {
                         $arrValue = false;
                         $typeErr = 'Email';

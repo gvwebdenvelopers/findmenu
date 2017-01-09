@@ -60,31 +60,32 @@ function validate_user() {
     if (result) {
         var data = {"user_email": email, "password": password, "password2": password2  };
         var data_users_JSON = JSON.stringify(data);
-
+        console.log(data_users_JSON);
         $.post(amigable("?module=users&function=signup_user"), {signup_user_json: data_users_JSON},
         //$.post("../../users/sign_up/", {signup_user_json: data_users_JSON},
         function (response) {
-            //console.log(response);
+            console.log(response);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {
+                console.log(response.typeErr);
                 if (response.typeErr === "Email") {
-                    $("#inputEmail").focus().after("<span class='error'>" + response.error + "</span>");
+                    $("#user_email").focus().after("<span class='msg_error'>" + response.error + "</span>");
                 }else if (response.typeErr === "Name") {
-                    $("#inputEmail").focus().after("<span class='error'>" + response.error + "</span>");
+                    $("#user_email").focus().after("<span class='msg_error'>" + response.error + "</span>");
                 }else {
                     console.log(response);
                     if (response["data"]["email"] !== undefined && response["data"]["email"] !== null) {
-                        $("#inputEmail").focus().after("<span class='error'>" + response["data"]["email"] + response.error.email + "</span>");
+                        $("#user_email").focus().after("<span class='msg_error'>" + response["data"]["email"] + response.error.email + "</span>");
                     }
 
                     if (response["data"]["password"] !== undefined && response["data"]["password"] !== null) {
-                        $("#password").focus().after("<span class='error'>" + response.error.password + "</span>");
+                        $("#password").focus().after("<span class='msg_error'>" + response.error.password + "</span>");
                     }
 
                     if (response["data"]["password"] !== response["data"]["password2"] ) {
-                        $("#password").focus().after("<span class='error'>" + response.error.password + "</span>");
-                        $("#password2").focus().after("<span class='error'>" + response.error.password + "</span>");
+                        $("#password").focus().after("<span class='msg_error'>" + response.error.password + "</span>");
+                        $("#conf_password").focus().after("<span class='msg_error'>" + response.error.password + "</span>");
                     }
                 }
             }

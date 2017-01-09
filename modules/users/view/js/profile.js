@@ -163,9 +163,9 @@ $(document).ready(function () {
         //console.log(user[0]);
         $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
         function (response) {
-            console.log(response);
-            console.log(response.user);
-            console.log(response.success);
+            //console.log(response);
+            //console.log(response.user);
+            //console.log(response.success);
             if (response.success) {
                 fill(response.user);
                 load_countries_v1(response.user['country']);
@@ -243,11 +243,11 @@ function validate_user() {
         result = false;
     } else if( $("#password").val() == "") {
 
-        console.log("usuario_facebook");
+        //console.log("usuario_facebook");
         password = "usuario_facebook";
     } else if ( $("#password").prop('display') != null ){
 
-        console.log($("#password").val());
+        //console.log($("#password").val());
         if( $("#password").val() === "" ) {
             $("#password").focus().after("<span class='error'>Ingrese su contraseña</span>");
             result = false;
@@ -260,7 +260,7 @@ function validate_user() {
             result = false;
         }
     }
-    console.log(result);
+    //console.log(result);
     if (result) {
         if (provincia == null) {
             provincia = '';
@@ -282,12 +282,12 @@ function validate_user() {
             "password": password, "type": tipo, "country": pais, "province": provincia, "city": poblacion,
             "avatar": avatar, "user": user_id};
         var data_users_JSON = JSON.stringify(data);
-        console.log(data_users_JSON);
+        //console.log(data_users_JSON);
         $.post(amigable("?module=users&function=modify"), {mod_user_json: data_users_JSON},
         function (response) {
-            console.log(response);
-            console.log(response.success);
-            console.log(response.arrValue);
+            console.log(response.data);
+            //console.log(response.success);
+            //console.log(response.arrValue);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {
@@ -417,7 +417,7 @@ function load_provinces_v2(prov) {
     });
 }
 
-function load_provinces_v1() { //provincesycityes.xml - xpath
+function load_provinces_v1(prov) { //provincesycityes.xml - xpath
     //$.get( "modules/products/controller/controller_products.class.php?load_provinces=true",
     $.get(amigable("?module=users&function=load_province_user&load_provinces=true"),
         function( response ) {
@@ -434,10 +434,17 @@ function load_provinces_v1() { //provincesycityes.xml - xpath
     		    //alert(provinces[0].name);
 
             if(provinces === 'error'){
-                load_provinces_v2();
+                load_provinces_v2(prov);
             }else{
                 for (var i = 0; i < provinces.length; i++) {
-        		    $("#province").append("<option value='" + provinces[i].id + "'>" + provinces[i].nombre + "</option>");
+                    if (prov == provincias[i].id)
+                        $("#province").append("<option value='" + provinces[i].id + "' selected='selected'>" + provinces[i].nombre + "</option>");
+                    else
+                        $("#province").append("<option value='" + provinces[i].id + "'>" + provinces[i].nombre + "</option>");
+
+                }
+
+
     		    }
           }
     })
