@@ -1,16 +1,16 @@
 $(document).ready(function () {
     /////**modal login*///
-    var modalbase = '<div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +   
+    var modalbase = '<div class="modal fade" id="modalLog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
                     '<div class="modal-content"></div>' +
                     '</div>';
     $("#LoginModal").append(modalbase);
-   
+
     ////**user menu*///
     var user = Tools.readCookie("user");
     if (user) {
         //console.log(user); //yomogan|https://projects-alumnes-yomogan.c9users.io/proj_final_login/JoinElderly//media/flowers.png|client|yomogan
         user = user.split("|");
-        $("#contact_li").after("<li><a href=" + amigable('?module=users&function=profile') + "><img id='menuImg' class='icon rounded' height='70' width='70' src='" + user[1] + "'/>" + user[0] + "</a></li>");
+        $("#contact_li").after("<li><a href=" + amigable('?module=users&function=profile') + "><img id='menuImg' class='icon rounded' height='70' width='70' src='" + user[1] + "'/>" + user[3] + "</a></li>");
         $(".logotipo").after("<li><a id='logout' href='#' >Log Out</a></li>");
         $("#users").fadeOut();
         if ( (user[2] === "client")  ) {

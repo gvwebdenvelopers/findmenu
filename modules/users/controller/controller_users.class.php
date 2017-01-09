@@ -237,9 +237,9 @@ class controller_users {
                 'lastname' => $user['apellidos'],
                 'name' => $user['nombre'],
                 'password' => "",
-                'tipo' => "client",
+                'type' => "client",
                 'token' => "",
-                'user' => $user['id']
+                'user' => $user['id'],
             );
             set_error_handler('ErrorHandler');
             try {
@@ -400,14 +400,14 @@ class controller_users {
             set_error_handler('ErrorHandler');
             try {
                 $arrValue = loadModel(MODEL_USER, "users_model", "select", array(column => array('user'), like => array($_POST['user']), field => array('*')));
-                //$jsondata["arrValue"] = $arrValue;
-                //$jsondata["msg"] = "en try";
+                $jsondata["arrValue"] = $arrValue;
+                $jsondata["msg"] = "en try";
             } catch (Exception $e) {
                 //$jsondata["msg"] = "en excepcion";
                 $arrValue = false;
             }
-            //echo json_encode($jsondata);
-            //exit();
+            echo json_encode($jsondata);
+            exit();
             restore_error_handler();
 
             if ($arrValue) {

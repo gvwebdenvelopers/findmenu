@@ -84,10 +84,11 @@ class users_dao {
         }
 
         $sql = $sql1 . $fields . $sql2 . $sql;
+        //return $sql;
         $stmt = $db->ejecutar($sql);
         return $db->listar($stmt);
     }
-    
+
     public function update_DAO($db, $arrArgument) {
         /*
          * @param= $arrArgument( column => array(colum),
@@ -107,24 +108,24 @@ class users_dao {
                 $change .=", ";
             }
             $change .= $arrArgument['field'][$j] . "='" . $arrArgument['new'][$j] . "'";
-            
+
         }
         for ($l = 0; $l < $k; $l++) {
             if ($k > 1 && $l != 0) {
                 $sql .=" AND ";
             }
             $sql .= $arrArgument['column'][$l] . " like '" . $arrArgument['like'][$l] . "'";
-            
+
         }
 
         $sql = $sql1 . $change . $sql2 . $sql;
 
         return $db->ejecutar($sql);
     }
-    
+
     public function update_one_DAO($db, $arrArgument) {
 
-        $sql = "UPDATE users SET ". $arrArgument['field'][0]."='". $arrArgument['new'][0]."' WHERE ".$arrArgument['column'][0] ." like '" . $arrArgument['like'][0] . "'"; 
+        $sql = "UPDATE users SET ". $arrArgument['field'][0]."='". $arrArgument['new'][0]."' WHERE ".$arrArgument['column'][0] ." like '" . $arrArgument['like'][0] . "'";
 
         return $db->ejecutar($sql);
     }

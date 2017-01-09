@@ -44,13 +44,13 @@ function getUserInfo() {
             console.log("response");
             var data = {"id": response.id, "nombre": response.first_name, "apellidos": response.last_name, "email": response.email};
             var datos_social = JSON.stringify(data);
-            //console.log(datos_social);
+            console.log(datos_social);
             $.post(amigable('?module=users&function=social_signin'), {user: datos_social},
             function (response) {
-               // console.log(response);
+                console.log(response);
                 //console.log(response[0]);
                 if (!response.error) {
-                    Tools.createCookie("user", response[0]['email'] + "|" + response[0]['avatar'] + "|" + response[0]['name'] + "|" + response[0]['lastname'], 1);
+                    Tools.createCookie("user",  response[0]['user'] + "|" + response[0]['avatar'] + "|" + response[0]['type'] + "|" + response[0]['email'], 1);
                     window.location.href = amigable("?module=home&fn=init");
                 } else {
                     if (response.datos == 503)

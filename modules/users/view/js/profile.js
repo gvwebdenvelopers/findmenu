@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("adadsas");
     $.datepicker.regional['es'] = {
         closeText: 'Cerrar',
         prevText: '<Ant',
@@ -161,12 +160,12 @@ $(document).ready(function () {
     //console.log( user );
     if (user) {
         user = user.split("|");
-        //console.log(user[0]);
+        console.log(user[0]);
         $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
         function (response) {
-            console.log(response.user.password);
-            //console.log(response.msg);
-            //console.log(response.success);
+            console.log(response.arrValue);
+            console.log(response.msg);
+            console.log(response.success);
             if (response.success) {
                 fill(response.user);
                 load_countries_v1(response.user['country']);
@@ -187,9 +186,9 @@ $(document).ready(function () {
                 window.location.href = response.redirect;
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
-            //console.log(xhr.errorThrown);
-            //console.log(xhr.textStatus);
-            //console.log(xhr.responseText);
+            console.log(xhr.errorThrown);
+            console.log(xhr.textStatus);
+            console.log(xhr.responseText);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
             } else if (xhr.status === 404) {
