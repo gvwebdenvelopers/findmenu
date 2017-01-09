@@ -137,7 +137,7 @@ class controller_users {
                     if ($arrValue[0]["total"] == 1) {
                         $arrArgument = array(
                             'column' => array("user"),
-                            'like' => array($user['user']),
+                            'like' => array($userName[0]),
                             'field' => array('*')
                         );
                         $user = loadModel(MODEL_USER, "users_model", "select", $arrArgument);
@@ -145,7 +145,7 @@ class controller_users {
                         $jsondata["success"] = true;
                         $jsondata["redirect"] = $url;
                         $jsondata["user"] = $user;
-                        echo json_encode($user);
+                        echo json_encode($jsondata);
                         exit();
                     } else {
                         $value = array(

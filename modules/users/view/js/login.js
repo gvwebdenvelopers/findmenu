@@ -48,7 +48,7 @@ function login() {
             //console.log(response[0]);
             if (!response.error) {
                 //create session cookies
-                Tools.createCookie("user", response[0]['user'] + "|" + response[0]['avatar'] + "|" + response[0]['type'] + "|" + response[0]['user'], 1);
+                Tools.createCookie("user", response['user'][0]['user'] + "|" + response['user'][0]['avatar'] + "|" + response['user'][0]['type'] + "|" + response['user'][0]['email'], 1);
                 window.location.href = amigable("?module=home&fn=init");
             } else {
                 if (response.datos == 503)
