@@ -406,8 +406,7 @@ class controller_users {
                 //$jsondata["msg"] = "en excepcion";
                 $arrValue = false;
             }
-            echo json_encode($jsondata);
-            exit();
+            
             restore_error_handler();
 
             if ($arrValue) {

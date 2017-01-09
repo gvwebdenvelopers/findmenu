@@ -160,11 +160,11 @@ $(document).ready(function () {
     //console.log( user );
     if (user) {
         user = user.split("|");
-        console.log(user[0]);
+        //console.log(user[0]);
         $.post(amigable('?module=users&function=profile_filler'), {user: user[0]},
         function (response) {
-            console.log(response.arrValue);
-            console.log(response.msg);
+            console.log(response);
+            console.log(response.user);
             console.log(response.success);
             if (response.success) {
                 fill(response.user);
@@ -174,13 +174,6 @@ $(document).ready(function () {
                     $("#city").prop('disabled', false);
                     load_provinces_v1(response.user['province']);
                     load_cities_v1(response.user['province'], response.user['city']);
-                }
-                if(response.user.password === ""){
-                    console.log("El usuario ha entrado por facebook");
-                    $("#inputPassword").hide();
-                }else {
-                    console.log("El usuario ha entrado por email login");
-                    $("#inputPassword").prop('display', 'block');
                 }
             } else {
                 window.location.href = response.redirect;
@@ -340,12 +333,13 @@ function validate_user() {
 }
 
 function fill(user) {
+    console.log(user);
     $("#input_name").val(user['name']);
-    $("#last_name").val(user['last_name']);
+    $("#last_name").val(user['lastname']);
     $("#birth_date").val(user['birthdate']);
-    $("#inputPass").val("");
+    $("#inputPass").val(user['password']);
     $("#inputType").val(user['usertype']);
-    $("#username").html(user['nombre']);
+    //$("#username").html(user['nombre']);
     $("#avatar_user").attr('src', user['avatar']);
     $("#user_email").val(user['email']);
     if (user['email'])
