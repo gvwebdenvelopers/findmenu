@@ -60,21 +60,21 @@ function validate_user() {
     if (result) {
         var data = {"user_email": email, "password": password, "password2": password2  };
         var data_users_JSON = JSON.stringify(data);
-        console.log(data_users_JSON);
+        //console.log(data_users_JSON);
         $.post(amigable("?module=users&function=signup_user"), {signup_user_json: data_users_JSON},
         //$.post("../../users/sign_up/", {signup_user_json: data_users_JSON},
         function (response) {
-            console.log(response);
+            //console.log(response);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {
-                console.log(response.typeErr);
+                //console.log(response.typeErr);
                 if (response.typeErr === "Email") {
                     $("#user_email").focus().after("<span class='msg_error'>" + response.error + "</span>");
                 }else if (response.typeErr === "Name") {
                     $("#user_email").focus().after("<span class='msg_error'>" + response.error + "</span>");
                 }else {
-                    console.log(response);
+                    //console.log(response);
                     if (response["data"]["email"] !== undefined && response["data"]["email"] !== null) {
                         $("#user_email").focus().after("<span class='msg_error'>" + response["data"]["email"] + response.error.email + "</span>");
                     }
@@ -95,7 +95,7 @@ function validate_user() {
             //console.log(xhr.responseText);
             if( (xhr.responseJSON === undefined) || (xhr.responseJSON === null) )
                 xhr.responseJSON = JSON.parse(xhr.responseText);
-                console.log(xhr.responseJSON);
+                //console.log(xhr.responseJSON);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
             } else if (xhr.status === 404) {

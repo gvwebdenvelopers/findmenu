@@ -299,7 +299,7 @@ class controller_users {
                     'new' => $new
                 );
                 $arrValue = loadModel(MODEL_USER, "users_model", "count", $arrArgument);
-                if ($arrValue[0]['total'] == 1) {
+                if ($arrValue[0]['total'] >= 1) {
                     //Esta consulta meda error de variables no definidas change y sql3 pero realiza
                     //realiza la consulta igual aunque al fallar no redirecciona
                     $arrValue = loadModel(MODEL_USER, "users_model", "update_one", $arrArgument);

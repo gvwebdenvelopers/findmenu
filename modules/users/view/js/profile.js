@@ -135,7 +135,7 @@ $(document).ready(function () {
         var pais = $(this).val();
         var provincia = $("#province");
         var poblacion = $("#city");
-        console.log( pais );
+        //console.log( pais );
         if (pais !== 'ES') {
             provincia.prop('disabled', true);
             poblacion.prop('disabled', true);
@@ -180,9 +180,9 @@ $(document).ready(function () {
                 window.location.href = response.redirect;
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
-            console.log(xhr.errorThrown);
-            console.log(xhr.textStatus);
-            console.log(xhr.responseText);
+            //console.log(xhr.errorThrown);
+            //console.log(xhr.textStatus);
+            //console.log(xhr.responseText);
             if (xhr.status === 0) {
                 alert('Not connect: Verify Network.');
             } else if (xhr.status === 404) {
@@ -286,9 +286,9 @@ function validate_user() {
         //console.log(data_users_JSON);
         $.post(amigable("?module=users&function=modify"), {mod_user_json: data_users_JSON},
         function (response) {
-            console.log(response.data);
-            console.log(response.success);
-            console.log(response.arrValue);
+           // console.log(response.data);
+            //console.log(response.success);
+            //console.log(response.arrValue);
             if (response.success) {
                 window.location.href = response.redirect;
             } else {
@@ -318,9 +318,9 @@ function validate_user() {
                 }
             }
         }, "json").fail(function (xhr, textStatus, errorThrown) {
-            console.log(xhr);
-            console.log(xhr.responseJSON);
-            console.log(xhr.responseText);
+            //console.log(xhr);
+            //console.log(xhr.responseJSON);
+            //console.log(xhr.responseText);
             if( (xhr.responseJSON === undefined) || (xhr.responseJSON === null) )
                 xhr.responseJSON = JSON.parse(xhr.responseText);
             if (xhr.status === 0) {
@@ -343,7 +343,7 @@ function validate_user() {
 }
 
 function fill(user) {
-    console.log(user);
+    //console.log(user);
     $("#input_name").val(user['name']);
     $("#last_name").val(user['lastname']);
     $("#birth_date").val(user['birthdate']);
@@ -360,7 +360,7 @@ function fill(user) {
 
 
 function load_countries_v2(cad, country) {
-    console.log(cad);
+    //console.log(cad);
     $.getJSON( cad, function(data) {
       $("#country").empty();
       if (!country)

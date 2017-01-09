@@ -2,7 +2,7 @@
 $(document).ready(function () {
     $('.product_name').click(function () {
         var id = this.getAttribute('id');
-        console.log(id);
+        //console.log(id);
         $.post(amigable("?module=products&function=id_product"), {'idProduct': id}, function (data, status) {
 
             var json = JSON.parse(data);
